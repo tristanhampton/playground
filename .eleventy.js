@@ -1,7 +1,17 @@
 const os = require('os');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
 
+// https://github.com/markdown-it/markdown-it
+const md = require('markdown-it')({
+	html: true,
+	linkify: true,
+	typographer: true
+});
+
 module.exports = function (config) {
+	// Override 11tydata filename to static string: https://www.11ty.dev/docs/config/#change-base-file-name-for-data-files
+	config.setDataFileBaseName("_index");
+
 	// 11ty uses gitignore to ignore watching files. Disable this.
 	config.setUseGitIgnore(false);
 
@@ -10,6 +20,10 @@ module.exports = function (config) {
 
 	//--- Plugins
 	config.addFilter("dump", dumpFilter);
+
+	config.addFilter("markdown", function(content) {
+		return md.render(content);
+	});
 
 	//--- Misc Options
 	// Additional files to watch for changes
