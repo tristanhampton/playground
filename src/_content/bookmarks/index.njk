@@ -1,0 +1,108 @@
+---
+layout: default
+siteTitle: "Tristan Hampton"
+title: "Bookmarks"
+metaDescription: "Curated list of bookmarks."
+pagination:
+  data: collections.bookmark
+  size: 10
+  reverse: true
+permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+---
+
+<main class="site__main main--projects">
+	<h1>{{title}}</h1>
+	<p>This is my full collection of bookmarks. These are links to resources, articles, inspirations, and other misc. content that I've found online and want to keep track of.</p>
+
+	{# Form doesn't work with pagination #}
+	{# <form>
+		<div class="form-input">
+			<label for="type">Filter</label>
+			<select name="type" id="type">
+				<option value="" selected>None</option>
+				<option value="Art">Art</option>
+				<option value="Article">Article</option>
+				<option value="Accessibility">Accessibility</option>
+				<option value="Board Games">Board Games</option>
+				<option value="Books">Books</option>
+				<option value="Creative Coding">Creative Coding</option>
+				<option value="Home Lab">Home Lab</option>
+				<option value="Social Media">Social Media</option>
+				<option value="Web Development">Web Development</option>
+				<option value="Website">Website</option>
+				<option value="Video Games">Video Games</option>
+				<option value="Misc">Misc.</option>
+			</select>
+		</div>
+	</form> #}
+
+	<ul class="bookmark-list">
+		{% for bookmark in pagination.items %}
+			<li class="bookmark-item" data-type="{{ bookmark.data.type }}">
+				<div class="tags">
+					{% for type in bookmark.data.type %}
+						<span class="tag">
+							<span class="sr-only">Tag: </span>{{ type }}</span>
+					{% endfor %}
+				</div>
+				<p class="bookmark-link">
+					<a href="{{bookmark.data.link}}">{{ bookmark.data.title }}
+						<span class="sr-only">(external link)</span></a>
+				</p>
+				{% if bookmark.data.description %}
+					{{ bookmark.data.description|markdown|safe }}
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<nav aria-labelledby="pagination-title" class="pagination">
+		<h2 id="pagination-title" class="sr-only">Pagination</h2>
+		<ul>
+			{%- for pageEntry in pagination.pages %}
+				<li>
+					<a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %} aria-label="go to page {{ loop.index }}">{{ loop.index }}</a>
+				</li>
+			{%- endfor %}
+		</ul>
+	</nav>
+
+</main>
+<script>
+	const bookmarks = document.querySelectorAll('.bookmark-item');
+	const filter = document.querySelector('select#type');
+
+	if (bookmarks && filter) {
+		filter.addEventListener('change', function (e) {
+			const targetType = e
+				.target
+				.value
+
+				bookmarks
+				.forEach(bookmark => {
+					const bookmarkTypes = bookmark
+						.dataset
+						.type
+						.split(',');
+
+					if (bookmarkTypes.includes(targetType)) {
+						bookmark
+							.classList
+							.remove('hidden');
+					} else {
+						bookmark
+							.classList
+							.add('hidden');
+					}
+				});
+
+			if (targetType == '') {
+				bookmarks.forEach(bookmark => {
+					bookmark
+						.classList
+						.remove('hidden');
+				})
+			}
+		});
+	}
+</script>

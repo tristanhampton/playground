@@ -1,0 +1,18 @@
+---
+layout: default
+siteTitle: "Tristan Hampton"
+title: "Blog"
+permalink: "/blog/"
+metaDescription: "The blog for Tristan Hampton."
+---
+
+	<h1>{{title}}</h1>
+
+	<ul class="blog-list">
+		{% for post in collections.blog %}
+			<li>
+				<h2><a href="{{ post.url }}">{{post.data.title}}</a></h2>
+				<p><small>{{ post.data.summary }}</small></p>
+			</li>
+		{% endfor %}
+	</ul>

@@ -1,0 +1,52 @@
+---
+layout: default
+siteTitle: "Tristan Hampton"
+title: "Creative Coding"
+eleventyNavigation:
+  key: Creative Coding
+  parent: ''
+  order: 2
+permalink: "/generative/"
+metaDescription: "I enjoy making art using code. I use p5.js to create images, along with different settings that can be used in real time to customize the image."
+---
+
+<main class="site__main main--projects">
+
+	<h1>Creative Coding</h1>
+	<p>All of these projects are made using <a href="https://p5js.org" target="_blank">p5.js</a>, a Javascript processing library for making art and such using the HTML Canvas</p>
+
+	<h2>Projects</h2>
+	<ul class="generative-list">
+		{% for project in collections.generative | reverse %}
+			{% if project.data.published %}
+				<li class="generative-item">
+					<a href="{{ project.url }}" title="{{ project.data.title }}">
+						<h3>{{ project.data.title }}</h3>
+						<picture>
+							<img src="img/{{ project.data.thumbnail }}" alt="screenshot of the {{ project.data.title }} art piece">
+						</picture>
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+
+	{% if local %}
+		<h2>Studies</h2>
+
+		<ul class="generative-list">
+			{% for project in collections.generative | reverse %}
+				{% if 'study' in project.data.tags %}
+					<li class="generative-item">
+						<a href="{{ project.url }}" title="{{ project.data.title }}">
+							<h3>{{ project.data.title }}</h3>
+							<picture>
+								<img src="img/{{ project.data.thumbnail }}" alt="screenshot of the {{ project.data.title }} art piece">
+							</picture>
+						</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+</main>
