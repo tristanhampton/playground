@@ -1,0 +1,118 @@
+---
+layout: default
+siteTitle: "Tristan Hampton"
+title: "Me"
+permalink: "/me/"
+metaDescription: 'Personal things relating to Tristan Hampton.'
+---
+
+
+<main class="site__main main--now">
+
+	<h1>Now</h1>
+  <p>All of this data is updated hourly with a script on my home server. I've used <a href="https://rknight.me/">Robb Knight's</a> tool <a href="https://echo.rknight.me/">Echo</a>, which I've modified a tad in order to be able to create new posts as well as update existing content.</p>
+  <p>My data sources are Steam, Letterboxd, Goodreads, and Strava. Eventually I'll get around to learning the Spotify API (I'd like to feature the albums I listen to, instead of a playlist), but for now it's just an iframe.
+
+  {% if collections.steam.length > 0 %}
+    <h2>Playing...</h2>
+    <div class="currently-playing">
+      <ul>
+        {% for game in collections.steam|reverse %}
+          {% if loop.index0 < 5 %} 
+            <li><img src="{{ game.data.image }}" alt="icon for {{ game.data.title }}">{{game.data.title}}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <h2>Listening to...</h2>
+  <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0LyweZG1IxsBZKnnaFF4R4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  {% if collections.letterboxd.length > 0 %}
+    <h2>Watching...</h2>
+    <ul class="letterboxd">
+      {% for movie in collections.letterboxd | reverse %}
+        {% if loop.index0 < 5 %}
+          <li>
+            <img src="{{ movie.data.poster }}" alt="{{ movie.data.title }} Poster">
+            <p class="sr-only">{{ movie.data.title }}</p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if collections.goodreads.length > 0 %}
+    <h2>Reading...</h2>
+    <ul class="goodreads">
+      {% for book in collections.goodreads | reverse %}
+        {% if book.data.category == 'read' and book.data.category != 'progress' %}
+          <li>
+            <img src="{{ book.data.cover }}" alt="{{ book.data.title }} cover">
+            <p><em>{{ book.data.title }}</em> by {{ book.data.author }}</p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if collections.strava.length > 0 %}
+    <h2>Biking...</h2>
+    <ul class="strava">
+      {% set i = 0 %}
+      {% for ride in collections.strava | reverse %}
+        {% if i < 9 and ride.data.type == 'ride' %}
+          <li>
+            <h3><a href="{{ ride.data.link }}">{{ ride.data.title }}</a></h3>
+            <em>{{ ride.data.rideDate }}</em>
+            <p>Distance: {{ ride.data.distance }}</p>
+            <p>Time: {{ ride.data.time }}</p>
+            <p>Speed: {{ ride.data.speed }}</p>
+          </li>
+          {% set i = i + 1 %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if mtg.recordsByPrice.length %}
+    <h2>Collecting...</h2>
+    <p>These are my top 10 Magic the Gathering cards out of {{ mtg.numCards }}, collected in the <a href="https://manabox.app/">Mana Box</a> app for IOS.
+    <table>
+      <thead>
+        <tr>
+          <th>Card Name</th>
+          <th>Set Name</th>
+          <th>Value</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% set i = 0 %}
+        {% for card in mtg.recordsByPrice %}
+          {% if i < 10 %}
+            <tr>
+              <td><a href="{{ card.link }}">{{ card.name }}</a></td>
+              <td>{{ card.set_name }}</td>
+              <td>${{ card.purchase_price }}</td>
+              <td>{{ card.quantity }}</td>
+            </tr>
+            {% set i = i + 1 %}
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  <h2>Working on...</h2>
+  <p>The following projects are little hobby projects that I've started working on. I work on them in my free time, so I don't know when they will be completed, if ever.</p>
+  <h3>Date scheduler</h3>
+  <p>A tool that allows automating scheduling dates with a partner by providing a list of possible dates and preferred days of the week</p>
+
+  <h3><a href="https://dw.tristanhampton.ca/">Dungeon World</a></h3>
+  <p>A little site for my friends and I to track our characters and adventure in the Dungeon World TTRPG system.</p>
+
+  <h3><a href="https://magenta-medovik-4742c4.netlify.app/">Edmonton Edible Trees</a></h3>
+  <p>In an effort to learn some React, I've been playing with <a href="https://data.edmonton.ca/">open data sets from the City of Edmonton</a>. I really liked the idea of making a little map that showed where you were and where edible fruit from trees was around you.</p>
+</main>
