@@ -1,0 +1,42 @@
+name: Sync Content Directory
+
+on:
+  push:
+    paths:
+      - 'src/_content/projects'  # Trigger the action only when changes are made in the "content" directory
+      - 'src/_content/tools'
+      - 'src/_content/_collections/bookmarks'
+
+jobs:
+  sync-content:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Ensures the full history is fetched
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'Tristan Hampton'
+          git config --global user.email 'tristanhampton@icloud.com'
+
+      - name: Copy Content to Another Repo
+        run: |
+          # Clone the second repository
+          git clone https://<PAT>@https://github.com/tristanhampton/portfolio-2024.git
+          cd portfolio-2024
+          # Remove existing content and copy new content
+          rm -rf src/_content/projects
+          rm -rf src/_content/tools
+          rm -rf src/_content/_collections/bookmarks
+          cp -R ../src/content/projects ./src/content/projects
+          cp -R ../src/content/tools ./src/content/tools
+          cp -R ../src/content/_collections/bookmarks ./src/content/_collections/bookmarks
+          # Commit and push the changes
+          git add .
+          git commit -m "Syncing content from playground"
+          git push origin main
+        env:
+          PAT: ${{ secrets.PAT }}  # Add your Personal Access Token as a GitHub Secret
