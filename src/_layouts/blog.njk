@@ -1,0 +1,11 @@
+{% include 'head.njk'%}
+{% include 'header.njk' %}
+		
+<main class="page page--blog">
+	<article>
+		<h1>{{ title }}</h1>
+		{{ content | safe }}
+	</article>
+</main>
+		
+{% include 'footer.njk' %}

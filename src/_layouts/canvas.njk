@@ -1,0 +1,27 @@
+{% include 'head.njk' %}
+{% include 'header.njk' %}
+
+<main class="site__main main--projects">
+	<h1>{{ title }}</h1>
+	<p>{{ intro | safe }}</p>
+	{# <p id="p5_loading" class="loadingclass">The canvas is loading, just one moment.</p> #}
+
+	<div class="generative-canvas" id="canvasContainer"></div>
+
+	<h2 class="sr-only project-settings-title">{{ title }} Settings</h2>
+	<div class="project__tweak-settings"></div>
+
+	{# Any extra markup can go here from the project file #}
+  {{ content | safe }}
+
+</main>
+
+{% for library in libraries %}
+	<script type="text/javascript" src="/js/plugins/{{ library }}"></script>
+{% endfor %}
+<script src="../js/{{ js_file }}.js"></script>
+
+{% include 'footer.njk' %}
+
+</body>
+</html>
