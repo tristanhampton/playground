@@ -1,0 +1,74 @@
+@mixin btn-defaults {
+  display: inline-block;
+  gap: var(--padding-100);
+  padding: var(--button-padding);
+  font-weight: var(--button-font-weight);
+  font-size: var(--font-small);
+  border-radius: var(--button-border-radius);
+  text-decoration: none !important;
+  max-width: 100%;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+
+  // prevents zoomnig on mobile if double tapped
+  touch-action: manipulation;
+
+  // prevents accidentally highlighting text
+  user-select: none;
+
+  svg.external-icon {
+    stroke: currentColor;
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+  }
+}
+
+@mixin btn-primary {
+  @include btn-defaults;
+  background-color: var(--text-primary);
+  color: var(--text-invert-primary);
+  border: var(--button-primary-border);
+
+  &:visited {
+    color: var(--text-invert-primary);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--button-primary-color-hover);
+    background-color: var(--button-primary-surface-hover);
+  }
+}
+
+@mixin btn-secondary {
+  @include btn-defaults;
+  background-color: var(--button-secondary-surface);
+  border: var(--button-secondary-border);
+  color: var(--button-secondary-color);
+
+  &:visited {
+    color: var(--button-secondary-color);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-secondary-surface-hover);
+    border: var(--button-secondary-border-hover);
+    color: var(--button-secondary-color-hover);
+  }
+}
+
+.btn-primary {
+  @include btn-primary;
+}
+
+.btn-secondary {
+  @include btn-secondary;
+}

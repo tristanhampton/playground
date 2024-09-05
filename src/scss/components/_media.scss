@@ -1,0 +1,19 @@
+.component--media {
+  padding: 0 var(--page-margin-500);
+
+  picture,
+  img,
+  video,
+  iframe {
+    width: 100%;
+    border-radius: var(--radius-frame-500);
+
+    + p {
+      font-size: var(--font-small);
+    }
+  }
+
+  iframe[src*='youtube'] {
+    aspect-ratio: 16 / 9;
+  }
+}

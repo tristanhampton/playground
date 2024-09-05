@@ -1,0 +1,48 @@
+  <footer class="site__footer">
+    {% if site.facebook or site.instagram or site.linkedin or site.youtube or site.x %}
+      <ul class="footer__socials">
+        {% if site.facebook %}
+          <li>
+            <a href="{{ site.facebook }}" aria-label="Visit {{ site.title }}'s Facebook page">
+              {% include 'icons/facebook.njk' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if site.instagram %}
+          <li>
+            <a href="{{ site.instagram }}" aria-label="Visit {{ site.title }}'s Instagram page">
+              {% include 'icons/instagram.njk' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if site.youtube %}
+          <li>
+            <a href="{{ site.youtube }}" aria-label="Visit {{ site.title }}'s Youtube page">
+              {% include 'icons/youtube.njk' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if site.linkedin %}
+          <li>
+            <a href="{{ site.linkedin }}" aria-label="Visit {{ site.title }}'s Linkedin page">
+              {% include 'icons/linkedin.njk' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if site.x %}
+          <li>
+            <a href="{{ site.x }}" aria-label="Visit {{ site.title }}'s X/Twitter page">
+              {% include 'icons/x.njk' %}
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    {% endif %}
+    <p class="footer__copyright">&copy; {{ helpers.currentYear() }} {{ site.title }}</p>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>

@@ -1,0 +1,6 @@
+.site__header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--padding-100) var(--padding-300);
+  padding: var(--padding-200) var(--page-margin-100);
+}

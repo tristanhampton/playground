@@ -1,0 +1,57 @@
+/* General Table Styles
+ * ----------------------------------------------- */
+ table {
+  border-collapse: collapse;
+  width: 100%;
+
+  caption {
+    text-align: left;
+    padding-bottom: var(--padding-300);
+    // we have to restrict this, because on mobile it will overflow with the table and we don't want that
+    max-width: min(calc(100vw - var(--page-margin-200)*2), 90ch);
+  }
+
+  thead {
+    background-color: var(--table-header-surface);
+    color: var(--table-header-color);
+
+    th {
+      border: var(--table-header-cell-border);
+      padding: var(--table-header-cell-padding);
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr:nth-of-type(even) {
+      background-color: var(--table-body-row-even-surface);
+      color: var(--table-body-row-even-color)
+    }
+
+    tr:nth-of-type(odd) {
+      background-color: var(--table-body-row-odd-surface);
+      color: var(--table-body-row-odd-color)
+    }
+
+    td,
+    th {
+      border: var(--table-body-cell-border);
+      padding: var(--table-body-cell-padding);
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--table-header-surface);
+    }
+  }
+}
+
+/* Mobile Overflow Styling
+ * ----------------------------------------------- */
+.table-wrapper {
+  overflow-x: auto;
+
+  td {
+    min-width: 20rem;
+  }
+}

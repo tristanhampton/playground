@@ -1,0 +1,71 @@
+/* Single Accordion
+ * ----------------------------------------------- */
+.component--accordions details {
+  border: var(--border-thickness-200) solid var(--border-color-primary);
+  padding: var(--padding-300) var(--padding-400);
+
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    font-size: var(--heading-4);
+    line-height: 1.33;
+    font-weight: 700;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      display: block;
+      content: '+';
+      color: var(--icon-secondary);
+      flex-shrink: 0;
+      font-size: var(--font-large);
+      font-weight: 400;
+    }
+
+    &:hover,
+    &:focus {
+
+      h3 {
+        text-decoration: underline;
+      }
+
+      .icon {
+        fill: var(--icon-primary)
+      }
+    }
+
+    &:focus-visible {
+      outline: var(--border-thickness-200) solid var(--focus-state-border);
+      outline-offset: 0.4rem;
+      border-radius: var(--radius-button-300);
+    }
+  }
+
+  &[open] {
+    border-color: var(--border-color-hover);
+
+    summary::after {
+      content: '-';
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    border-color: var(--border-color-hover);
+  }
+}
+
+/* Accordions Group
+ * ----------------------------------------------- */
+.component--accordions {
+  padding: 0 var(--page-margin-500);
+}

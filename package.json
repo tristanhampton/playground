@@ -1,0 +1,33 @@
+{
+  "name": "11ty-starter-2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:site": "npx @11ty/eleventy",
+    "build:assets": "webpack --config webpack.config.prod.js",
+    "build": "npm-run-all build:assets build:site",
+    "dev:site": "npx @11ty/eleventy --serve",
+    "dev:assets": "webpack --config webpack.config.dev.js",
+    "dev": "npm-run-all --parallel dev:assets dev:site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@sindresorhus/slugify": "^2.2.1"
+  },
+  "devDependencies": {
+    "@jamshop/eleventy-filter-dump": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.77.8",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^6.0.1",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass-loader": "^16.0.0",
+    "terser-webpack-plugin": "^5.3.10"
+  }
+}

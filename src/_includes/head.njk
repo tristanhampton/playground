@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{site.title}}{% if title %} - {{ title }}{% endif %}</title>
+
+	{% if meta_description %}
+		<meta name="description" content="{{ meta_description }}">
+	{% endif %}
+
+	{% if og_title or title %}
+		<meta property="og:title" content="{{ og_title if og_title else title }}">
+	{% endif %}
+
+	{% if og_image or site.og_image_default %}
+		<meta property="og:image" content="{{ og_image if og_image else site.og_image_default }}">
+	{% endif %}
+
+	{% if twitter_card or site.twitter_card %}
+		<meta name="twitter:card" content="{{ twitter_card if twitter_card else site.twitter_card }}">
+	{% endif %}
+
+  {% if site.GTM_ID %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{ site.GTM_ID }}');</script>
+    <!-- End Google Tag Manager -->
+  {% endif %}
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/favicons/site.webmanifest">
+
+	{% if site.theme_colour %}	
+		<meta name="theme-color" content="{{ site.theme_colour }}" />
+	{% endif %}
+</head>
+<body class="site">
+  {% if site.GTM_ID %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWS3W3Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  {% endif %}

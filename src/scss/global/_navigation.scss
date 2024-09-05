@@ -1,0 +1,9 @@
+.site__navigation {
+  ul {
+    display: flex;
+    gap: var(--padding-100) var(--padding-300);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}

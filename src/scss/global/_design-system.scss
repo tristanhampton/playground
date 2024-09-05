@@ -1,0 +1,352 @@
+/* System Variables
+ * ----------------------------------------------- */
+ :root {
+  //set to 10px to use rem as font unit. 1.6rem = 16px
+  font-size: 16px;
+  font-size: 62.5%;
+  --font-size: 1.8rem;
+
+  --baseline: 0.8rem;
+  --col: 5vw;
+
+  --heading-1: 2.66em; // 48
+  --heading-2: 2.22em; // 40
+  --heading-3: 1.77em; // 32
+  --heading-4: 1.33em; // 24
+  --heading-5: 1em; // 18
+  --heading-6: 1em; // Not set in Manitoba yet
+
+  --font-large: 1.33em; // 24
+  --font-small: 0.88em; // 16
+
+  @media screen and (max-width: 768px) {
+    --heading-1: 2.22em; // 40
+    --heading-2: 1.77em; // 32
+    --heading-3: 1.55em; // 28
+    --heading-4: 1.33em; // 24
+    --heading-5: 1.2em; // Not set in Manitoba yet
+    --heading-6: 1em; // Not set in Manitoba yet
+  }
+
+  @media screen and (min-width: 1900px) {
+    --font-size: 2rem;
+  }
+
+  @media screen and (min-width: 2400px) {
+    --font-size: 2.2rem;
+  }
+}
+
+/* Colours
+ * ----------------------------------------------- */
+:root {
+
+  // Neutrals
+  --black-000: #000;
+  --grey-200: #323232;
+  --grey-400: #636363;
+  --grey-500: #7C7D7C;
+  --grey-600: #969696;
+  --grey-700: #AFB0AF;
+  --grey-800: #C9C9C9;
+  --grey-900: #E2E3E2;
+  --white-1000: #FFF;
+
+  // System
+  --system-green-500: #00B38F;
+  --system-yellow-500: #FFE75D;
+  --system-red-500: #DB6666;
+}
+
+/* Typography
+ * ----------------------------------------------- */
+:root {
+  --text-primary: var(--grey-200);
+  --text-secondary: var(--grey-500);
+
+  --text-link-primary: var(--system-green-500);
+  --text-link-visited: var(--system-green-500);
+  --text-link-hover: var(--system-yellow-500);
+
+  --text-invert-primary: var(--white-1000);
+  --text-invert-secondary: var(--grey-800);
+  --text-invert-hover: var(--system-red-500);
+
+  --text-accent: var(--system-green-500);
+
+  // Vertical Spacing
+  --vertical-type-spacing-size-xs: 1;
+  --vertical-type-spacing-size-sm: 1;
+  --vertical-type-spacing-size-med: 2;
+  --vertical-type-spacing-size-lrg: 2;
+
+  --vertical-type-spacing-xs: calc(var(--baseline) * var(--vertical-type-spacing-size-xs));
+  --vertical-type-spacing-sm: calc(var(--baseline) * var(--vertical-type-spacing-size-sm));
+  --vertical-type-spacing-med: calc(var(--baseline) * var(--vertical-type-spacing-size-med));
+  --vertical-type-spacing-lrg: calc(var(--baseline) * var(--vertical-type-spacing-size-lrg));
+
+  @media screen and (min-width: 480px) {}
+
+  @media screen and (min-width: 768px) {
+    --vertical-type-spacing-size-xs: 1;
+    --vertical-type-spacing-size-sm: 2;
+    --vertical-type-spacing-size-med: 3;
+    --vertical-type-spacing-size-lrg: 3;
+  }
+
+  @media screen and (min-width: 1020px) {
+    --vertical-type-spacing-size-xs: 1;
+    --vertical-type-spacing-size-sm: 2;
+    --vertical-type-spacing-size-med: 3;
+    --vertical-type-spacing-size-lrg: 3;
+  }
+}
+
+/* Surface
+ * ----------------------------------------------- */
+// Surface variables essentially work out to be background colours for things like CTA's, Tiles, etc
+:root {
+  --surface-primary: var(--white-1000);
+  --surface-invert: var(--system-green-500);
+  --surface-hover: var(--system-green-500);
+
+  --surface-secondary: var(--grey-900);
+
+  --surface-navigation-primary: var(--grey-900);
+  --surface-navigation-secondary: var(--grey-900);
+
+  --surface-link-primary: var(--system-green-500);
+  --surface-link-hover: var(--system-green-500);
+  --surface-link-invert: var(--white-1000);
+  --surface-link-invert-hover: var(--system-green-500);
+  --surface-disabled: var(--grey-500);
+
+  --surface-alert: var(--system-yellow-500);
+
+  --surface-code-view: var(--grey-900);
+}
+
+/* Icons
+* ----------------------------------------------- */
+:root {
+  --icon-primary: var(--grey-200);
+  --icon-invert-primary: var(--white-1000);
+  --icon-secondary: var(--grey-500);
+  --icon-invert-secondary: var(--grey-900);
+}
+
+/* Borders
+ * ----------------------------------------------- */
+:root {
+
+  // Color
+  --border-color-primary: var(--grey-500);
+  --border-color-secondary: var(--grey-800);
+  --border-color-hover: var(--grey-200);
+  --border-color-accent: var(--system-green-500);
+  --border-color-inverse-accent: var(--system-green-500);
+  --border-color-emergency: var(--system-error-500);
+
+  // Radius
+  --border-radius-000: 0;
+  --border-radius-200: 0.2rem;
+  --border-radius-400: 0.4rem;
+  --border-radius-800: 0.8rem;
+
+  --radius-button-000: var(--border-radius-000);
+  --radius-button-300: var(--border-radius-400);
+  --radius-button-500: var(--border-radius-800);
+
+  --radius-frame-000: var(--border-radius-000);
+  --radius-frame-300: var(--border-radius-400);
+  --radius-frame-500: var(--border-radius-800);
+
+
+  --radius-media-000: var(--border-radius-000);
+  --radius-media-400: var(--border-radius-400);
+  --radius-media-800: var(--border-radius-800);
+
+  // Thickness
+  --border-thickness-000: 0;
+  --border-thickness-100: 0.1rem;
+  --border-thickness-200: 0.2rem;
+  --border-thickness-300: 0.3rem;
+
+  // Box Shadows
+  --box-shadow: 0px 0.2rem 0.6rem 0px rgba(50, 50, 50, 0.40);
+}
+
+/* Spacing
+ * ----------------------------------------------- */
+:root {
+
+  // Padding
+  --padding-000: 0;
+  --padding-100: calc(var(--baseline)*1);
+  --padding-200: calc(var(--baseline)*2);
+  --padding-300: calc(var(--baseline)*3);
+  --padding-400: calc(var(--baseline)*4);
+  --padding-500: calc(var(--baseline)*5);
+  --padding-600: calc(var(--baseline)*6);
+  --padding-700: calc(var(--baseline)*7);
+  --padding-800: calc(var(--baseline)*8);
+  --padding-900: calc(var(--baseline)*9);
+  --padding-1000: calc(var(--baseline)*10);
+
+  // Components
+  --component-margin-top-child-pages: var(--padding-000);
+  --component-margin-top-first: var(--padding-400);
+  --component-margin-top-default: var(--padding-800);
+  --footer-margin-800: calc(var(--baseline) * 8);
+
+  // Text
+  --text-margin-100: calc(var(--baseline)*1);
+  --text-margin-200: calc(var(--baseline)*2);
+  --text-margin-300: calc(var(--baseline)*3);
+  --text-margin-500: calc(var(--baseline)*5);
+
+  // Page Margin
+  --page-margin-100: calc(var(--col)*1);
+  --page-margin-200: calc(var(--col)*2);
+  --page-margin-300: calc(var(--col)*3);
+  --page-margin-500: calc(var(--col)*5);
+
+  @media screen and (min-width: 200px) {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*1);
+    --page-margin-300: calc(var(--col)*1);
+    --page-margin-500: calc(var(--col)*1);
+
+    --component-margin-top-child-pages: var(--padding-000);
+    --component-margin-top-first: var(--padding-400);
+    --component-margin-top-default: var(--padding-800);
+  }
+
+  @media screen and (min-width: 768px) {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*1);
+    --page-margin-300: calc(var(--col)*2);
+    --page-margin-500: calc(var(--col)*3);
+  }
+  
+  @media screen and (min-width: 1020px) {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*2);
+    --page-margin-300: calc(var(--col)*3);
+    --page-margin-500: calc(var(--col)*5);
+    
+    --component-margin-top-child-pages: var(--padding-000);
+    --component-margin-top-first: var(--padding-500);
+    --component-margin-top-default: var(--padding-1000);
+    --footer-margin-800: calc(var(--baseline) * 12);
+  }
+
+  @media screen and (min-width: 1440px) {
+    --page-margin-100: calc(var(--col)*1);
+    --page-margin-200: calc(var(--col)*2);
+    --page-margin-300: calc(var(--col)*3);
+    --page-margin-500: calc(var(--col)*5);
+  }
+
+  @media screen and (min-width: 1900px) {
+    --page-margin-100: calc(var(--col)*3);
+    --page-margin-200: calc(var(--col)*3);
+    --page-margin-500: calc(var(--col)*6);
+    --component-margin-top-first: var(--padding-600);
+    --component-margin-top-default: calc(var(--baseline) * 12);
+    --footer-margin-800: calc(var(--baseline) * 14);
+  }
+
+  @media screen and (min-width: 2400px) {
+    --page-margin-100: calc(var(--col)*4);
+    --page-margin-200: calc(var(--col)*4);
+    --page-margin-500: calc(var(--col)*6);
+    --component-margin-top-first: var(--padding-700);
+    --component-margin-top-default: calc(var(--baseline) * 14);
+    --footer-margin-800: calc(var(--baseline) * 16);
+  }
+}
+
+/* Buttons
+ * ----------------------------------------------- */
+// Primary/Secondary buttons are built in _buttons.scss and can be used as a class or mixin where needed
+:root {
+  --button-padding: var(--padding-200) var(--padding-300);
+  --button-font-weight: 700;
+  --button-border-radius: var(--radius-button-500);
+
+  // Primary Button
+  --button-primary-surface: var(--surface-link-invert);
+  --button-primary-border: var(--border-thickness-200) solid var(--surface-link-invert);
+  --button-primary-color: var(--text-primary);
+
+  --button-primary-surface-hover: var(--surface-link-hover);
+  --button-primary-color-hover: var(--text-invert-primary);
+
+  // Secondary Button
+  --button-secondary-surface: var(--surface-link-primary);
+  --button-secondary-border: var(--border-thickness-200) solid var(--surface-link-primary);
+  --button-secondary-color: var(--white-1000);
+  --button-secondary-surface-hover: transparent;
+  --button-secondary-border-hover: var(--border-thickness-200) solid var(--surface-link-primary);
+  --button-secondary-color-hover: var(--surface-link-primary);
+}
+
+/* Webforms
+ * ----------------------------------------------- */
+:root {
+  --form-item-spacing: var(--padding-400); // spacing between form items: input, select, textarea etc
+  --form-input-spacing: var(--padding-100); // spacing between elements IN form items: label, input, description etc
+  --input-height: calc(var(--baseline) * 6);
+  --input-padding: 1.2rem;
+  --input-border: var(--border-thickness-200) solid var(--border-color-primary);
+  --focus-state-border: var(--blue-700);
+  --input-border-radius: var(--radius-frame-300);
+
+  --select-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.07,15.21c.07-.11,6.47-6.58,9.62-9.71a1.08,1.08,0,0,1,.56-.31.72.72,0,0,1,.51.19c.33.28.62.6.93.9s.41.72,0,1.13L12.51,18.58a.62.62,0,0,1-1,0L.34,7.45c-.46-.46-.46-.74,0-1.2l.81-.81a.68.68,0,0,1,1.1,0Z'/%3E%3C/svg%3E%0A");
+
+  --textarea-height: calc(var(--baseline)*10); // minimum height of a text area
+
+  --fieldset-border: none;
+  --fieldset-padding: 0;
+  --fieldset-legend-size: var(--heading-3);
+  --fieldset-legend-weight: 700;
+
+  --check-radio-color: var(--green-400);
+  --check-radio-size: calc(var(--baseline) * 3);
+  --check-radio-spacing: var(--padding-100);
+  --check-radio-label-size: var(--font-size);
+  --check-radio-label-weight: 400;
+
+  --label-size: var(--heading-5);
+  --label-weight: 700;
+  --legend-weight: 400;
+
+  --description-size: var(--font-size);
+
+  --file-help-size: var(--captions);
+
+  --color-picker-width: calc(var(--baseline) * 14);
+  --color-picker-height: calc(var(--baseline) * 2);
+
+  --range-accent-color: var(--border-color-accent);
+
+  --scale-accent-color: var(--border-color-accent);
+}
+
+/* Tables
+ * ----------------------------------------------- */
+:root {
+  --table-header-surface: var(--surface-secondary);
+  --table-header-color: var(--text-primary);
+  --table-header-cell-padding: var(--padding-100);
+  --table-header-cell-border: var(--border-thickness-100) solid var(--border-color-primary);
+
+  --table-body-cell-padding: var(--padding-100);
+  --table-body-cell-border: var(--border-thickness-100) solid var(--border-color-primary);
+
+  --table-body-row-even-surface: var(--surface-primary);
+  --table-body-row-even-color: var(--text-primary);
+  --table-body-row-odd-surface: var(--surface-primary);
+  --table-body-row-odd-color: var(--text-primary);
+}

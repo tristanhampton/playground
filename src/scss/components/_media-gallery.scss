@@ -1,0 +1,17 @@
+.component--media-gallery {
+  padding: 0 var(--page-margin-200);
+
+  .gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: var(--padding-200);
+  }
+
+  .gallery__item {
+    display: block;
+    border-radius: var(--radius-frame-500);
+    overflow: hidden;
+    max-width: max-content;
+    margin: 0;
+  }
+}

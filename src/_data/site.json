@@ -1,0 +1,12 @@
+{
+  "title": "11ty Starter",
+  "GTM_ID": null,
+  "og_image_default" : "/img/og-default.jpg",
+  "theme_colour": "#222",
+  "twitter_card": "summary_large_image",
+  "facebook": "https://facebook.com",
+  "instagram": "https://instagram.com",
+  "linkedin": "https://linkedin.com",
+  "youtube": "https://youtube.com",
+  "x": "https://twitter.com"
+}

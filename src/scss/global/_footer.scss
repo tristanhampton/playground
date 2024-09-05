@@ -1,0 +1,35 @@
+/* Socials
+ * ----------------------------------------------- */
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding-100) var(--padding-200);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  a {
+    display: block;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* Copyright
+ * ----------------------------------------------- */
+.footer__copyright {
+  margin: 0;
+}
+
+/* Footer General Styles
+ * ----------------------------------------------- */
+.site__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--padding-200) var(--padding-300);
+  padding: var(--padding-200) var(--page-margin-100);
+}

@@ -1,0 +1,56 @@
+label {
+  display: block;
+  font-weight: 600;
+
+  +* {
+    margin-top: var(--padding-100)
+  }
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  background: transparent;
+  border: var(--border-thickness-100) solid #000;
+  padding: 0 var(--padding-100);
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  height: 2em;
+}
+
+textarea {
+  padding: var(--padding-100);
+  resize: none;
+}
+
+input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+}
+
+.form-item--check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  gap: var(--padding-100);
+
+  * {
+    margin: 0;
+  }
+}
+
+.form-item {
+  +.form-item {
+    margin-top: var(--padding-400);
+  }
+
+  &.form-item--check+.form-item--check {
+    margin-top: var(--padding-200);
+  }
+}
