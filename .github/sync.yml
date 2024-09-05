@@ -1,0 +1,7 @@
+tristanhampton/portfolio-2024@main:
+  - source: src/_content/_collections/bookmarks/
+    dest: src/_content/_collections/bookmarks/
+  - source: src/_content/projects/
+    dest: src/_content/projects/
+  - source: src/_content/tools/
+    dest: src/_content/tools/
