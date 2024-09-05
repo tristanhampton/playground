@@ -1,7 +1,11 @@
+# https://github.com/marketplace/actions/repo-file-sync-action
 tristanhampton/portfolio-2024@main:
   - source: src/_content/_collections/bookmarks/
     dest: src/_content/_collections/bookmarks/
+    deleteOrphaned: true
   - source: src/_content/projects/
     dest: src/_content/projects/
+    deleteOrphaned: true
   - source: src/_content/tools/
     dest: src/_content/tools/
+    deleteOrphaned: true
