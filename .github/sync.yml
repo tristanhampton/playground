@@ -5,13 +5,16 @@ tristanhampton/portfolio-2024@main:
     deleteOrphaned: true
     exclude: |
       index.njk
+      _index.11tydata.js
   - source: src/_content/projects/
     dest: src/_content/projects/
     deleteOrphaned: true
     exclude: |
       index.njk
+      _index.11tydata.js
   - source: src/_content/tools/
     dest: src/_content/tools/
     deleteOrphaned: true
     exclude: |
       index.njk
+      _index.11tydata.js
