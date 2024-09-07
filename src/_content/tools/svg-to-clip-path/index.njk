@@ -2,19 +2,15 @@
 tags:
 - tool 
 date: 2022-08-25
-layout: default
 title: SVG to CSS Polygon
-permalink: "tools/svg-to-polygon/"
-published: true
-eleventyNavigation:
-  key: SVG to CSS Polygon
-  parent: 'tools'
-  order: 1
 ---
-<main class="site__main main--projects project--clip-paths">
-
+<section class="banner banner--default">
   <h1>{{ title }}</h1>
-  <p>Tool For converting SVG paths into CSS Polygon shapes. Right now, it can only handle simpler SVG's that don't have multiple path properties.</p>
+  <p>Convert SVG paths into CSS polygon shapes.</p>
+</section>
+
+<section class="component component--standard">
+  <p>Right now, it can only handle simpler SVG's that don't have multiple path properties.</p>
   <p>The CSS polygon property can only handle straight lines, so the more points used the smoother curves will be. The lower the point density value, the more points will be used to create the clip path.</p>
 
   <form action="">
@@ -37,8 +33,7 @@ eleventyNavigation:
   <div class="output images"></div>
 
   <button class="copy btn">Copy CSS</button>
-
-</main>
+</section>
 
 <link rel="stylesheet" href="/css/plugins/a11y-dark.min.css">
 <script type="text/javascript" src="/js/plugins/highlight.min.js"></script>
