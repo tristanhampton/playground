@@ -1,5 +1,6 @@
 const os = require('os');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
+const { title } = require('process');
 
 // https://github.com/markdown-it/markdown-it
 const md = require('markdown-it')({
@@ -25,8 +26,9 @@ module.exports = function (config) {
 		return md.render(content);
 	});
 
-	//--- Misc Options
-	// Additional files to watch for changes
+	/* General Site Setup
+	 * ----------------------------------------------- */
+	//--- Watches
 	config.addWatchTarget("src/scss/**/*.scss");
 	config.addWatchTarget("src/js/**/*.js");
 
@@ -44,12 +46,19 @@ module.exports = function (config) {
 	//--- Adds fonts to _site
 	config.addPassthroughCopy({ "src/fonts": "fonts" });
 
-	//--- Creative Coding Assets
+	/* Content Assets
+	 * ----------------------------------------------- */
+	//--- Creative Coding
 	config.addPassthroughCopy({ "src/_content/generative/*/*.js": 'js/generative' });
 	config.addPassthroughCopy({ "src/_content/generative/*/*.png": 'img/generative' });
 	config.addPassthroughCopy({ "src/_content/generative/*/*.json": 'js/generative' });
 	config.addPassthroughCopy({ "src/_content/generative/*/*.mp3": 'mp3/generative' });
 
+	//--- Projects
+	config.addPassthroughCopy({ "src/_content/projects/*/*.png": 'projects/img' });
+
+	/* Shortcodes
+	 * ----------------------------------------------- */
 	config.addShortcode("youtube", (videoURL, title) => {
 		const url = new URL(videoURL);
 		const id = url.searchParams.get("v");
