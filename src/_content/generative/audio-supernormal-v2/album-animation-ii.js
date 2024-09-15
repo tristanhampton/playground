@@ -15,7 +15,7 @@ let audio, audioContext, audioData, sourceNode, analyserNode, fft;
 let minDb, maxDb, channels = [];
 
 function preload() {
-	audio = loadSound('../mp3/supernormal.mp3');
+	audio = loadSound('/mp3/generative/supernormal.mp3');
 	audioContext = getAudioContext();
 	analyserNode = new p5.FFT(0.9);
 }

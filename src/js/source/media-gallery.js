@@ -1,4 +1,4 @@
-import { Fancybox } from '../vendor/fancybox.min.js';
+import { Fancybox } from '../plugins/fancybox.min.js';
 
 export const initMediaGalleries = () => {
   const galleries = document.querySelectorAll('.component--media-gallery');

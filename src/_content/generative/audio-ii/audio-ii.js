@@ -12,7 +12,7 @@ let audio, audioContext, audioData, sourceNode, analyserNode
 let bin, bins = [], lineWidth, mapped, minDb, maxDb, lineWidths = [];
 
 function preload() {
-	audio = loadSound('../mp3/Apta - Elements 1 - 07 Breath.mp3');
+	audio = loadSound('/mp3/generative/Apta - Elements 1 - 07 Breath.mp3');
 	audioContext = getAudioContext();
 	analyserNode = new p5.FFT(0.9);
 }

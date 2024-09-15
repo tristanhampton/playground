@@ -33,6 +33,7 @@ module.exports = function (config) {
 	//--- Adds CSS/JS to _site
 	config.addPassthroughCopy({ "_dist/main.css": "css/main.css" });
 	config.addPassthroughCopy({ "_dist/main.js": "js/main.js" });
+	config.addPassthroughCopy({ "src/js/plugins/*.js": "js/plugins" });
 
 	//--- Adds Favicons to _site
 	config.addPassthroughCopy({ "src/favicons": "favicons" });
@@ -42,6 +43,12 @@ module.exports = function (config) {
 
 	//--- Adds fonts to _site
 	config.addPassthroughCopy({ "src/fonts": "fonts" });
+
+	//--- Creative Coding Assets
+	config.addPassthroughCopy({ "src/_content/generative/*/*.js": 'js/generative' });
+	config.addPassthroughCopy({ "src/_content/generative/*/*.png": 'img/generative' });
+	config.addPassthroughCopy({ "src/_content/generative/*/*.json": 'js/generative' });
+	config.addPassthroughCopy({ "src/_content/generative/*/*.mp3": 'mp3/generative' });
 
 	config.addShortcode("youtube", (videoURL, title) => {
 		const url = new URL(videoURL);
