@@ -1,12 +1,11 @@
 {
-  "title": "11ty Starter",
-  "GTM_ID": null,
+  "title": "Tristan Hampton",
+  "GTM_ID": "GTM-TWS3W3Q",
   "og_image_default" : "/img/og-default.jpg",
   "theme_colour": "#222",
   "twitter_card": "summary_large_image",
-  "facebook": "https://facebook.com",
-  "instagram": "https://instagram.com",
-  "linkedin": "https://linkedin.com",
-  "youtube": "https://youtube.com",
-  "x": "https://twitter.com"
+  "instagram": "https://www.instagram.com/trihampton",
+  "linkedin": "https://www.linkedin.com/in/tristanhampton/",
+  "youtube": "",
+  "x": "https://www.threads.net/@trihampton"
 }
