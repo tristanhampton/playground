@@ -6,6 +6,7 @@ draft: true
 date: 2024-04-25T18:39:53.375Z
 summary: My experience building a home server using Proxmomx and a Dell Optiplex
   7050 SFF desktop, full of plenty of highs and lows.
+tags: blog
 ---
 I've gone through a number of iterations of home servers as I learn more about them. My first was just a Raspberry Pi with an external hard drive plugged in. Then I moved onto a cheap old laptop I had lying around. Eventually I saw [Retail Era](https://retail.era.ca/) sold mystery boxes and I thought that having my own fully fledged server at home would be *the coolest thing*. I set this one up with docker containers to host all my services. It was too large to keep in the living room, so I had to get a cheap [wifi extender](https://www.amazon.ca/TP-Link-AC750-WiFi-Range-Extender/dp/B07N1WW638/ref=sr_1_7?crid=22R1S62BHJPRQ&dib=eyJ2IjoiMSJ9.FmYnZZENPNoiAsi6FUVWVg-Dd69fqbfmv2MNh9CzjqBeo_Ug3bBaWOYJGuVdGn6sWigW99swKg-A10KxydiR5G0ysvm9gvWLTZgNEUKeaT5nNKCOjKrpezmhvUU9NXtT3JdjfMQ5L-RddO7T-k4GYFigTgfJvwOGMe0u0FNPrc3w0KCwy22MXnG2Dw80WMgndC8WlOs7NA01qYPpRGGjUlb-NM9MXMjNnmBCP5OtE3fSAJpMlQHEjuRvsI3j4YCSmzyxdBA3W0xqfvSHF0Hg5dPviu7DJn4_jfTS734VZRI.Aby-fXYGKgF1a2SAC3v0RTHQLmXccxmx_Xd1MefgV40&dib_tag=se&keywords=tp+link+wifi+extender&qid=1714070707&sprefix=tp+link+%2Caps%2C205&sr=8-7) from Amazon that I could plug it into while it sat in the storage room unmounted and objectively a little sad. 
 

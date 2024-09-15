@@ -17,6 +17,7 @@
 
 /* Components
  * ----------------------------------------------- */
+@import "components/standard";
 @import "components/banner-default";
 @import "components/text-block";
 @import "components/table";
@@ -25,3 +26,8 @@
 @import "components/media";
 @import "components/media-gallery";
 @import "components/form";
+@import "components/text-list";
+
+/* Pages
+ * ----------------------------------------------- */
+@import "pages/home"

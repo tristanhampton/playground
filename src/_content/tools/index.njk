@@ -3,17 +3,19 @@ layout: default
 siteTitle: "Tristan Hampton"
 title: "Tools"
 permalink: "/tools/"
-metaDescription: "Sometimes I make things to make my life easier, and post them here."
+meta_description: "Sometimes I make things to make my life easier, and post them here."
 ---
-<h1>{{title}}</h1>
-<p>Sometimes I have to make something to make my life easier, or just becuase I think it's neat. They're listed here!</p>
+<section class="banner banner--default">
+  <h1>{{title}}</h1>
+  <p>Sometimes I have to make something to make my life easier, or just becuase I think it's neat. They're listed here!</p>
+</section>
 
-<ul class="link-list">
-  {% for tool in collections.tool | reverse %}
-    {% if tool.data.published %}
+<section class="component component--standard-narrow">
+  <ul class="link-list">
+    {% for tool in collections.tool | reverse %}
       <li>
         <a href="{{ tool.url }}">{{ tool.data.title }}</a>
       </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+</section>

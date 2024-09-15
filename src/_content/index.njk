@@ -1,35 +1,85 @@
 ---
-title: "Home Page"
+title: "Home"
 meta_description: "The home page of this 11ty site starter"
 og_title: "11ty Starter Home Page"
+layout: home
 ---
-<section class="banner style--default">
-  <h1>Playground</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quaerat ducimus nobis deleniti doloremque minus? Ullam natus earum ipsum odit. Dolorem dolor, magnam veniam consectetur beatae minima unde quas dicta.</p>
-</section>
+<div class="column--left">
 
-<section class="component component--child-pages">
-  <h2>Child Pages</h2>
-  <ul class="flex-wrapper">
-    <li>
-      <a href="/kitchen-sink">
-        <p class="h3">Kitchen Sink</p>
-        <p class="description">Landing page for testing</p>
-      </a>
-    </li>
+  <section class="banner style--default">
+    <h1>Playground</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quaerat ducimus nobis deleniti doloremque minus? Ullam natus earum ipsum odit. Dolorem dolor, magnam veniam consectetur beatae minima unde quas dicta.</p>
+  </section>
+  <section class="component component--standard-wide">
+    <h2>Projects</h2>
+    <p>Most of the websites I've built are within the education or public sectors, with some other private companies sprinkled in here and there. Below are some of my most recent, and <a href="/projects">my full project archive is also available.</a>
+    </p>
+    <ul class="project-list">
+      {% for project in collections.project | reverse %}
+        {% if loop.index0 < 6 %}
+          <li class="project-item">
+            <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
+              <h3>{{ project.data.short }}</h3>
+              <picture>
+                <img src="projects/img/{{ project.data.img_small }}" alt="screenshot of the {{ project.data.title }} website">
+              </picture>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
 
-    <li>
-      <a href="/kitchen-sink/text-styles">
-        <p class="h3">Text Styles</p>
-        <p class="description">Examples of site text styles</p>
-      </a>
-    </li>
+  <section class="component component--standard-wide">
+    <h2>Creative Coding</h2>
+    <p>I've been enjoying making art and animations using p5.js. Below are some of my favourites.</p>
+    <ul class="generative-list">
+      <li class="generative-item">
+        <a href="/generative/album-animation-ii" title="album-animation-ii">
+          <h3>Album Animation II</h3>
+          <picture>
+            <img src="/generative/img/album-animation-ii.png" alt="screenshot of the album-animation-ii art piece">
+          </picture>
+        </a>
+      </li>
+      <li class="generative-item">
+        <a href="/generative/quadrants" title="quadrants">
+          <h3>Quadrants</h3>
+          <picture>
+            <img src="/generative/img/quadrants.png" alt="screenshot of the quadrants art piece">
+          </picture>
+        </a>
+      </li>
+      <li class="generative-item">
+        <a href="/generative/points-and-bezier/" title="Points and bezier">
+          <h3>Points and Bezier</h3>
+          <picture>
+            <img src="/generative/img/points-and-bezier.png" alt="screenshot of the flow field art piece">
+          </picture>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-    <li>
-      <a href="/about">
-        <p class="h3">About</p>
-        <p class="description">Just an empty about page</p>
-      </a>
-    </li>
-  </ul>
-</section>
+  {% include 'footer.njk' %}
+</div>
+
+<div class="column--right">
+  <section class="component component--standard-wide content--bookmarks">
+    <h2 class="h4">Latest Finds</h2>
+    <p>These are links to things I've come accross online that I think are interesting, or deserving of remembering to look at later.</p>
+    <ul class="text-list">
+      {% for bookmark in collections.bookmark | reverse %}
+        {% if loop.index0 < 20 %}
+          <li class="bookmark-item">
+            <a class="h5" href="{{bookmark.data.link}}">{{ bookmark.data.title }}
+              <span class="sr-only">(external link)</span></a>
+            {% if bookmark.data.description %}
+              {{ bookmark.data.description|markdown|safe }}
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+</div>

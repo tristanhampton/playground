@@ -1,0 +1,36 @@
+.page--home {
+  --page-margin-200: var(--col);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  .column--left,
+  .column--right {
+    max-height: calc(100vh - 5rem);
+    overflow: auto;
+  }
+
+  .column--left {
+    flex: 1 1 calc(100% - 40rem);
+  }
+
+  .column--right {
+    flex: 1 1 clamp(20rem, 3vw, 40rem);
+  }
+  
+  .content--bookmarks {
+    grid-row: 1 / 1000;
+    grid-column: 2 / 3;
+    margin: 0;
+    padding: var(--padding-200);
+    border: 0.1rem dashed black;
+
+    p {
+      font-size: 0.8em;
+    }
+  }
+
+  @media screen and (max-width: 911px) {
+    display: block;
+  }
+}

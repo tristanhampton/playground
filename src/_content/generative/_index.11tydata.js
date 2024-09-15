@@ -3,7 +3,7 @@ module.exports = function () {
     layout: 'canvas',
     published: false,
     ogType: 'website',
-    metaDescription: "Artwork built using p5.js",
+    meta_description: "Artwork built using p5.js",
     twitterCard: 'summary_large_image',
     eleventyComputed: {
       slug: data => {
@@ -22,7 +22,7 @@ module.exports = function () {
       ogImage: data => {
         return `/generative/img/${data.slug}.png`;
       },
-      ogTitle: data => {
+      og_title: data => {
         return data.title;
       }
     }

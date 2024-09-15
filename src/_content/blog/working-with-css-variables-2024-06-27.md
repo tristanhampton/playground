@@ -4,6 +4,7 @@ type: post
 title: Working with CSS Variables
 date: 2024-06-27T19:33:37.238Z
 summary: Thoughts on using CSS Variables and how they've impacted my day to day.
+tags: blog
 ---
 In the lifespan of the internet, I'm a fairly new developer at only five years old post grad. Most of my CSS knowledge was built on learning to use SCSS, @mixins, and SCSS variables.
 
