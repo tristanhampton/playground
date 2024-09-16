@@ -1,5 +1,6 @@
 const os = require('os');
 const dumpFilter = require("@jamshop/eleventy-filter-dump");
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 const { title } = require('process');
 
 // https://github.com/markdown-it/markdown-it
@@ -19,12 +20,18 @@ module.exports = function (config) {
 	// We're setting 11ty to build when scss/js is updated, but we want a delay so that the assets have time to build
 	config.setWatchThrottleWaitTime(120);
 
-	//--- Plugins
+	/* Plugins
+	 * ----------------------------------------------- */
 	config.addFilter("dump", dumpFilter);
-
 	config.addFilter("markdown", function(content) {
 		return md.render(content);
 	});
+	// https://www.npmjs.com/package/@codestitchofficial/eleventy-plugin-sharp-images
+	config.addPlugin(eleventyPluginSharpImages, {
+		urlPath: "/img/processed",
+		outputDir: "_dist/img",
+});
+
 
 	/* General Site Setup
 	 * ----------------------------------------------- */
@@ -35,6 +42,7 @@ module.exports = function (config) {
 	//--- Adds CSS/JS to _site
 	config.addPassthroughCopy({ "_dist/main.css": "css/main.css" });
 	config.addPassthroughCopy({ "_dist/main.js": "js/main.js" });
+	config.addPassthroughCopy({ "_dist/img": "img/processed" });
 	config.addPassthroughCopy({ "src/js/plugins/*.js": "js/plugins" });
 
 	//--- Adds Favicons to _site

@@ -43,7 +43,7 @@
 		<meta name="theme-color" content="{{ site.theme_colour }}" />
 	{% endif %}
 </head>
-<body class="site">
+<body class="site layout--{{ layout|slugify }}">
   {% if site.GTM_ID %}
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWS3W3Q"

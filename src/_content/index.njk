@@ -2,84 +2,63 @@
 title: "Home"
 meta_description: "The home page of this 11ty site starter"
 og_title: "11ty Starter Home Page"
-layout: home
 ---
-<div class="column--left">
+<section class="component component--standard-wide">
+  <h2>Creative Coding</h2>
+  <p>I've been enjoying making art and animations using p5.js. Below are some of my favourites.</p>
+  <ul class="flex-wrapper">
+    <li class="generative-item">
+      <a href="/generative/album-animation-ii" title="album-animation-ii">
+        <h3>Album Animation II</h3>
+        <picture>
+          <source srcset="{% getUrl '/generative/audio-supernormal-v2/album-animation-ii.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+          <source srcset="{% getUrl '/generative/audio-supernormal-v2/album-animation-ii.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+          <img src="{% getUrl '/generative/audio-supernormal-v2/album-animation-ii.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the album-animation-ii art piece">
+        </picture>
+      </a>
+    </li>
+    <li class="generative-item">
+      <a href="/generative/quadrants" title="quadrants">
+        <h3>Quadrants</h3>
+        <picture>
+          <source srcset="{% getUrl '/generative/quadrants/quadrants.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+          <source srcset="{% getUrl '/generative/quadrants/quadrants.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+          <img src="{% getUrl '/generative/quadrants/quadrants.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the quadrants art piece">
+        </picture>
+      </a>
+    </li>
+    <li class="generative-item">
+      <a href="/generative/points-and-bezier/" title="Points and bezier">
+        <h3>Points and Bezier</h3>
+        <picture>
+          <source srcset="{% getUrl '/generative/points-and-flow/points-and-bezier.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+          <source srcset="{% getUrl '/generative/points-and-flow/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+          <img src="{% getUrl '/generative/points-and-flow/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the points and bezier art piece">
+        </picture>
+      </a>
+    </li>
+  </ul>
+</section>
 
-  <section class="banner style--default">
-    <h1>Playground</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quaerat ducimus nobis deleniti doloremque minus? Ullam natus earum ipsum odit. Dolorem dolor, magnam veniam consectetur beatae minima unde quas dicta.</p>
-  </section>
-  <section class="component component--standard-wide">
-    <h2>Projects</h2>
-    <p>Most of the websites I've built are within the education or public sectors, with some other private companies sprinkled in here and there. Below are some of my most recent, and <a href="/projects">my full project archive is also available.</a>
-    </p>
-    <ul class="project-list">
-      {% for project in collections.project | reverse %}
-        {% if loop.index0 < 6 %}
-          <li class="project-item">
-            <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
-              <h3>{{ project.data.short }}</h3>
-              <picture>
-                <img src="projects/img/{{ project.data.img_small }}" alt="screenshot of the {{ project.data.title }} website">
-              </picture>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section class="component component--standard-wide">
-    <h2>Creative Coding</h2>
-    <p>I've been enjoying making art and animations using p5.js. Below are some of my favourites.</p>
-    <ul class="generative-list">
-      <li class="generative-item">
-        <a href="/generative/album-animation-ii" title="album-animation-ii">
-          <h3>Album Animation II</h3>
-          <picture>
-            <img src="/generative/img/album-animation-ii.png" alt="screenshot of the album-animation-ii art piece">
-          </picture>
-        </a>
-      </li>
-      <li class="generative-item">
-        <a href="/generative/quadrants" title="quadrants">
-          <h3>Quadrants</h3>
-          <picture>
-            <img src="/generative/img/quadrants.png" alt="screenshot of the quadrants art piece">
-          </picture>
-        </a>
-      </li>
-      <li class="generative-item">
-        <a href="/generative/points-and-bezier/" title="Points and bezier">
-          <h3>Points and Bezier</h3>
-          <picture>
-            <img src="/generative/img/points-and-bezier.png" alt="screenshot of the flow field art piece">
-          </picture>
-        </a>
-      </li>
-    </ul>
-  </section>
-
-  {% include 'footer.njk' %}
-</div>
-
-<div class="column--right">
-  <section class="component component--standard-wide content--bookmarks">
-    <h2 class="h4">Latest Finds</h2>
-    <p>These are links to things I've come accross online that I think are interesting, or deserving of remembering to look at later.</p>
-    <ul class="text-list">
-      {% for bookmark in collections.bookmark | reverse %}
-        {% if loop.index0 < 20 %}
-          <li class="bookmark-item">
-            <a class="h5" href="{{bookmark.data.link}}">{{ bookmark.data.title }}
-              <span class="sr-only">(external link)</span></a>
-            {% if bookmark.data.description %}
-              {{ bookmark.data.description|markdown|safe }}
-            {% endif %}
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </section>
-</div>
+<section class="component component--standard-wide">
+  <h2>Projects</h2>
+  <p>Most of the websites I've built are within the education or public sectors, with some other private companies sprinkled in here and there. Below are some of my most recent, and <a href="/projects">my full project archive is also available.</a>
+  </p>
+  <ul class="flex-wrapper">
+    {% for project in collections.project | reverse %}
+      {% if loop.index0 < 3 %}
+        <li class="project-item">
+          <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
+            <h3>{{ project.data.short }}</h3>
+            {% set imgPath = project.page.filePathStem + '.png' %}
+            <picture>
+              <source srcset="{% getUrl imgPath | resize({ height: 300, width: 300, position: 'top' }) | avif({ quality: 100 }) %}" media="(max-width: 768px)">
+              <source srcset="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" media="(min-width: 769px)">
+              <img src="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" alt="screenshot of the points and bezier art piece">
+            </picture>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

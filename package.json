@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@codestitchofficial/eleventy-plugin-sharp-images": "^1.0.7",
     "@sindresorhus/slugify": "^2.2.1",
     "markdown-it": "^14.1.0"
   },
