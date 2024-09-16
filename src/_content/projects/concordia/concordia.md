@@ -8,7 +8,4 @@ title: Concordia 100 Year Centenial
 short: Concordia CUE
 redirect: true
 website_url: "https://concordia.ab.ca/cue100/"
-img_desktop: "concordia-desktop.png"
-img_mobile: "concordia-mobile.png"
-img_small: "concordia-small.png"
 ---

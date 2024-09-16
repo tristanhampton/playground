@@ -23,14 +23,14 @@ module.exports = function (config) {
 	/* Plugins
 	 * ----------------------------------------------- */
 	config.addFilter("dump", dumpFilter);
-	config.addFilter("markdown", function(content) {
+	config.addFilter("markdown", function (content) {
 		return md.render(content);
 	});
 	// https://www.npmjs.com/package/@codestitchofficial/eleventy-plugin-sharp-images
 	config.addPlugin(eleventyPluginSharpImages, {
 		urlPath: "/img/processed",
 		outputDir: "_dist/img",
-});
+	});
 
 
 	/* General Site Setup
