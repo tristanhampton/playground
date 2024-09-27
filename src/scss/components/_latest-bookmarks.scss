@@ -1,0 +1,24 @@
+.component--latest-bookmarks {
+  padding: var(--padding-200) var(--page-margin-200);
+
+  .bookmark-item {
+    * + p {
+      margin-top: var(--padding-100);
+    }
+  }
+}
+
+/* Sidebar Variant
+ * ----------------------------------------------- */
+.column--right .component--latest-bookmarks {
+  padding: var(--padding-200) var(--padding-200);
+
+  @media screen and (max-width: 911px) {
+    padding: var(--padding-200) var(--page-margin-200);
+    
+    // Only display 3 on mobile
+    .bookmark-item:nth-of-type(n+4) {
+      display: none;
+    }
+  }
+}
