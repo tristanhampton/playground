@@ -12,39 +12,46 @@ meta_description: "The full list of web projects that I have worked on, along wi
 
 <main class="site__main main--projects">
 
-	<h1>Projects</h1>
+	<section class="banner banner__default">
+		<h1>Projects</h1>
+	</section>
 
-	<h2>Projects with Yellow Pencil</h2>
-	<small><em>February 2022 - Present</em></small>
-	<ul class="project-list">
-		{% for project in collections.yellowpencil | reverse %}
-			{% if project.data.published != false %}
+	<section class="component component--standard-wide">
+		<h2>Projects with Yellow Pencil</h2>
+		<small><em>February 2022 - Present</em></small>
+		<ul class="flex-wrapper">
+			{% for project in collections.yellowpencil | reverse %}
 				<li class="project-item">
 					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
 						<h3>{{ project.data.short }}</h3>
+						{% set imgPath = project.page.filePathStem + '.png' %}
 						<picture>
-							<img src="/projects/img/{{ project.data.img_small }}" alt="screenshot of the {{ project.data.title }} website">
+							<source srcset="{% getUrl imgPath | resize({ height: 300, width: 300, position: 'top' }) | avif({ quality: 100 }) %}" media="(max-width: 768px)">
+							<source srcset="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" media="(min-width: 769px)">
+							<img src="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" alt="screenshot of the points and bezier art piece">
 						</picture>
 					</a>
 				</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
+			{% endfor %}
+		</ul>
 
-	<h2>Projects with Box Clever</h2>
-	<small><em>December 2020 - February 2022</em></small>
-	<ul class="project-list">
-		{% for project in collections.boxclever | reverse %}
-			{% if project.data.published != false %}
+		<h2>Projects with Box Clever</h2>
+		<small><em>December 2020 - February 2022</em></small>
+		 <ul class="flex-wrapper">
+			{% for project in collections.boxclever | reverse %}
 				<li class="project-item">
 					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
 						<h3>{{ project.data.short }}</h3>
+						{% set imgPath = project.page.filePathStem + '.png' %}
 						<picture>
-							<img src="/projects/img/{{ project.data.img_small }}" alt="screenshot of the {{ project.data.title }} website">
+							<source srcset="{% getUrl imgPath | resize({ height: 300, width: 300, position: 'top' }) | avif({ quality: 100 }) %}" media="(max-width: 768px)">
+							<source srcset="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" media="(min-width: 769px)">
+							<img src="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" alt="screenshot of the points and bezier art piece">
 						</picture>
 					</a>
 				</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
+			{% endfor %}
+		</ul>
+	</section>
+
 </main>
