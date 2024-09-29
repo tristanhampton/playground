@@ -45,8 +45,11 @@ meta_description: "I enjoy making art using code. I use p5.js to create images, 
 					<li class="generative-item">
 						<a href="{{ project.url }}" title="{{ project.data.title }}">
 							<h3>{{ project.data.title }}</h3>
+							{% set imgPath = project.page.filePathStem + '.png' %}
 							<picture>
-								<img src="/img/generative/{{ project.data.thumbnail }}" alt="screenshot of the {{ project.data.title }} art piece">
+								<source srcset="{% getUrl imgPath | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+								<source srcset="{% getUrl imgPath | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+								<img src="{% getUrl imgPath | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the {{ project.data.title }} art piece">
 							</picture>
 						</a>
 					</li>

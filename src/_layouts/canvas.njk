@@ -2,18 +2,22 @@
 {% include 'header.njk' %}
 
 <main class="site__main main--projects">
-	<h1>{{ title }}</h1>
-	<p>{{ intro | safe }}</p>
-	{# <p id="p5_loading" class="loadingclass">The canvas is loading, just one moment.</p> #}
+	<section class="banner banner--default">
+		<h1>{{ title }}</h1>
+		{% if intro %}
+			<p>{{ intro | safe }}</p>
+		{% endif %}
+	</section>
 
-	<div class="generative-canvas" id="canvasContainer"></div>
+	<div class="component component--standard-wide">
+		<div class="generative-canvas" id="canvasContainer"></div>
 
-	<h2 class="sr-only project-settings-title">{{ title }} Settings</h2>
-	<div class="project__tweak-settings"></div>
+		<h2 class="sr-only project-settings-title">{{ title }} Settings</h2>
+		<div class="project__tweak-settings"></div>
 
-	{# Any extra markup can go here from the project file #}
-  {{ content | safe }}
-
+		{# Any extra markup can go here from the project file #}
+		{{ content | safe }}
+	</div>
 </main>
 
 {% for library in libraries %}
