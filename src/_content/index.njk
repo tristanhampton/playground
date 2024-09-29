@@ -51,6 +51,7 @@ og_title: "11ty Starter Home Page"
           <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
             <h3>{{ project.data.short }}</h3>
             {% set imgPath = project.page.filePathStem + '.png' %}
+            {{ imgPath | dump |safe }}
             <picture>
               <source srcset="{% getUrl imgPath | resize({ height: 300, width: 300, position: 'top' }) | avif({ quality: 100 }) %}" media="(max-width: 768px)">
               <source srcset="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" media="(min-width: 769px)">
