@@ -1,12 +1,19 @@
 <header class="site__header">
-  <nav class="site__navigation">
-    <ul>
-      <li><a href="/generative/">Creative Coding</a></li>
-      <li><a href="/projects/">Projects</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/tools/">Tools</a></li>
-      <li><a href="/me/">Me</a></li>
-      <li><a href="/bookmarks/">Bookmarks</a></li>
-    </ul>
-  </nav>
+  <a href="/" class="home-link">
+    {% include 'icons/home.njk' %}
+  </a>
+  <button class="menu-toggle js-menu-toggle" aria-label="Open navigation">
+    {% include 'icons/menu.njk' %}
+    {% include 'icons/close.njk' %}
+  </button>
 </header>
+<nav class="site__navigation">
+  <ul>
+    <li><a href="/generative/">Creative Coding</a></li>
+    <li><a href="/projects/">Projects</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/tools/">Tools</a></li>
+    <li><a href="/me/">Me</a></li>
+    <li><a href="/bookmarks/">Bookmarks</a></li>
+  </ul>
+</nav>

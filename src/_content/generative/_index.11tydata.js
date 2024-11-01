@@ -5,6 +5,9 @@ module.exports = function () {
     ogType: 'website',
     meta_description: "Artwork built using p5.js",
     twitterCard: 'summary_large_image',
+    permalink: function({title}) {
+      return `/generative/${this.slugify(title)}/`;
+    },
     eleventyComputed: {
       slug: data => {
         return  data.title.toLowerCase().replaceAll(' ', '-');
@@ -24,7 +27,7 @@ module.exports = function () {
       },
       og_title: data => {
         return data.title;
-      }
+      },
     }
   }
 }

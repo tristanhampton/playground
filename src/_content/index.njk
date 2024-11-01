@@ -3,6 +3,10 @@ title: "Home"
 meta_description: "The home page of this 11ty site starter"
 og_title: "11ty Starter Home Page"
 ---
+<div class="banner banner__default">
+  <h1 class="sr-only">Home</h1>
+  <p class="h1">???</p>
+</div>
 <section class="component component--standard-wide">
   <h2>Creative Coding</h2>
   <p>I've been enjoying making art and animations using p5.js. Below are some of my favourites.</p>
@@ -31,9 +35,9 @@ og_title: "11ty Starter Home Page"
       <a href="/generative/points-and-bezier/" title="Points and bezier">
         <h3>Points and Bezier</h3>
         <picture>
-          <source srcset="{% getUrl '/generative/points-and-flow/points-and-bezier.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
-          <source srcset="{% getUrl '/generative/points-and-flow/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
-          <img src="{% getUrl '/generative/points-and-flow/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the points and bezier art piece">
+          <source srcset="{% getUrl '/generative/points-and-bezier/points-and-bezier.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+          <source srcset="{% getUrl '/generative/points-and-bezier/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+          <img src="{% getUrl '/generative/points-and-bezier/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the points and bezier art piece">
         </picture>
       </a>
     </li>
