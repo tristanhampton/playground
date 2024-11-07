@@ -1,6 +1,6 @@
 /* System Variables
  * ----------------------------------------------- */
- :root {
+:root {
   //set to 10px to use rem as font unit. 1.6rem = 16px
   font-size: 16px;
   font-size: 62.5%;
@@ -56,6 +56,62 @@
   --system-green-500: #00B38F;
   --system-yellow-500: #FFE75D;
   --system-red-500: #DB6666;
+
+  // Olives
+  --h-olive: 74;
+  --s-olive: 32%;
+  --olive-100: hsl(var(--h-olive), var(--s-olive), 10%);
+  --olive-200: hsl(var(--h-olive), var(--s-olive), 20%);
+  --olive-300: hsl(var(--h-olive), var(--s-olive), 30%);
+  --olive-400: hsl(var(--h-olive), var(--s-olive), 40%);
+  --olive-500: hsl(var(--h-olive), var(--s-olive), 50%);
+  --olive-600: hsl(var(--h-olive), var(--s-olive), 60%);
+  --olive-700: hsl(var(--h-olive), var(--s-olive), 70%);
+  --olive-800: hsl(var(--h-olive), var(--s-olive), 80%);
+  --olive-900: hsl(var(--h-olive), var(--s-olive), 90%);
+  --olive-1000: hsl(var(--h-olive), var(--s-olive), 95%);
+
+  // Tan
+  --h-tan: 42;
+  --s-tan: 81%;
+  --tan-100: hsl(var(--h-tan), var(--s-tan), 10%);
+  --tan-200: hsl(var(--h-tan), var(--s-tan), 20%);
+  --tan-300: hsl(var(--h-tan), var(--s-tan), 30%);
+  --tan-400: hsl(var(--h-tan), var(--s-tan), 40%);
+  --tan-500: hsl(var(--h-tan), var(--s-tan), 50%);
+  --tan-600: hsl(var(--h-tan), var(--s-tan), 60%);
+  --tan-700: hsl(var(--h-tan), var(--s-tan), 70%);
+  --tan-800: hsl(var(--h-tan), var(--s-tan), 80%);
+  --tan-900: hsl(var(--h-tan), var(--s-tan), 90%);
+  --tan-1000: hsl(var(--h-tan), var(--s-tan), 95%);
+
+  // Cream
+  --h-cream: 52;
+  --s-cream: 94%;
+  --cream-100: hsl(var(--h-cream), var(--s-cream), 10%);
+  --cream-200: hsl(var(--h-cream), var(--s-cream), 20%);
+  --cream-300: hsl(var(--h-cream), var(--s-cream), 30%);
+  --cream-400: hsl(var(--h-cream), var(--s-cream), 40%);
+  --cream-500: hsl(var(--h-cream), var(--s-cream), 50%);
+  --cream-600: hsl(var(--h-cream), var(--s-cream), 60%);
+  --cream-700: hsl(var(--h-cream), var(--s-cream), 70%);
+  --cream-800: hsl(var(--h-cream), var(--s-cream), 80%);
+  --cream-900: hsl(var(--h-cream), var(--s-cream), 90%);
+  --cream-1000: hsl(var(--h-cream), var(--s-cream), 98%);
+
+  // Green
+  --h-green: 66;
+  --s-green: 47%;
+  --green-100: hsl(var(--h-green), var(--s-green), 10%);
+  --green-200: hsl(var(--h-green), var(--s-green), 20%);
+  --green-300: hsl(var(--h-green), var(--s-green), 30%);
+  --green-400: hsl(var(--h-green), var(--s-green), 40%);
+  --green-500: hsl(var(--h-green), var(--s-green), 50%);
+  --green-600: hsl(var(--h-green), var(--s-green), 60%);
+  --green-700: hsl(var(--h-green), var(--s-green), 70%);
+  --green-800: hsl(var(--h-green), var(--s-green), 80%);
+  --green-900: hsl(var(--h-green), var(--s-green), 90%);
+  --green-1000: hsl(var(--h-green), var(--s-green), 95%);
 }
 
 /* Typography
@@ -64,8 +120,8 @@
   --text-primary: var(--grey-200);
   --text-secondary: var(--grey-500);
 
-  --text-link-primary: var(--system-green-500);
-  --text-link-visited: var(--system-green-500);
+  --text-link-primary: var(--green-500);
+  --text-link-visited: var(--green-300);
   --text-link-hover: var(--system-yellow-500);
 
   --text-invert-primary: var(--white-1000);
@@ -106,8 +162,8 @@
  * ----------------------------------------------- */
 // Surface variables essentially work out to be background colours for things like CTA's, Tiles, etc
 :root {
-  --surface-primary: var(--white-1000);
-  --surface-invert: var(--system-green-500);
+  --surface-primary: var(--cream-1000);
+  --surface-invert: var(--olive-500);
   --surface-hover: var(--system-green-500);
 
   --surface-secondary: var(--grey-900);
@@ -115,8 +171,8 @@
   --surface-navigation-primary: var(--grey-900);
   --surface-navigation-secondary: var(--grey-900);
 
-  --surface-link-primary: var(--system-green-500);
-  --surface-link-hover: var(--system-green-500);
+  --surface-link-primary: var(--green-500);
+  --surface-link-hover: var(--green-400);
   --surface-link-invert: var(--white-1000);
   --surface-link-invert-hover: var(--system-green-500);
   --surface-disabled: var(--grey-500);
@@ -228,13 +284,13 @@
     --page-margin-300: calc(var(--col)*2);
     --page-margin-500: calc(var(--col)*3);
   }
-  
+
   @media screen and (min-width: 1020px) {
     --page-margin-100: calc(var(--col)*1);
     --page-margin-200: calc(var(--col)*2);
     --page-margin-300: calc(var(--col)*3);
     --page-margin-500: calc(var(--col)*5);
-    
+
     --component-margin-top-child-pages: var(--padding-000);
     --component-margin-top-first: var(--padding-500);
     --component-margin-top-default: var(--padding-1000);

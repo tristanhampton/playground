@@ -3,6 +3,10 @@ html {
 	font-family: sans-serif;
 }
 
+body {
+	background-color: var(--surface-primary);
+}
+
 picture {
 	overflow: hidden;
 

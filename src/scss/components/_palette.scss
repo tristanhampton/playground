@@ -1,0 +1,56 @@
+.component--palette {
+  padding: 0 var(--page-margin-200);
+  
+  .flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .swatch {
+    flex: 1 1 10%;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        background-color: var(--olive-#{$i}00);
+      }
+
+      &:nth-child(#{$i + 10}) {
+        background-color: var(--green-#{$i}00);
+      }
+      
+      &:nth-child(#{$i + 20}) {
+        background-color: var(--cream-#{$i}00);
+      }
+      
+      &:nth-child(#{$i + 30}) {
+        background-color: var(--tan-#{$i}00);
+      }
+    }
+
+    // @for $i from 4 through 6 {
+    //   &:nth-child(#{$i + 17}) {
+    //     background-color: var(--yellow-#{$i}00);
+    //   }
+
+    //   &:nth-child(#{$i + 20}) {
+    //     background-color: var(--red-#{$i}00);
+    //   }
+
+    //   &:nth-child(#{$i + 23}) {
+    //     background-color: var(--teal-#{$i}00);
+    //   }
+
+    //   &:nth-child(#{$i + 27}) {
+    //     background-color: var(--purple-#{$i}00);
+    //   }
+
+    //   &:nth-child(#{$i + 30}) {
+    //     background-color: var(--dark-blue-#{$i}00);
+    //   }
+    // }
+  }
+}
