@@ -18,36 +18,39 @@ picture {
 
 /* Wrappers
  * ----------------------------------------------- */
-.grid-wrapper {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: var(--padding-200);
+.flex-wrapper {
+	container-name: flex-wrapper;
+	container-type: inline-size;
 	padding: 0;
 	margin: 0;
 	list-style: none;
-}
-
-.flex-wrapper {
 	display: flex;
 	align-items: flex-end;
 	flex-wrap: wrap;
 	gap: var(--padding-200);
-	padding: 0;
-	margin: 0;
-	list-style: none;
 
-	>* {
-		flex: 1 1 max(250px, calc(33.3333% - var(--padding-200)));
+	> * {
+		flex: 1 1 100%;
+		margin: 0;
 	}
 }
 
-*+.grid-wrapper,
-*+.flex-wrapper {
-	margin-top: var(--vertical-type-spacing-med);
-
-	>* {
+@container flex-wrapper (min-width: 500px) {
+	.flex-wrapper > * {
+		flex: 0 1 calc(50% - 0.8rem);
 		margin: 0;
 	}
+}
+
+@container flex-wrapper (min-width: 768px) {
+	.flex-wrapper > * {
+		flex: 0 1 calc(33.333% - 1.1rem);
+		margin: 0;
+	}
+}
+
+*+.flex-wrapper {
+	margin-top: var(--vertical-type-spacing-med);
 }
 
 .sr-only {
