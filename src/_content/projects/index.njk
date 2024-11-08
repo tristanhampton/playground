@@ -22,7 +22,7 @@ meta_description: "The full list of web projects that I have worked on, along wi
 		<ul class="flex-wrapper">
 			{% for project in collections.yellowpencil | reverse %}
 				<li class="project-item">
-					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
+					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">
 						<h3>{{ project.data.short }}</h3>
 						{% set imgPath = project.page.filePathStem + '.png' %}
 						<picture>
@@ -40,7 +40,7 @@ meta_description: "The full list of web projects that I have worked on, along wi
 		 <ul class="flex-wrapper">
 			{% for project in collections.boxclever | reverse %}
 				<li class="project-item">
-					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
+					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">
 						<h3>{{ project.data.short }}</h3>
 						{% set imgPath = project.page.filePathStem + '.png' %}
 						<picture>

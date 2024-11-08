@@ -20,7 +20,7 @@ meta_description: "I enjoy making art using code. I use p5.js to create images, 
 		{% for project in collections.generative | reverse %}
 			{% if project.data.published %}
 				<li class="generative-item">
-					<a href="{{ project.url }}" title="{{ project.data.title }}">
+					<a href="{{ project.url }}" title="{{ project.data.title }}" class="card size--square">
 						<h3>{{ project.data.title }}</h3>
 						{% set imgPath = project.page.filePathStem + '.png' %}
 						<picture>
@@ -43,7 +43,7 @@ meta_description: "I enjoy making art using code. I use p5.js to create images, 
 			{% for project in collections.generative | reverse %}
 				{% if 'study' in project.data.tags %}
 					<li class="generative-item">
-						<a href="{{ project.url }}" title="{{ project.data.title }}">
+						<a href="{{ project.url }}" title="{{ project.data.title }}" class="card size--square">
 							<h3>{{ project.data.title }}</h3>
 							{% set imgPath = project.page.filePathStem + '.png' %}
 							<picture>

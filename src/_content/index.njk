@@ -12,7 +12,7 @@ og_title: "11ty Starter Home Page"
   <p>I've been enjoying making art and animations using p5.js. Below are some of my favourites.</p>
   <ul class="flex-wrapper">
     <li class="generative-item">
-      <a href="/generative/album-animation-ii" title="album-animation-ii">
+      <a href="/generative/album-animation-ii" title="album-animation-ii" class="card size--square">
         <h3>Album Animation II</h3>
         <picture>
           <source srcset="{% getUrl '/generative/audio-supernormal-v2/album-animation-ii.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
@@ -22,7 +22,7 @@ og_title: "11ty Starter Home Page"
       </a>
     </li>
     <li class="generative-item">
-      <a href="/generative/quadrants" title="quadrants">
+      <a href="/generative/quadrants" title="quadrants" class="card size--square">
         <h3>Quadrants</h3>
         <picture>
           <source srcset="{% getUrl '/generative/quadrants/quadrants.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
@@ -32,7 +32,7 @@ og_title: "11ty Starter Home Page"
       </a>
     </li>
     <li class="generative-item">
-      <a href="/generative/points-and-bezier/" title="Points and bezier">
+      <a href="/generative/points-and-bezier/" title="Points and bezier" class="card size--square">
         <h3>Points and Bezier</h3>
         <picture>
           <source srcset="{% getUrl '/generative/points-and-bezier/points-and-bezier.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
@@ -52,7 +52,7 @@ og_title: "11ty Starter Home Page"
     {% for project in collections.project | reverse %}
       {% if loop.index0 < 3 %}
         <li class="project-item">
-          <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer">
+          <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">
             <h3>{{ project.data.short }}</h3>
             {% set imgPath = project.page.filePathStem + '.png' %}
             <picture>

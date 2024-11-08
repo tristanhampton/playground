@@ -1,8 +1,4 @@
 .banner {
   padding: var(--padding-400) var(--page-margin-200);
-  background-color: var(--surface-invert);
-  // border-bottom-right-radius: 50% 80%;
-  position: relative;
-
-  background-image: url(../img/backgrounds/topography.svg);
+  border-bottom: 0.1rem dashed #000;
 }
