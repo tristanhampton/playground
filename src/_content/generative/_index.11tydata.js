@@ -5,6 +5,7 @@ module.exports = function () {
     ogType: 'website',
     meta_description: "Artwork built using p5.js",
     twitterCard: 'summary_large_image',
+    backLink: '/generative',
     permalink: function({title}) {
       return `/generative/${this.slugify(title)}/`;
     },

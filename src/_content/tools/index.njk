@@ -3,6 +3,7 @@ layout: default
 siteTitle: "Tristan Hampton"
 title: "Tools"
 permalink: "/tools/"
+backLink: false
 meta_description: "Sometimes I make things to make my life easier, and post them here."
 ---
 <section class="banner banner--default">
@@ -11,10 +12,11 @@ meta_description: "Sometimes I make things to make my life easier, and post them
 </section>
 
 <section class="component component--standard-wide">
-  <ul class="link-list">
+  <ul class="blog-list">
     {% for tool in collections.tool | reverse %}
       <li>
-        <a href="{{ tool.url }}">{{ tool.data.title }}</a>
+        <h2 class="h4"><a href="{{ tool.url }}">{{ tool.data.title }}</a></h2>
+        <p>{{ tool.data.summary }}</p>
       </li>
     {% endfor %}
   </ul>

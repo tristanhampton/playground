@@ -38,9 +38,9 @@ meta_description: 'Personal things relating to Tristan Hampton.'
 {% if collections.letterboxd.length > 0 %}
   <div class="component component--standard-wide">
     <h2>Watching...</h2>
-    <ul class="letterboxd">
+    <ul class="letterboxd flex-wrapper">
       {% for movie in collections.letterboxd | reverse %}
-        {% if loop.index0 < 5 %}
+        {% if loop.index0 < 6 %}
           <li>
             <img src="{{ movie.data.poster }}" alt="{{ movie.data.title }} Poster">
             <p class="sr-only">{{ movie.data.title }}</p>
@@ -71,15 +71,13 @@ meta_description: 'Personal things relating to Tristan Hampton.'
 {% if collections.strava.length > 0 %}
   <div class="component component--standard-wide">
     <h2>Biking...</h2>
-    <ul class="strava">
+    <ul class="strava flex-wrapper">
       {% set i = 0 %}
       {% for ride in collections.strava | reverse %}
         {% if i < 9 and ride.data.type == 'ride' %}
-          <li>
-            <h3>
-              <a href="{{ ride.data.link }}">{{ ride.data.title }}</a>
-            </h3>
-            <em>{{ ride.data.rideDate }}</em>
+          <li class="card card--text">
+            <h3 class="h4">{{ ride.data.title }}</h3>
+            <small><em>{{ ride.data.rideDate }}</em></small>
             <p>Distance: {{ ride.data.distance }}</p>
             <p>Time: {{ ride.data.time }}</p>
             <p>Speed: {{ ride.data.speed }}</p>

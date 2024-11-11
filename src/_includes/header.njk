@@ -1,4 +1,16 @@
 <header class="site__header">
+  {% if backLink %}
+    <a href="{{ backLink }}" class="back-link">
+      {% include 'icons/arrow-left.njk' %}
+    </a>
+  {% endif %}
+
+  {% if layout == 'tools' %}
+    <a href="/tools" class="back-link">
+      {% include 'icons/arrow-left.njk' %}
+    </a>
+  {% endif %}
+
   <a href="/" class="home-link">
     {% include 'icons/home.njk' %}
   </a>

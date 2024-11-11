@@ -56,3 +56,26 @@
     aspect-ratio: 1 / 1;
   }
 }
+
+.card.card--text {
+  padding: var(--padding-200);
+
+  h2,
+  h3,
+  h4,
+  h5,
+  .h2,
+  .h3,
+  .h4,
+  .h5 {
+    position: static;
+    opacity: 1;
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+  }
+
+  *+p {
+    margin-top: var(--padding-100);
+  }
+}

@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: simple
 siteTitle: "Tristan Hampton"
 title: "Bookmarks"
 meta_description: "Curated list of bookmarks."
+backLink: false
 pagination:
   data: collections.bookmark
   size: 10
@@ -10,9 +11,10 @@ pagination:
 permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
 
-<main class="site__main main--projects">
-	<h1>{{title}}</h1>
-	<p>This is my full collection of bookmarks. These are links to resources, articles, inspirations, and other misc. content that I've found online and want to keep track of.</p>
+	<div class="banner banner--default">
+		<h1>{{title}}</h1>
+		<p>This is my full collection of bookmarks. These are links to resources, articles, inspirations, and other misc. content that I've found online and want to keep track of.</p>
+	</div>
 
 	{# Form doesn't work with pagination #}
 	{# <form>
@@ -36,6 +38,7 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 		</div>
 	</form> #}
 
+<div class="component component--standard-wide">
 	<ul class="bookmark-list">
 		{% for bookmark in pagination.items %}
 			<li class="bookmark-item" data-type="{{ bookmark.data.type }}">
@@ -45,9 +48,8 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 							<span class="sr-only">Tag: </span>{{ type }}</span>
 					{% endfor %}
 				</div>
-				<p class="bookmark-link">
-					<a href="{{bookmark.data.link}}">{{ bookmark.data.title }}
-						<span class="sr-only">(external link)</span></a>
+				<p class="bookmark-link h4">
+					<a href="{{bookmark.data.link}}">{{ bookmark.data.title }}<span class="sr-only">(external link)</span></a>
 				</p>
 				{% if bookmark.data.description %}
 					{{ bookmark.data.description|markdown|safe }}
@@ -56,19 +58,20 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 		{% endfor %}
 	</ul>
 
-	<nav aria-labelledby="pagination-title" class="pagination">
-		<h2 id="pagination-title" class="sr-only">Pagination</h2>
-		<ul>
-			{%- for pageEntry in pagination.pages %}
-				<li>
-					<a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %} aria-label="go to page {{ loop.index }}">{{ loop.index }}</a>
-				</li>
-			{%- endfor %}
-		</ul>
-	</nav>
+</div>
 
-</main>
-<script>
+<nav aria-labelledby="pagination-title" class="pagination">
+	<h2 id="pagination-title" class="sr-only">Pagination</h2>
+	<ul>
+		{%- for pageEntry in pagination.pages %}
+			<li>
+				<a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %} aria-label="go to page {{ loop.index }}">{{ loop.index }}</a>
+			</li>
+		{%- endfor %}
+	</ul>
+</nav>
+
+{# <script>
 	const bookmarks = document.querySelectorAll('.bookmark-item');
 	const filter = document.querySelector('select#type');
 
@@ -105,4 +108,4 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 			}
 		});
 	}
-</script>
+</script> #}

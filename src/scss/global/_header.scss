@@ -1,6 +1,7 @@
 /* Home Link
  * ----------------------------------------------- */
-.home-link {
+.home-link,
+.back-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,6 +62,15 @@
   }
 }
 
+/* Back Link
+ * ----------------------------------------------- */
+.back-link {
+  margin-right: auto;
+}
+
+
+/* Header Layout
+ * ----------------------------------------------- */
 .site__header {
   display: flex;
   justify-content: flex-end;

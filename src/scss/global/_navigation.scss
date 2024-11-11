@@ -1,6 +1,5 @@
 .site__navigation {
   display: none;
-  padding: var(--padding-200) var(--padding-200);
   border-bottom: 0.1rem dashed black;
 
   &.active {
@@ -10,14 +9,20 @@
   ul {
     display: flex;
     justify-content: flex-end;
-    gap: var(--padding-100) var(--padding-300);
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
   a {
-    font-size: var(--heading-4);
+    display: block;
+    font-size: var(--heading-5);
+    padding: var(--padding-100) var(--padding-200);
     text-decoration: none;
+    border-left: 0.1rem dashed #000;
+  }
+
+  li:last-child a {
+    padding-right: var(--padding-200);
   }
 }

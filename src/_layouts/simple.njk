@@ -1,0 +1,7 @@
+{% include 'head.njk'%}
+{% include 'header.njk' %}
+<main class="page page--{{ title|slugify }} ">
+  {{ content | safe }}
+</main>
+
+{% include 'footer.njk' %}

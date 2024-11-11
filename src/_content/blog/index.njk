@@ -3,6 +3,7 @@ layout: default
 siteTitle: "Tristan Hampton"
 title: "Blog"
 meta_description: "The blog for Tristan Hampton."
+backLink: false
 ---
 <section class="banner banner--default">
 	<h1>{{title}}</h1>
@@ -12,7 +13,7 @@ meta_description: "The blog for Tristan Hampton."
 	<ul class="blog-list">
 		{% for post in collections.blog|reverse %}
 			<li>
-				<h2><a href="{{ post.url }}">{{post.data.title}}</a></h2>
+				<h2 class="h4"><a href="{{ post.url }}">{{post.data.title}}</a></h2>
 				<p><small>{{ post.data.summary }}</small></p>
 			</li>
 		{% endfor %}
