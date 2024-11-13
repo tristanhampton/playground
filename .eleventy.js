@@ -29,7 +29,7 @@ module.exports = function (config) {
 	// https://www.npmjs.com/package/@codestitchofficial/eleventy-plugin-sharp-images
 	config.addPlugin(eleventyPluginSharpImages, {
 		urlPath: "/img/processed",
-		outputDir: "_dist/img",
+		outputDir: "_site/img/processed",
 	});
 
 
