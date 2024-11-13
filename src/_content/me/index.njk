@@ -12,7 +12,7 @@ meta_description: 'Personal things relating to Tristan Hampton.'
 
 <div class="component component--standard-wide">
   <p>All of this data is updated hourly with a script on my home server. I've used <a href="https://rknight.me/">Robb Knight's</a> tool <a href="https://echo.rknight.me/">Echo</a>, which I've modified a tad in order to be able to create new posts as well as update existing content.</p>
-  <p>My data sources are Steam, Letterboxd, Goodreads, and Strava. Eventually I'll get around to learning the Spotify API (I'd like to feature the albums I listen to, instead of a playlist), but for now it's just an iframe.</p>
+  <p>My data sources are Steam, Letterboxd, Goodreads, and Strava.</p>
 </div>
 
 {% if collections.steam.length > 0 %}
@@ -29,11 +29,6 @@ meta_description: 'Personal things relating to Tristan Hampton.'
     </div>
   </div>
 {% endif %}
-
-<div class="component component--standard-wide">
-  <h2>Listening to...</h2>
-  <iframe class="spotify-embed" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0LyweZG1IxsBZKnnaFF4R4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
 
 {% if collections.letterboxd.length > 0 %}
   <div class="component component--standard-wide">
@@ -54,14 +49,18 @@ meta_description: 'Personal things relating to Tristan Hampton.'
 {% if collections.goodreads.length > 0 %}
   <div class="component--standard-wide component">
     <h2>Reading...</h2>
-    <ul class="goodreads">
+    <ul class="goodreads flex-wrapper">
+      {% set count = 0 %}
       {% for book in collections.goodreads | reverse %}
-        {% if book.data.category == 'read' and book.data.category != 'progress' %}
-          <li>
-            <img src="{{ book.data.cover }}" alt="{{ book.data.title }} cover">
-            <p>
-              <em>{{ book.data.title }}</em> by {{ book.data.author }}</p>
-          </li>
+        {% if count < 6 %}
+          {% if book.data.category == 'read' and book.data.category != 'progress' %}
+            <li>
+              <img src="{{ book.data.cover }}" alt="{{ book.data.title }} cover">
+              <p>
+                <em>{{ book.data.title }}</em> </br>{{ book.data.author }}</p>
+            </li>
+            {% set count = count + 1 %}
+          {% endif %}
         {% endif %}
       {% endfor %}
     </ul>

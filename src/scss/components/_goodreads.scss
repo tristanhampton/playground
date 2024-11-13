@@ -1,0 +1,11 @@
+.goodreads {
+  li {
+    display: flex;
+    gap: var(--padding-200);
+    align-items: center;
+  }
+
+  img + p {
+    margin: 0;
+  }
+}
