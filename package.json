@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:site": "npx @11ty/eleventy",
+    "build:site": "npx @11ty/eleventy --quiet",
     "build:assets": "webpack --config webpack.config.prod.js",
     "build": "npm-run-all build:assets build:site",
-    "dev:site": "npx @11ty/eleventy --serve",
+    "dev:site": "npx @11ty/eleventy --serve --quiet",
     "dev:assets": "webpack --config webpack.config.dev.js",
     "dev": "npm-run-all --parallel dev:assets dev:site"
   },
