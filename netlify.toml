@@ -1,6 +1,5 @@
 [[plugins]]
-package = "netlify-plugin-cache"
-package = "@netlify/plugin-lighthouse"
+package = "netlify-plugin-cache, @netlify/plugin-lighthouse"
 
   [plugins.inputs]
   paths = [
