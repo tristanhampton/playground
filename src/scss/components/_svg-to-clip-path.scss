@@ -1,0 +1,13 @@
+.page--svg-to-css-polygon {
+  .output.images {
+    margin: var(--padding-300) 0;
+    display: flex;
+    gap: var(--padding-200);
+
+    img,
+    svg {
+      flex: 1 0 calc(50% - var(--padding-200));
+      max-width: 30rem;
+    }
+  }
+}
