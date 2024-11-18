@@ -27,7 +27,7 @@ picture {
 	display: flex;
 	align-items: stretch;
 	flex-wrap: wrap;
-	gap: var(--padding-200);
+	gap: var(--padding-400);
 
 	> * {
 		flex: 1 1 100%;
@@ -37,14 +37,14 @@ picture {
 
 @container flex-wrapper (min-width: 500px) {
 	.flex-wrapper > * {
-		flex: 0 1 calc(50% - 0.8rem);
+		flex: 0 1 calc(50% - 1.6rem);
 		margin: 0;
 	}
 }
 
 @container flex-wrapper (min-width: 768px) {
 	.flex-wrapper > * {
-		flex: 0 1 calc(33.333% - 1.1rem);
+		flex: 0 1 calc(33.333% - 2.2rem);
 		margin: 0;
 	}
 }
