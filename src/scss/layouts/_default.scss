@@ -1,5 +1,7 @@
 .layout--default,
 .layout--blog {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   
   // Mobile
   @media screen and (max-width: 911px) {
@@ -16,21 +18,28 @@
     .column--left,
     .column--right {
       height: 100vh;
-      max-height: 100vh;
+      max-height: calc(100vh - 6rem);
       overflow: auto;
     }
   
     .column--left {
       flex: 1 1 calc(100% - 40rem);
       padding-bottom: var(--padding-200);
+      margin: 0 4rem;
+      border: 2px solid black;
+      border-radius: 2rem;
+      box-shadow: -8px 13px 0px 3px black;
     }
   
     .column--right {
       flex: 1 1 clamp(20rem, 3vw, 40rem);
       grid-row: 1 / 1000;
       grid-column: 2 / 3;
-      margin: 0;
       border-left: 0.1rem dashed black;
+      margin: 0 4rem 0 0;
+      border: 2px solid black;
+      border-radius: 2rem;
+      box-shadow: -8px 13px 0px 3px black;
     
       p {
         font-size: 0.8em;
