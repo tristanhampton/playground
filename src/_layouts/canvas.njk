@@ -1,31 +1,33 @@
 {% include 'head.njk' %}
-{% include 'header.njk' %}
 
-<main class="site__main main--projects">
-	<section class="banner banner--default">
-		<h1>{{ title }}</h1>
-		{% if intro %}
-			<p>{{ intro | safe }}</p>
-		{% endif %}
-	</section>
-
-	<div class="component component--standard-wide">
+<main class="column--left site__main main--projects page page--{{ title|slugify }} ">
+	<div class="window">
+		{% include 'header.njk' %}
+		<section class="banner banner--default">
+			<h1>{{ title }}</h1>
+			{% if intro %}
+				<p>{{ intro | safe }}</p>
+			{% endif %}
+		</section>
+	</div>
+	<div class="window">
 		<div class="generative-canvas" id="canvasContainer"></div>
-
-		<h2 class="sr-only project-settings-title">{{ title }} Settings</h2>
-		<div class="project__tweak-settings"></div>
 
 		{# Any extra markup can go here from the project file #}
 		{{ content | safe }}
 	</div>
 </main>
 
+<div class="column--right window">
+	<h2 class="sr-only project-settings-title">{{ title }} Settings</h2>
+	<div class="project__tweak-settings"></div>
+</div>
+
 {% for library in libraries %}
 	<script type="text/javascript" src="/js/plugins/{{ library }}"></script>
 {% endfor %}
 <script src="/js/generative/{{ js_file }}.js"></script>
 
-{% include 'footer.njk' %}
 
 </body>
 </html>

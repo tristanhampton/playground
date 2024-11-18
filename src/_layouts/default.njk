@@ -1,13 +1,13 @@
 {% include 'head.njk'%}
 
-<div class="column--left">
+<div class="column--left window">
   {% include 'header.njk' %}
   <main class="page page--{{ title|slugify }} ">
     {{ content | safe }}
   </main>
 </div>
 
-<div class="column--right">
+<div class="column--right window">
   {% include 'latest-bookmarks.njk' %}
   {% include 'footer.njk' %}
 </div>

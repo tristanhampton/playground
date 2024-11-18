@@ -1,3 +1,32 @@
 .layout--canvas {
-  
+  padding-bottom: 3rem;
+
+  .column--left {
+    height: auto;
+    max-height: unset;;
+  }
+
+  .column--right {
+    height: max-content;
+    padding-bottom: 0;
+
+  }
+
+  .window {
+    padding-bottom: 0;
+  }
+
+  .banner {
+    border-bottom: none;
+  }
+
+  .generative-canvas {
+    display: flex;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+  }
 }
