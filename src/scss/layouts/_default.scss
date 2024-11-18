@@ -13,7 +13,7 @@
 .layout--default,
 .layout--blog,
 .layout--canvas {
-  padding: max(var(--padding-300), calc(var(--col)/2));
+  padding-inline: max(var(--padding-300), calc(var(--col)/2));
   
   // Mobile
   @media screen and (max-width: 911px) {
@@ -32,8 +32,12 @@
   
     .column--left,
     .column--right {
+      margin-block: max(var(--padding-300), calc(var(--col)/2));
       height: 100vh;
       max-height: calc(100vh - var(--col));
+      overflow: auto;
+      padding-bottom: 1.5rem; // make space for box shadows
+      padding-left: 1.1rem; // make space for box shadows
     }
   
     .column--left {

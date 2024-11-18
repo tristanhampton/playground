@@ -22,6 +22,10 @@
     border-left: 0.1rem dashed #000;
   }
 
+  li{
+    margin: 0;
+  }
+
   li:last-child a {
     padding-right: var(--padding-200);
   }
