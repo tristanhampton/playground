@@ -1,7 +1,7 @@
 ---
 title: "Vampire Survivors"
 id: 1794680
-date: 2024-11-18T00:00:07.723Z
+date: 2024-11-19T00:00:06.264Z
 link: games/steam/recent/vampire-survivors
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1794680/3677cf1be3be1f4ea42261c62ce10519715ade58.jpg
 playtime_2weeks: 45
