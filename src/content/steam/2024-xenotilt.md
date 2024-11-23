@@ -1,13 +1,13 @@
 ---
 title: "XENOTILT"
 id: 2008980
-date: 2024-11-22T00:00:09.780Z
+date: 2024-11-23T00:00:06.910Z
 link: games/steam/recent/xenotilt
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2008980/b0c6b9cd1a958b4e41fcd9b0a1b4b8828a748e8a.jpg
-playtime_2weeks: 27
-playtime_forever: 27
+playtime_2weeks: 28
+playtime_forever: 28
 playtime_windows_forever: 0
 playtime_mac_forever: 0
-playtime_linux_forever: 27
-playtime_deck_forever: 27
+playtime_linux_forever: 28
+playtime_deck_forever: 28
 ---
