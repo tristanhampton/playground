@@ -1,7 +1,7 @@
 ---
 title: "Brighter Shores"
 id: 2791440
-date: 2024-11-27T00:00:06.939Z
+date: 2024-11-28T00:00:08.413Z
 link: games/steam/recent/brighter-shores
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2791440/29359e8de6e575f68aedfe3528707c48cc0af185.jpg
 playtime_2weeks: 67
