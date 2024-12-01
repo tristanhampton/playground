@@ -1,7 +1,7 @@
 ---
 title: "Slay the Spire"
 id: 646570
-date: 2024-11-30T00:00:06.897Z
+date: 2024-12-01T00:00:06.902Z
 link: games/steam/recent/slay-the-spire
 image: http://media.steampowered.com/steamcommunity/public/images/apps/646570/33ea124ea8c03a9ce7012d34c3b348a351612fca.jpg
 playtime_2weeks: 62
