@@ -102,6 +102,6 @@ export const config = {
 		output: "_site",
 		includes: "../../src/_includes",
 		layouts: "../../src/_layouts",
-		data: "src/_data"
+		data: "../../src/_data"
 	}
 }
