@@ -1,6 +1,4 @@
-module.exports = function () {
-  return {
-    tags: 'goodreads',
-    permalink: false,
-  }
+export const config = {
+  tags: 'goodreads',
+  permalink: false,
 }

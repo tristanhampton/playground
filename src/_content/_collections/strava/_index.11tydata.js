@@ -1,6 +1,4 @@
-module.exports = function () {
-  return {
-    tags: 'strava',
-    permalink: false,
-  }
+export const config = {
+  tags: 'strava',
+  permalink: false,
 }

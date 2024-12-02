@@ -1,6 +1,6 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const { merge } = require('webpack-merge');
-const common = require('./webpack.config.common.js'); module.exports = merge(common, {
+const common = require('./webpack.config.common.cjs'); module.exports = merge(common, {
   // Enable minification and tree-shaking
   mode: 'production',
   optimization: {

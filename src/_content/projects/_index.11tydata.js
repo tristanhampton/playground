@@ -1,5 +1,3 @@
-module.exports = function () {
-  return {
-    permalink: false,
-  }
+export const config = {
+  permalink: false,
 }
