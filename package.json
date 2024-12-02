@@ -18,6 +18,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-upgrade-help": "^3.0.1",
     "@codestitchofficial/eleventy-plugin-sharp-images": "^1.0.7",
+    "@directus/sdk": "^18.0.0",
     "@sindresorhus/slugify": "^2.2.1",
     "markdown-it": "^14.1.0",
     "netlify-plugin-cache": "^1.0.3"
