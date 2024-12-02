@@ -5,7 +5,7 @@ title: "Bookmarks"
 meta_description: "Curated list of bookmarks."
 backLink: false
 pagination:
-  data: collections.bookmark
+  data: d_bookmarks
   size: 10
   reverse: true
 permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
@@ -41,18 +41,18 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 <div class="component component--standard-wide">
 	<ul class="bookmark-list">
 		{% for bookmark in pagination.items %}
-			<li class="bookmark-item" data-type="{{ bookmark.data.type }}">
+			<li class="bookmark-item" data-type="{{ bookmark.type }}">
 				<div class="tags">
-					{% for type in bookmark.data.type %}
+					{% for type in bookmark.type %}
 						<span class="tag">
 							<span class="sr-only">Tag: </span>{{ type }}</span>
 					{% endfor %}
 				</div>
 				<p class="bookmark-link h4">
-					<a href="{{bookmark.data.link}}">{{ bookmark.data.title }}<span class="sr-only">(external link)</span></a>
+					<a href="{{bookmark.link}}">{{ bookmark.title }}<span class="sr-only">(external link)</span></a>
 				</p>
-				{% if bookmark.data.description %}
-					{{ bookmark.data.description|markdown|safe }}
+				{% if bookmark.description %}
+					{{ bookmark.description|markdown|safe }}
 				{% endif %}
 			</li>
 		{% endfor %}
@@ -84,7 +84,7 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 				bookmarks
 				.forEach(bookmark => {
 					const bookmarkTypes = bookmark
-						.dataset
+						set
 						.type
 						.split(',');
 
