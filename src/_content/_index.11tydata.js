@@ -1,8 +1,6 @@
-module.exports = function () {
-  return {
-    layout: 'default',
-    directory: data => {
-      return data.title
-    }
+export const config = {
+  layout: 'default',
+  directory: data => {
+    return data.title
   }
 }

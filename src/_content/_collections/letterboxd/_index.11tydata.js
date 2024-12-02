@@ -1,6 +1,4 @@
-module.exports = function () {
-  return {
+export const config = {
     tags: 'letterboxd',
     permalink: false,
-  }
 }
