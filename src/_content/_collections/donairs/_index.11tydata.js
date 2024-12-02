@@ -1,4 +1,4 @@
-export const config = {
+export default {
   layout: 'default',
   permalink: false,
   eleventyComputed: {
@@ -11,7 +11,7 @@ export const config = {
         return 'no 🌯\'s awarded';
       }
 
-      for (i = 1; i <= rating; i++) {
+      for (let i = 1; i <= rating; i++) {
         donairRating += symbol;
       }
 

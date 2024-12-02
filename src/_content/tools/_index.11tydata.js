@@ -1,4 +1,4 @@
-export const config = {
+export default {
     layout: 'default',
     backLink: '/tools',
     directory: data => {
