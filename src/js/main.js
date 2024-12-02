@@ -1,5 +1,5 @@
-const { initMediaGalleries } = require("./source/media-gallery");
-const { initNavigation } = require("./source/navigation");
+import { initNavigation } from "./source/navigation.js";
+import { initMediaGalleries } from "./source/media-gallery.js";
 
 (() => {
   initNavigation();
