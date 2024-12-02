@@ -1,4 +1,3 @@
-import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 import os from 'os';
 import dumpFilter from "@jamshop/eleventy-filter-dump";
 import eleventyPluginSharpImages from "@codestitchofficial/eleventy-plugin-sharp-images";
@@ -34,7 +33,6 @@ export default function (eleventyConfig) {
 		urlPath: "/img/processed",
 		outputDir: "_site/img/processed",
 	});
-	eleventyConfig.addPlugin(UpgradeHelper);
 
 
 	/* General Site Setup

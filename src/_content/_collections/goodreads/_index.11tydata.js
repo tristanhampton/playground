@@ -1,4 +1,4 @@
-export const config = {
+export default {
   tags: 'goodreads',
   permalink: false,
 }

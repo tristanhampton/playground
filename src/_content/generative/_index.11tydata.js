@@ -1,4 +1,4 @@
-export const config = {
+export default {
   layout: 'canvas',
   published: false,
   ogType: 'website',
