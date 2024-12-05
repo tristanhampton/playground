@@ -1,0 +1,7 @@
+<div class="component component--standard-wide">
+  {% if component.item.section_title %}
+    <h2>{{ component.item.section_title }}</h2>
+  {% endif %}
+
+  {{component.item.content|safe}}
+</div>
