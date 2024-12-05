@@ -1,0 +1,15 @@
+---
+layout: default
+pagination:
+    data: pages
+    size: 1
+    alias: page
+permalink: "{{ page.slug }}/index.html"
+eleventyComputed:
+    title: "{{ page.page_title }}"
+---
+<section class="banner banner--default">
+    <h1>{{ title }}</h1>
+</section>
+
+{% include "page-components.njk" %}

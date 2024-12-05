@@ -1,0 +1,21 @@
+<div class="component component--standard-wide">
+  {{ component.item.pages|dump|safe }}
+
+  {% if component.item.section_title %}
+    <h2>{{ component.item.section_title }}</h2>
+  {% endif %}
+
+  {% if component.item.description %}
+    <p>{{ component.item.description }}</p>
+  {% endif %}
+
+  {% if component.item.pages %}
+    <ul>
+      {% for page in component.item.pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
