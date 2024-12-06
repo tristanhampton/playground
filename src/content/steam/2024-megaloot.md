@@ -1,7 +1,7 @@
 ---
 title: "Megaloot"
 id: 2440380
-date: 2024-12-05T00:00:08.557Z
+date: 2024-12-06T00:00:10.656Z
 link: games/steam/recent/megaloot
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2440380/3f63b0e78691bbc2b1b335a8b47f84f8ac3f2f43.jpg
 playtime_2weeks: 26
