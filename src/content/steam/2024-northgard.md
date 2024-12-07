@@ -1,7 +1,7 @@
 ---
 title: "Northgard"
 id: 466560
-date: 2024-12-06T00:00:11.431Z
+date: 2024-12-07T00:00:09.469Z
 link: games/steam/recent/northgard
 image: http://media.steampowered.com/steamcommunity/public/images/apps/466560/f290db6bc98c8b40d01a13b9c99baaf705c6ac17.jpg
 playtime_2weeks: 4
