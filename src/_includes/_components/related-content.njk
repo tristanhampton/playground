@@ -11,8 +11,9 @@
   {% if component.item.pages %}
     <ul>
       {% for page in component.item.pages %}
+        {% set data = pages|find(page.item) %}
         <li>
-          <a href="{{ page.url }}">{{ page.data.title }}</a>
+          <a href="/{{ data.slug }}">{{ data.page_title }}</a>
         </li>
       {% endfor %}
     </ul>
