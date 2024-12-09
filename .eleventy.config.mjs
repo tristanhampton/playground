@@ -34,6 +34,16 @@ export default function (eleventyConfig) {
 		outputDir: "_site/img/processed",
 	});
 
+	// eleventyConfig.addFilter('getPage', function (pageID) {
+	// 	console.log(eleventyConfig);
+	// });
+
+	eleventyConfig.addFilter("find", function find(collection = [], id = "") {
+		// If you want more advanced, dynamic filtering, you might need https://lodash.com/docs/4.17.15#get
+		// for fetching [deeply] nested properties.
+		return collection.find(pages => pages.id === id);
+	});
+
 
 	/* General Site Setup
 	 * ----------------------------------------------- */

@@ -1,5 +1,7 @@
 import directus from './directus.js';
 import { readItems } from '@directus/sdk';
+import { richText } from './components/rich-text.js';
+import { relatedContent } from './components/related-content.js';
 
 export default async () => {
     try {
@@ -12,13 +14,8 @@ export default async () => {
                 '*',
                 {
                   item: {
-                    related_content: ['*',
-                      {
-                        // Need to figure out how to get the page data from here
-                        pages: ['*']
-                      }
-                    ],
-                    block_rich_text: ['*'],
+                    ...relatedContent,
+                    ...richText,
                   }
                 }
               ]
