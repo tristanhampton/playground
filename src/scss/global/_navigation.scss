@@ -20,6 +20,11 @@
     padding: var(--padding-100) var(--padding-200);
     text-decoration: none;
     border-left: 0.1rem dashed #000;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   li{
@@ -28,5 +33,16 @@
 
   li:last-child a {
     padding-right: var(--padding-200);
+  }
+
+  @media screen and (max-width: 784px) {
+    ul {
+      flex-direction: column;;
+    }
+
+    a {
+      border-top: 0.1rem dashed #000;
+      border-left: none;
+    }
   }
 }
