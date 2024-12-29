@@ -60,8 +60,8 @@ class House {
 		this.height = height;
 		this.sWidth = this.width * 0.6; // South facing wall width
 		this.sHeight = this.height * 0.6; // South facing wall height
-		this.wWidth = 1 - this.sWidth; // West facing wall width
-		this.wHeight = 1 - this.sHeight; // West facing wall height
+		this.wWidth = this.width - this.sWidth; // West facing wall width
+		this.wHeight = this.height - this.sHeight; // West facing wall height
 		this.x = x;
 		this.y = y + (this.height - this.sHeight); // Adjust y to begin drawing house at bottom left corner of width
 		this.trueX = x;
@@ -70,6 +70,7 @@ class House {
 
 	draw() {
 		console.info('Drawing house at', this.x, this.y);
+		console.log('Width:', this.width, 'sWidth:', this.sWidth, 'wWidth:', this.wWidth);
 		// Build the south facing wall
 		const sOffset = this.sWidth*0.05;
 		const sp1 = {x: this.x, y: this.y};
@@ -98,8 +99,8 @@ class House {
 		// Build the west facing wall
 		const wOffset = this.width*0.2;
 		const wp1 = {x: sp3.x, y: sp3.y};
-		const wp2 = {x: sp3.x + this.width*0.5, y: sp3.y - wOffset};
-		const wp3 = {x: sp4.x + this.width*0.5, y: sp4.y - wOffset};
+		const wp2 = {x: sp3.x + this.wWidth, y: sp3.y - wOffset};
+		const wp3 = {x: sp4.x + this.wWidth, y: sp4.y - wOffset};
 		const wp4 = {x: sp4.x, y: sp4.y};
 
 		push();
