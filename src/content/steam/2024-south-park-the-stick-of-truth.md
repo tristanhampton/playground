@@ -1,7 +1,7 @@
 ---
 title: "South Park™: The Stick of Truth™"
 id: 213670
-date: 2024-12-28T00:00:06.762Z
+date: 2024-12-29T00:00:05.581Z
 link: games/steam/recent/south-park-the-stick-of-truth
 image: http://media.steampowered.com/steamcommunity/public/images/apps/213670/afad8295902080fb2aedd9aaabb3e21c10eecc85.jpg
 playtime_2weeks: 85
