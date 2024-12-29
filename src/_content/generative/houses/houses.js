@@ -2,7 +2,7 @@ const settings = {
   gap: null,
   cellGapRate: 0.04,
   lineGap: 3,
-  cellsX: 10,
+  cellsX: 6,
   frequency: 1,
   scale: 5,
   segments: 4,
@@ -56,22 +56,28 @@ function draw() {
 
 class House {
 	constructor({x, y, width = 500, height = 500}) {
-		this.x = x;
-		this.y = y;
 		this.width = width;
 		this.height = height;
+		this.sWidth = this.width * 0.6; // South facing wall width
+		this.sHeight = this.height * 0.6; // South facing wall height
+		this.wWidth = 1 - this.sWidth; // West facing wall width
+		this.wHeight = 1 - this.sHeight; // West facing wall height
+		this.x = x;
+		this.y = y + (this.height - this.sHeight); // Adjust y to begin drawing house at bottom left corner of width
+		this.trueX = x;
+		this.trueY = y;
 	}
 
 	draw() {
 		console.info('Drawing house at', this.x, this.y);
 		// Build the south facing wall
-		const sOffset = this.width*0.05;
+		const sOffset = this.sWidth*0.05;
 		const sp1 = {x: this.x, y: this.y};
-		const sp2 = {x: this.x + this.width/2, y: this.y - sOffset};
-		const sp3 = {x: sp2.x + this.width/2, y: sp2.y + sOffset};
-		const sp4 = {x: sp2.x + this.width/2, y: sp2.y + this.height + sOffset};
-		const sp5 = {x: this.x + this.width/2, y: this.y + this.height - sOffset};
-		const sp6 = {x: this.x, y: this.y + this.height};
+		const sp2 = {x: this.x + this.sWidth/2, y: this.y - sOffset};
+		const sp3 = {x: sp2.x + this.sWidth/2, y: sp2.y + sOffset};
+		const sp4 = {x: sp2.x + this.sWidth/2, y: sp2.y + this.sHeight + sOffset};
+		const sp5 = {x: this.x + this.sWidth/2, y: this.y + this.sHeight - sOffset};
+		const sp6 = {x: this.x, y: this.y + this.sHeight};
 
 		push();
 		stroke(0);
@@ -139,7 +145,7 @@ class House {
 		stroke('red');
 		strokeWeight(2);
 		noFill();
-		rect(this.x, this.y, this.width, this.height);
+		rect(this.trueX, this.trueY, this.width, this.height);
 		pop();
 	}
 }
