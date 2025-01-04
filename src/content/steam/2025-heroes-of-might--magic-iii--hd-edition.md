@@ -1,7 +1,7 @@
 ---
 title: "Heroes of Might & Magic III - HD Edition"
 id: 297000
-date: 2025-01-03T00:00:10.263Z
+date: 2025-01-04T00:00:12.132Z
 link: games/steam/recent/heroes-of-might--magic-iii--hd-edition
 image: http://media.steampowered.com/steamcommunity/public/images/apps/297000/0ae505e74b80d1cdee125500f4467a4c7a1d7e43.jpg
 playtime_2weeks: 2
