@@ -1,7 +1,7 @@
 ---
 title: "DEMON'S TILT"
 id: 422510
-date: 2025-01-05T00:00:10.478Z
+date: 2025-01-06T00:00:12.539Z
 link: games/steam/recent/demons-tilt
 image: http://media.steampowered.com/steamcommunity/public/images/apps/422510/8da38b0e70044e63457a99ca49854c01025855af.jpg
 playtime_2weeks: 5
