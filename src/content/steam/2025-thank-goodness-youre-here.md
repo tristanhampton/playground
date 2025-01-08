@@ -1,7 +1,7 @@
 ---
 title: "Thank Goodness You're Here!"
 id: 2366980
-date: 2025-01-07T00:00:10.966Z
+date: 2025-01-08T00:00:13.351Z
 link: games/steam/recent/thank-goodness-youre-here
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2366980/81ed58d1e830670e39a0f92f9f46e1582c1ad8be.jpg
 playtime_2weeks: 81
