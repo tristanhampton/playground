@@ -1,7 +1,7 @@
 ---
 title: "Caves of Qud"
 id: 333640
-date: 2025-01-08T00:00:14.287Z
+date: 2025-01-09T00:00:09.085Z
 link: games/steam/recent/caves-of-qud
 image: http://media.steampowered.com/steamcommunity/public/images/apps/333640/d301aa7d579383e6eeedf4a9cd26d703e6e5d5e0.jpg
 playtime_2weeks: 40
