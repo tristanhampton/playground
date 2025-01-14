@@ -1,7 +1,7 @@
 ---
 title: "Baldur's Gate 3"
 id: 1086940
-date: 2025-01-13T00:00:06.198Z
+date: 2025-01-14T00:00:06.011Z
 link: games/steam/recent/baldurs-gate-3
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1086940/d866cae7ea1e471fdbc206287111f1b642373bd9.jpg
 playtime_2weeks: 248
