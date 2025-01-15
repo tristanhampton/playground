@@ -1,7 +1,7 @@
 ---
 title: "Persona 5 Royal"
 id: 1687950
-date: 2025-01-14T00:00:07.549Z
+date: 2025-01-15T00:00:08.686Z
 link: games/steam/recent/persona-5-royal
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1687950/2f868d8c16fc357dc7122d440b9de3916e36e6fa.jpg
 playtime_2weeks: 87
