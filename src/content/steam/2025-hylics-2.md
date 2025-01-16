@@ -1,7 +1,7 @@
 ---
 title: "Hylics 2"
 id: 1286710
-date: 2025-01-15T00:00:13.006Z
+date: 2025-01-16T00:00:15.853Z
 link: games/steam/recent/hylics-2
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1286710/c1a512b9730b15d91a003d48f79c1072995e82f5.jpg
 playtime_2weeks: 39
