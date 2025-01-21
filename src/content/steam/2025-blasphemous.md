@@ -1,7 +1,7 @@
 ---
 title: "Blasphemous"
 id: 774361
-date: 2025-01-20T00:00:08.842Z
+date: 2025-01-21T00:00:08.116Z
 link: games/steam/recent/blasphemous
 image: http://media.steampowered.com/steamcommunity/public/images/apps/774361/4adaff16db14b2cf3bcfda2c523f0d4d68e15d6f.jpg
 playtime_2weeks: 34
