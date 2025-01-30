@@ -1,7 +1,7 @@
 ---
 title: "Root"
 id: 965580
-date: 2024-11-13T00:00:08.663Z
+date: 2024-11-20T00:00:08.157Z
 link: games/steam/recent/root
 image: http://media.steampowered.com/steamcommunity/public/images/apps/965580/18008c5174b3c919fb15543d0f7527875a2095ef.jpg
 playtime_2weeks: 30

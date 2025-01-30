@@ -1,5 +1,5 @@
 ---
-title: "Nosfera"
+title: "Nosferatu"
 id: letterboxd-watch-794826358
 poster: https://a.ltrbxd.com/resized/film-poster/3/5/9/5/0/5/359505-nosferatu-2024-0-600-0-900-crop.jpg?v=a12d4ad648
 link: https://letterboxd.com/tristanhampton/film/nosferatu-2024/
