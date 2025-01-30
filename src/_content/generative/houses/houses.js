@@ -1,12 +1,9 @@
 const settings = {
   gap: null,
-  cellGapRate: 0.04,
-  lineGap: 3,
+  cellGapRate: -0.02,
+	cellGapRateX: -0.02,
+	cellGapRateY: -0.05,
   cellsX: 6,
-  frequency: 1,
-  scale: 5,
-  segments: 4,
-  chaos: 1,
 }
 
 function setup() {
@@ -18,21 +15,14 @@ function setup() {
 	const canvas = createCanvas(settings.width, settings.height);
 	canvas.parent('canvasContainer');
 	canvas.mouseClicked(redraw);
+
+	settings.gap = settings.cellGapRate * width;
+	background('#f5f1e6');
 }
 
 function draw() {
-	noStroke();
-	background('#f5f1e6');
-	strokeWeight(1);
-
-	const house = new House({x: width*0.5 - 250, y: height*0.5 - 250});
-
-	house.draw();
-
-	settings.gap = settings.cellGapRate * width;
+	
   const houses = []
-  noStroke();
-  background('#f5f1e6');
 
   // width/height are determined by num of cells, subtracting gaps to allow for space
   const w = width / settings.cellsX - settings.gap - (settings.gap / settings.cellsX);
@@ -40,17 +30,23 @@ function draw() {
 
   for (let i = 0; i < settings.cellsX; i++) {
     for (let j = 0; j < settings.cellsX; j++) {
+			const rand = getRandomInt(0, 20);
       const x = settings.gap + (w + settings.gap) * i;
-      const y = settings.gap + (h + settings.gap) * j;
+      const y = settings.gap + (h + settings.cellGapRateY * width) * j;
+			console.log(rand);
 
-      houses.push(new House({x: x, y: y, width: w, height: h}))
+			if (rand) {
+				houses.push(new House({x: x, y: y, width: w, height: h}))
+			}
     }
   }
+
+	// houses.reverse();
 
   // Draw each box
   houses.forEach(house => {
     house.draw();
-		house.bound();
+		// house.bound();
   });
 }
 
@@ -58,10 +54,13 @@ class House {
 	constructor({x, y, width = 500, height = 500}) {
 		this.width = width;
 		this.height = height;
-		this.sWidth = this.width * 0.6; // South facing wall width
-		this.sHeight = this.height * 0.6; // South facing wall height
+		this.vOffset = this.height * (getRandomInt(2,4)/10); // Vertical offset for roof
+		this.wOffset = (getRandomInt(4,8)/10); // Width offset for walls
+		this.sWidth = this.width * this.wOffset; // South facing wall width
+		this.sHeight = this.height * this.wOffset; // South facing wall height
 		this.wWidth = this.width - this.sWidth; // West facing wall width
 		this.wHeight = this.height - this.sHeight; // West facing wall height
+
 		this.x = x;
 		this.y = y + (this.height - this.sHeight); // Adjust y to begin drawing house at bottom left corner of width
 		this.trueX = x;
@@ -70,14 +69,14 @@ class House {
 
 	draw() {
 		console.info('Drawing house at', this.x, this.y);
-		console.log('Width:', this.width, 'sWidth:', this.sWidth, 'wWidth:', this.wWidth);
+		console.log(this.wOffset);
 		// Build the south facing wall
 		const sOffset = this.sWidth*0.05;
 		const sp1 = {x: this.x, y: this.y};
 		const sp2 = {x: this.x + this.sWidth/2, y: this.y - sOffset};
 		const sp3 = {x: sp2.x + this.sWidth/2, y: sp2.y + sOffset};
 		const sp4 = {x: sp2.x + this.sWidth/2, y: sp2.y + this.sHeight + sOffset};
-		const sp5 = {x: this.x + this.sWidth/2, y: this.y + this.sHeight - sOffset};
+		// const sp5 = {x: this.x + this.sWidth/2, y: this.y + this.sHeight - sOffset};
 		const sp6 = {x: this.x, y: this.y + this.sHeight};
 
 		push();
@@ -89,18 +88,16 @@ class House {
 		vertex(sp2.x, sp2.y);
 		vertex(sp3.x, sp3.y);
 		vertex(sp4.x, sp4.y);
-		vertex(sp5.x, sp5.y);
+		// vertex(sp5.x, sp5.y);
 		vertex(sp6.x, sp6.y);
 		vertex(sp1.x, sp1.y);
-		
 		endShape(CLOSE);
 		pop();
 
 		// Build the west facing wall
-		const wOffset = this.width*0.2;
 		const wp1 = {x: sp3.x, y: sp3.y};
-		const wp2 = {x: sp3.x + this.wWidth, y: sp3.y - wOffset};
-		const wp3 = {x: sp4.x + this.wWidth, y: sp4.y - wOffset};
+		const wp2 = {x: sp3.x + this.wWidth, y: sp3.y - this.vOffset};
+		const wp3 = {x: sp4.x + this.wWidth, y: sp4.y - this.vOffset};
 		const wp4 = {x: sp4.x, y: sp4.y};
 
 		push();
@@ -116,7 +113,7 @@ class House {
 		const rp1 = {x: sp2.x, y: sp2.y};
 		const rp2 = {x: sp3.x, y: sp3.y};
 		const rp3 = {x: wp2.x, y: wp2.y };
-		const rp4 = {x: sp2.x + rXOffset, y: sp2.y - rYOffset};
+		const rp4 = {x: sp2.x + rXOffset, y: sp2.y - this.vOffset};
 
 		push();
 		stroke(0);
@@ -131,7 +128,7 @@ class House {
 		const lrp1 = {x: sp1.x, y: sp1.y};
 		const lrp2 = {x: sp2.x, y: sp2.y};
 		const lrp3 = {x: rp4.x, y: rp4.y };
-		const lrp4 = {x: sp1.x + rXOffset, y: sp1.y - rYOffset};
+		const lrp4 = {x: sp1.x + rXOffset, y: sp1.y - this.vOffset};
 
 		push();
 		stroke(0);
@@ -143,7 +140,7 @@ class House {
 
 	bound() {
 		push();
-		stroke('red');
+		stroke('#f003');
 		strokeWeight(2);
 		noFill();
 		rect(this.trueX, this.trueY, this.width, this.height);
