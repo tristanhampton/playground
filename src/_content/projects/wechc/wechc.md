@@ -8,5 +8,5 @@ title: Windsor Essex Community Housing Corporation
 short: WECHC
 published: true
 redirect: true
-website_url: "https://www.wechc.ca/"
+website_url: "https://www.wechc.com/"
 ---
