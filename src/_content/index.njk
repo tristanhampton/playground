@@ -51,8 +51,9 @@ og_title: "11ty Starter Home Page"
   <p>Most of the websites I've built are within the education or public sectors, with some other private companies sprinkled in here and there. Below are some of my most recent, and <a href="/projects">my full project archive is also available.</a>
   </p>
   <ul class="flex-wrapper">
+    {% set i = 0 %}
     {% for project in collections.project | reverse %}
-      {% if loop.index0 < 3 %}
+      {% if i < 3 and project.data.published %}
         <li class="project-item">
           <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">
             <h3>{{ project.data.short }}</h3>
@@ -64,6 +65,7 @@ og_title: "11ty Starter Home Page"
             </picture>
           </a>
         </li>
+        {% set i = i + 1 %}
       {% endif %}
     {% endfor %}
   </ul>
