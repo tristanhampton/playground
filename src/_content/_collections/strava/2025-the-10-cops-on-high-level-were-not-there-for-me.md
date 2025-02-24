@@ -3,7 +3,7 @@ title: "The 10 cops on High Level were NOT there for me"
 id: https://strava.com/activities/7095359608
 link: https://strava.com/activities/7095359608
 date: 2022-05-06T01:54:41.000Z
-rideDate: Thu May 05 2022
+rideDate: Fri May 06 2022
 pubDate: Thu, 05 May 2022 19:54:41 -0600
 type: ride
 distance: 8.0km
