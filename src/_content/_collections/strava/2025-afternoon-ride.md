@@ -1,14 +1,14 @@
 ---
 title: "Afternoon Ride"
-id: https://strava.com/activities/10989467270
-link: https://strava.com/activities/10989467270
-date: 2024-03-18T23:06:41.000Z
-rideDate: Mon Mar 18 2024
-pubDate: Mon, 18 Mar 2024 17:06:41 -0600
+id: https://strava.com/activities/7902595310
+link: https://strava.com/activities/7902595310
+date: 2022-10-02T22:22:01.000Z
+rideDate: Sun Oct 02 2022
+pubDate: Sun, 02 Oct 2022 16:22:01 -0600
 type: ride
-distance: 8.9km
-elevation: 19m
-time: 00:32:32
-speed: 16.4km/h
+distance: 14.6km
+elevation: 10m
+time: 00:48:09
+speed: 18.2km/h
 ---
-Ride: Distance: 8.9km, Elevation Gain: 19m, Moving Time: 00:32:32, Average Speed: 16.4km/h
+Ride: Distance: 14.6km, Elevation Gain: 10m, Moving Time: 00:48:09, Average Speed: 18.2km/h
