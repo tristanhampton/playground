@@ -45,4 +45,11 @@
       border-left: none;
     }
   }
+
+  @media screen and (min-width: 785px) {
+    li {
+      flex-grow: 1;
+    text-align: center;
+    }
+  }
 }
