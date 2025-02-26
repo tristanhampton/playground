@@ -2,6 +2,7 @@ import os from 'os';
 import dumpFilter from "@jamshop/eleventy-filter-dump";
 import eleventyPluginSharpImages from "@codestitchofficial/eleventy-plugin-sharp-images";
 import markdownit from 'markdown-it';
+import { title } from 'process';
 
 // https://github.com/markdown-it/markdown-it
 const md = markdownit({
@@ -80,8 +81,8 @@ export default function (eleventyConfig) {
 	//--- Tools
 	eleventyConfig.addPassthroughCopy({ "src/_content/tools/*/*.js": 'tools/js' });
 
-	// /* Shortcodes
-	//  * ----------------------------------------------- */
+	/* Shortcodes
+	 * ----------------------------------------------- */
 	eleventyConfig.addShortcode("youtube", (videoURL, title) => {
 		const url = new URL(videoURL);
 		const id = url.searchParams.get("v");
@@ -91,7 +92,7 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.addShortcode('galleryItem', (img, caption, galleryID) => {
 		return `<a class="gallery__item" href="${img}" data-fancybox="${galleryID}" data-caption="${caption}"><img src="${img}"></a> `;
-	})
+	});
 
 	//--- Determine if local or live
 	eleventyConfig.addGlobalData('local', function () {
@@ -103,7 +104,14 @@ export default function (eleventyConfig) {
 			return false;
 		}
 	});
+
+	/* Custom Filters
+	 * ----------------------------------------------- */
+	eleventyConfig.addFilter('year', function (date) {
+		return new Date(date).getFullYear();
+	});
 }
+
 
 export const config = {
 	pathPrefix: "/",

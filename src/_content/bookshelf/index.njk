@@ -1,0 +1,25 @@
+<div class="banner banner__default">
+  <h1>Bookshelf</h1>
+</div>
+
+<div class="component component--standard-wide">
+  <p>This is a collection of books that I've read. This data is sourced directly from my Goodreads account.</p>
+</div>
+
+<div class="component component--bookshelf">
+  {% set currentYear = null %}
+  {% for book in collections.goodreads|reverse %}
+
+    {% if book.data.date|year != currentYear %}
+      <h2>{{ book.data.date|year }}</h2>
+      {% set currentYear = book.data.date|year %}
+    {% endif %}
+    
+    <div class="bookshelf__item">
+      <img src="{{ book.data.cover }}" alt="{{ book.data.title }} cover">
+      <p>
+        <em>{{ book.data.title }}</em> </br>{{ book.data.author }}
+      </p>
+    </div>
+  {% endfor %}
+</div>
