@@ -15,10 +15,10 @@ meta_description: 'Personal things relating to Tristan Hampton'
   <div class="component component--standard-wide">
     <h2>Playing...</h2>
     <div class="currently-playing">
-      <ul>
+      <ul class="flex-wrapper">
         {% for game in collections.steam | reverse %}
-          {% if loop.index0 < 5 %}
-            <li><img src="{{ game.data.image }}" alt="icon for {{ game.data.title }}">{{game.data.title}}</li>
+          {% if loop.index0 < 6 %}
+            <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/{{ game.data.id }}/library_600x900.jpg" alt="icon for {{ game.data.title }}"></li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -39,6 +39,7 @@ meta_description: 'Personal things relating to Tristan Hampton'
         {% endif %}
       {% endfor %}
     </ul>
+    <p><a href="/bookshelf" class="btn-primary">View full movieshelf</a></p>
   </div>
 {% endif %}
 

@@ -1,18 +1,9 @@
 .currently-playing {
-  ul {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: var(--padding-300);
-    list-style: none;
-    padding: 0;
-
-  }
-
   li {
     display: flex;
+    gap: var(--padding-200);
     align-items: center;
-    gap: var(--padding-100);
     margin: 0;
+    flex: 0 1 clamp(15rem, calc(25% - var(--padding-200)*3), 30rem);
   }
 }
