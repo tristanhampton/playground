@@ -6,7 +6,7 @@ contentSnippet: "Tristan gave 4 stars to The Dungeon Anarchist's Cookbook (Dunge
       Matt Dinniman"
 date: 2025-02-24T23:04:50.000Z
 link: https://www.goodreads.com/review/show/7320534250
-cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612814290l/57001971._SY75_.jpg
+cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612814290l/57001971._LY75_.jpg
 author: Matt Dinniman
 category: read
 ---
