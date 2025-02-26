@@ -3,9 +3,11 @@
     display: flex;
     gap: var(--padding-200);
     align-items: center;
+    margin: 0;
   }
 
   img + p {
     margin: 0;
+    display: none;
   }
 }
