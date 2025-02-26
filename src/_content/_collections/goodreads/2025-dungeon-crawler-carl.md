@@ -6,7 +6,7 @@ contentSnippet: "Tristan gave 4 stars to Dungeon Crawler Carl (Dungeon Crawler C
       Matt Dinniman"
 date: 2025-01-25T06:48:31.000Z
 link: https://www.goodreads.com/review/show/7110583118
-cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1734203042l/56791389._SY75_.jpg
+cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1734203042l/56791389._LY75_.jpg
 author: Matt Dinniman
 category: read
 ---
