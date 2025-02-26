@@ -4,9 +4,9 @@ id: Review7320532517
 contentSnippet: "Tristan gave 4 stars to Carl's Doomsday Scenario (Dungeon Crawler Carl, #2)
       by
       Matt Dinniman"
-date: 2025-02-14T17:31:59.000Z
+date: 2025-02-14T17:32:14.000Z
 link: https://www.goodreads.com/review/show/7320532517
-cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1608612407l/56377548._SY75_.jpg
+cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1608612407l/56377548._LY75_.jpg
 author: Matt Dinniman
 category: read
 ---
