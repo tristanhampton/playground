@@ -1,9 +1,9 @@
 ---
 title: "Balatro"
 id: 2379780
-date: 2025-02-26T22:21:48.136Z
+date: 2025-02-27T00:00:04.664Z
 link: games/steam/recent/balatro
-image: https://cdn.akamai.steamstatic.com/steam/apps/2379780/library_600x900.jpg
+image: http://media.steampowered.com/steamcommunity/public/images/apps/2379780/b6018068070ab0e23561694c11f7950dd6f4c752.jpg
 playtime_2weeks: 744
 playtime_forever: 7000
 playtime_windows_forever: 0
