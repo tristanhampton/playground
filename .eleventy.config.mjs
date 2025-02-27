@@ -110,6 +110,10 @@ export default function (eleventyConfig) {
 	eleventyConfig.addFilter('year', function (date) {
 		return new Date(date).getFullYear();
 	});
+
+	eleventyConfig.addFilter('playtime', function (minutes) {
+		return Math.round(minutes/60);
+	});
 }
 
 

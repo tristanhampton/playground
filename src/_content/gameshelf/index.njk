@@ -1,0 +1,28 @@
+<div class="banner banner__default">
+  <h1>Gameshelf</h1>
+</div>
+
+<div class="component component--standard-wide">
+  <p>This is a collection of games that I've played on Steam. This data is sourced directly from my Steam account.</p>
+</div>
+
+<div class="component component--shelf shelf--games grid-wrapper">
+  {% set currentYear = null %}
+  {% for game in collections.steam|reverse %}
+    {# Don't bother displaying if playtime is less than 2 hours #}
+    {% if game.data.playtime_forever > 120 %}
+
+      {% if game.data.date|year != currentYear %}
+        <h2>{{ game.data.date|year }}</h2>
+        {% set currentYear = game.data.date|year %}
+      {% endif %}
+      
+      <div class="shelf__item">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/{{ game.data.id }}/library_600x900.jpg" alt="icon for {{ game.data.title }}">
+        <p>
+          <em>{{ game.data.title }}</em> </br>{{ game.data.playtime_forever | playtime }} hours
+        </p>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
