@@ -19,7 +19,7 @@ meta_description: "The full list of web projects that I have worked on, along wi
 	<section class="component component--standard-wide">
 		<h2>Projects with Northern</h2>
 		<small><em>January 2024 - Present</em></small>
-		<ul class="flex-wrapper">
+		<ul class="grid-wrapper grid--extra-large gap--large">
 			{% for project in collections.northern | reverse %}
 				{% if project.data.published %}
 					<li class="project-item">
@@ -39,7 +39,7 @@ meta_description: "The full list of web projects that I have worked on, along wi
 
 		<h2>Projects with Yellow Pencil</h2>
 		<small><em>February 2022 - Present</em></small>
-		<ul class="flex-wrapper">
+		<ul class="grid-wrapper grid--extra-large gap--large">
 			{% for project in collections.yellowpencil | reverse %}
 				<li class="project-item">
 					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">
@@ -57,7 +57,7 @@ meta_description: "The full list of web projects that I have worked on, along wi
 
 		<h2>Projects with Box Clever</h2>
 		<small><em>December 2020 - February 2022</em></small>
-		 <ul class="flex-wrapper">
+		 <ul class="grid-wrapper grid--extra-large gap--large">
 			{% for project in collections.boxclever | reverse %}
 				<li class="project-item">
 					<a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">

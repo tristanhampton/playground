@@ -51,7 +51,7 @@ picture {
 
 .grid-wrapper {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 	gap: var(--padding-200);
 	padding: 0;
 	margin: 0;
@@ -59,6 +59,10 @@ picture {
 	
 	> * {
 		margin: 0;
+	}
+
+	&.gap--large {
+		gap: var(--padding-400);
 	}
 	
 	@media screen and (min-width: 551px) {
@@ -73,8 +77,8 @@ picture {
 			grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 		}
 	
-		&.grid--exrtra-large {
-			grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+		&.grid--extra-large {
+			grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 		}
 	}
 }

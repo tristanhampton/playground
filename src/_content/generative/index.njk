@@ -17,7 +17,7 @@ meta_description: "I enjoy making art using code. I use p5.js to create images, 
 
 <section class="component component--standard-wide">
 	<h2>Projects</h2>
-	<ul class="flex-wrapper">
+	<ul class="grid-wrapper grid--extra-large gap--large">
 		{% for project in collections.generative | reverse %}
 			{% if project.data.published %}
 				<li class="generative-item">

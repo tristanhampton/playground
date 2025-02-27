@@ -12,7 +12,7 @@ og_title: "11ty Starter Home Page"
 <section class="component component--standard-wide">
   <h2>Creative Coding</h2>
   <p>I've been enjoying making art and animations using p5.js. Below are some of my favourites.</p>
-  <ul class="flex-wrapper">
+  <ul class="grid-wrapper grid--extra-large gap--large">
     <li class="generative-item">
       <a href="/generative/album-animation-ii" title="album-animation-ii" class="card size--square">
         <h3>Album Animation II</h3>
@@ -50,10 +50,10 @@ og_title: "11ty Starter Home Page"
   <h2>Projects</h2>
   <p>Most of the websites I've built are within the education or public sectors, with some other private companies sprinkled in here and there. Below are some of my most recent, and <a href="/projects">my full project archive is also available.</a>
   </p>
-  <ul class="flex-wrapper">
+  <ul class="grid-wrapper grid--extra-large gap--large">
     {% set i = 0 %}
     {% for project in collections.project | reverse %}
-      {% if i < 3 and project.data.published %}
+      {% if i < 6 and project.data.published %}
         <li class="project-item">
           <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">
             <h3>{{ project.data.short }}</h3>
