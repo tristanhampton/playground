@@ -49,7 +49,38 @@ picture {
 	}
 }
 
-*+.flex-wrapper {
+.grid-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+	gap: var(--padding-200);
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	
+	> * {
+		margin: 0;
+	}
+	
+	@media screen and (min-width: 551px) {
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+		gap: var(--padding-400);
+
+		&.grid--small {
+			grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		}
+	
+		&.grid--large {
+			grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		}
+	
+		&.grid--exrtra-large {
+			grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+		}
+	}
+}
+
+*+.flex-wrapper,
+*+.grid-wrapper {
 	margin-top: var(--vertical-type-spacing-med);
 }
 

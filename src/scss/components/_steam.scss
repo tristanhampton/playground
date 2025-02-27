@@ -1,9 +1,0 @@
-.currently-playing {
-  li {
-    display: flex;
-    gap: var(--padding-200);
-    align-items: center;
-    margin: 0;
-    flex: 0 1 clamp(15rem, calc(25% - var(--padding-200)*3), 30rem);
-  }
-}
