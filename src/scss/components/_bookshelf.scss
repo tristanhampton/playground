@@ -1,22 +1,25 @@
-.component--bookshelf {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--padding-400);
+.component--shelf {
   padding: 0 var(--page-margin-200);
 
   h2 {
-    flex: 1 1 100%;
+    grid-column: 1 / -1;
+
+    &:not(:first-child) {
+      margin-top: var(--padding-400);
+    }
   }
 
-  .bookshelf__item {
-    flex: 0 1 clamp(15rem, calc(25% - var(--padding-400)*3), 30rem);
+  .shelf__item {
     margin: 0;
 
     img {
       width: 100%;
       aspect-ratio: 2/3;
-      border-radius: 0 1rem 1rem 0;
     }
+  }
+
+  &.shelf--books .shelf__item img {
+    border-radius: 0 1rem 1rem 0;
   }
 
   @media screen and (max-width: 500px) {

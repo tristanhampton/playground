@@ -6,7 +6,7 @@
   <p>This is a collection of books that I've read. This data is sourced directly from my Goodreads account.</p>
 </div>
 
-<div class="component component--bookshelf">
+<div class="component component--shelf shelf--books grid-wrapper">
   {% set currentYear = null %}
   {% for book in collections.goodreads|reverse %}
 
@@ -15,7 +15,7 @@
       {% set currentYear = book.data.date|year %}
     {% endif %}
     
-    <div class="bookshelf__item">
+    <div class="shelf__item">
       <img src="{{ book.data.cover }}" alt="{{ book.data.title }} cover">
       <p>
         <em>{{ book.data.title }}</em> </br>{{ book.data.author }}

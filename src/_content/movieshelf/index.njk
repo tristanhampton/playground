@@ -6,7 +6,7 @@
   <p>This is a collection of movies that I've watched. This data is sourced directly from my Letterboxd account.</p>
 </div>
 
-<div class="component component--bookshelf">
+<div class="component component--shelf shelf--movies grid-wrapper">
   {% set currentYear = null %}
   {% for movie in collections.letterboxd|reverse %}
 
@@ -15,7 +15,7 @@
       {% set currentYear = movie.data.date|year %}
     {% endif %}
     
-    <div class="bookshelf__item">
+    <div class="shelf__item">
       <img src="{{ movie.data.poster }}" alt="{{ movie.data.title }} poster">
       <p>
         <em>{{ movie.data.title }}</em> </br>{{ movie.data.author }}
