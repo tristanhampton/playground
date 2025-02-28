@@ -1,13 +1,13 @@
 ---
 title: "Rift of the NecroDancer"
 id: 2073250
-date: 2025-02-27T00:00:06.436Z
+date: 2025-02-28T00:00:06.851Z
 link: games/steam/recent/rift-of-the-necrodancer
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2073250/c098e2f779cadbb9e24a58a0e0763ec65b82b4b5.jpg
-playtime_2weeks: 85
-playtime_forever: 458
+playtime_2weeks: 90
+playtime_forever: 462
 playtime_windows_forever: 0
 playtime_mac_forever: 0
-playtime_linux_forever: 458
-playtime_deck_forever: 458
+playtime_linux_forever: 462
+playtime_deck_forever: 462
 ---
