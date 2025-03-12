@@ -1,4 +1,16 @@
 .banner {
   padding: var(--padding-400) var(--page-margin-200);
   border-bottom: 0.1rem dashed #000;
+
+  h1,
+  .h1 {
+    font-size: var(--display-large);
+    font-weight: 700;
+    line-height: 0.85;
+  }
+
+  p {
+    font-size: var(--font-large);
+    max-width: 90ch;
+  }
 }

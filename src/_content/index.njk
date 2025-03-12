@@ -6,67 +6,37 @@ og_title: "11ty Starter Home Page"
 
 <div class="banner banner__default">
   <h1 class="sr-only">Home</h1>
-  <p class="h1">Hello!</p>
-  <p>This is my little corner of the internet. I like to show off things that I've made, or things that I enjoy. Don't take anything too seriously here. If you're <a href="https://portfolio.tristanhampton.ca/">looking for my portfolio, look here</a>.</p>
+  <p class="h1">TITLE PENDING</p>
+  <p>This is my little corner of the internet. Don't take it too seriously, but I hope you like it.</p>
 </div>
-<section class="component component--standard-wide">
-  <h2>Creative Coding</h2>
-  <p>I've been enjoying making art and animations using p5.js. Below are some of my favourites.</p>
-  <ul class="grid-wrapper grid--extra-large gap--large">
-    <li class="generative-item">
-      <a href="/generative/album-animation-ii" title="album-animation-ii" class="card size--square">
-        <h3>Album Animation II</h3>
-        <picture>
-          <source srcset="{% getUrl '/generative/audio-supernormal-v2/album-animation-ii.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
-          <source srcset="{% getUrl '/generative/audio-supernormal-v2/album-animation-ii.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
-          <img src="{% getUrl '/generative/audio-supernormal-v2/album-animation-ii.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the album-animation-ii art piece">
-        </picture>
-      </a>
-    </li>
-    <li class="generative-item">
-      <a href="/generative/quadrants" title="quadrants" class="card size--square">
-        <h3>Quadrants</h3>
-        <picture>
-          <source srcset="{% getUrl '/generative/quadrants/quadrants.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
-          <source srcset="{% getUrl '/generative/quadrants/quadrants.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
-          <img src="{% getUrl '/generative/quadrants/quadrants.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the quadrants art piece">
-        </picture>
-      </a>
-    </li>
-    <li class="generative-item">
-      <a href="/generative/points-and-bezier/" title="Points and bezier" class="card size--square">
-        <h3>Points and Bezier</h3>
-        <picture>
-          <source srcset="{% getUrl '/generative/points-and-bezier/points-and-bezier.png' | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
-          <source srcset="{% getUrl '/generative/points-and-bezier/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
-          <img src="{% getUrl '/generative/points-and-bezier/points-and-bezier.png' | resize({ height: 500, width: 500 }) | avif %}" alt="screenshot of the points and bezier art piece">
-        </picture>
-      </a>
-    </li>
-  </ul>
+
+<section class="component--standard-wide">
+  <h2 class="display-small">FAQ's That Nobody Asked</h2>
+
+  <div class="question-answer">
+    <h3>Why am I here?</h3>
+    <p>Good question.</p>
+  </div>
+
+  {# <div class="question-answer">
+    <h3>Aren't you a web developer?</h3>
+    <p>If you know that you might be looking for <a href="https://portfolio.tristanhampton.ca">my portfolio</a> instead. You can take that a little more seriously.</p>
+  </div> #}
+
+  <div class="question-answer">
+    <h3>What's your deal?</h3>
+    <p>I like to collect things, and this site serves as a collection of projects, hobbies started and stopped, media I've consumed etc.</p>
+  </div>
+
+  <div class="question-answer">
+    <h3>Why your deal?</h3>
+    <p>dunno</p>
+  </div>
 </section>
 
-<section class="component component--standard-wide">
-  <h2>Projects</h2>
-  <p>Most of the websites I've built are within the education or public sectors, with some other private companies sprinkled in here and there. Below are some of my most recent, and <a href="/projects">my full project archive is also available.</a>
-  </p>
-  <ul class="grid-wrapper grid--extra-large gap--large">
-    {% set i = 0 %}
-    {% for project in collections.project | reverse %}
-      {% if i < 6 and project.data.published %}
-        <li class="project-item">
-          <a href="{{ project.data.website_url if project.data.redirect else project.url }}" title="{{ project.data.title }}" target="{{ '_blank' if project.data.redirect else '' }}" rel="noopener noreferrer" class="card size--square">
-            <h3>{{ project.data.short }}</h3>
-            {% set imgPath = project.page.filePathStem + '.png' %}
-            <picture>
-              <source srcset="{% getUrl imgPath | resize({ height: 300, width: 300, position: 'top' }) | avif({ quality: 100 }) %}" media="(max-width: 768px)">
-              <source srcset="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" media="(min-width: 769px)">
-              <img src="{% getUrl imgPath | resize({ height: 600, width: 600, position: 'top' }) | avif({ quality: 100 }) %}" alt="screenshot of the points and bezier art piece">
-            </picture>
-          </a>
-        </li>
-        {% set i = i + 1 %}
-      {% endif %}
-    {% endfor %}
-  </ul>
+<hr/>
+
+<section class="component--standard-wide">
+  <h2 class="display-small">Okay but seriously</h2>
+  <p>I'm a front end developer from Alberta, Canada. I've lived in Edmonton since 2012, and grew up in a hamlet of less than 100 people <s>and that's why I'm not very social</s>.
 </section>

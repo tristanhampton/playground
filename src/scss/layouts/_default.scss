@@ -1,54 +1,9 @@
-.window {
-  border: 2px solid var(--green-200);
-  border-radius: 2rem;
-  box-shadow: -8px 13px 0px 3px var(--green-200);
-  padding-bottom: 3rem;
-  overflow: auto;
+.layout--default {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-  + .window:not([class*=column]) {
-    margin-top: var(--padding-500);
-  }
-}
-
-.layout--default,
-.layout--blog,
-.layout--canvas {
-  padding: max(var(--padding-300), calc(var(--col)/2));
-  
-  // Mobile
-  @media screen and (max-width: 911px) {
-    display: flex;
-    flex-direction: column;
-    gap: var(--padding-500);
-  }
-  
-  // Desktop
-  @media screen and (min-width: 912px) {
-    --page-margin-200: calc(var(--col)/2);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    gap: calc(var(--col)/2);
-  
-    .column--left,
-    .column--right {
-      height: 100vh;
-      max-height: calc(100vh - var(--col));
-    }
-  
-    .column--left {
-      flex: 1 1 calc(100% - 40rem);
-      // margin: 0 calc(var(--col)/2);
-      
-    }
-  
-    .column--right {
-      flex: 1 1 clamp(20rem, 3vw, 40rem);
-      // margin: 0 calc(var(--col)/2) 0 0;
-    
-      p {
-        font-size: 0.8em;
-      }
-    }
+  main {
+    flex: 1 1 auto;
   }
 }

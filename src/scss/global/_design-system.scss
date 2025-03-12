@@ -4,11 +4,13 @@
   //set to 10px to use rem as font unit. 1.6rem = 16px
   font-size: 16px;
   font-size: 62.5%;
-  --font-size: 1.8rem;
+  --font-size: 2rem;
 
   --baseline: 0.8rem;
   --col: 5vw;
 
+  --display-large: clamp(3em, 20vw, 9em);
+  --display-small: clamp(2.8em, 15vw, 4.5em);
   --heading-1: 2.66em; // 48
   --heading-2: 2.22em; // 40
   --heading-3: 1.77em; // 32
@@ -16,7 +18,7 @@
   --heading-5: 1em; // 18
   --heading-6: 1em; // Not set in Manitoba yet
 
-  --font-large: 1.33em; // 24
+  --font-large: 1.22em; // 24
   --font-small: 0.88em; // 16
 
   @media screen and (max-width: 768px) {
@@ -162,7 +164,7 @@
  * ----------------------------------------------- */
 // Surface variables essentially work out to be background colours for things like CTA's, Tiles, etc
 :root {
-  --surface-primary: var(--cream-1000);
+  --surface-primary: #FFF;
   --surface-invert: var(--olive-500);
   --surface-hover: var(--system-green-500);
 
@@ -405,4 +407,18 @@
   --table-body-row-even-color: var(--text-primary);
   --table-body-row-odd-surface: var(--surface-primary);
   --table-body-row-odd-color: var(--text-primary);
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
 }
