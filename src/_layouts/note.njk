@@ -1,0 +1,18 @@
+{% include 'head.njk'%}
+{% include 'header.njk' %}
+
+<main class="page page--{{ title|slugify }} ">
+  <section class="banner banner__small">
+    <h1>{{title}}</h1>
+
+    {% if date %}
+      <p class="banner__date">Published: <time>{{ date | postDate }}</time></p>
+    {% endif %}
+  </section>
+
+  <div class="component--standard-narrow">
+    {{ content | safe }}
+  </div>
+</main>
+
+{% include 'footer.njk' %}

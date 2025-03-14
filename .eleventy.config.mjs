@@ -2,7 +2,7 @@ import os from 'os';
 import dumpFilter from "@jamshop/eleventy-filter-dump";
 import eleventyPluginSharpImages from "@codestitchofficial/eleventy-plugin-sharp-images";
 import markdownit from 'markdown-it';
-import { title } from 'process';
+import { DateTime } from "luxon";
 
 // https://github.com/markdown-it/markdown-it
 const md = markdownit({
@@ -43,6 +43,10 @@ export default function (eleventyConfig) {
 		// If you want more advanced, dynamic filtering, you might need https://lodash.com/docs/4.17.15#get
 		// for fetching [deeply] nested properties.
 		return collection.find(pages => pages.id === id);
+	});
+
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 	});
 
 

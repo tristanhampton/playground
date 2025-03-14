@@ -14,3 +14,10 @@
     max-width: 90ch;
   }
 }
+
+.banner.banner__small {
+  h1,
+  .h1 {
+    font-size: var(--display-small);
+  }
+}
