@@ -57,7 +57,7 @@
   img:first-of-type {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    align-items: flex-end;
+    
   }
 
   img:last-of-type {
@@ -69,6 +69,11 @@
   a:first-of-type {
     grid-column: 2 / 2;
     grid-row: 1 / 2;
+    
+  }
+
+  a:last-of-type {
+    align-items: flex-end;
   }
 
   @media screen and (max-width: 550px) {
