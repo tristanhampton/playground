@@ -5,13 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--surface-link-primary);
-  border: none;
   border-radius: .6rem;
   width: 4.8rem;
   height: 4.8rem;
   padding: 1.3rem;
   margin: 0;
+  background: transparent;
+  border: 0.2rem solid #000;
 
   .icon {
     width: 100%;
@@ -30,13 +30,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--surface-link-primary);
-  border: none;
   border-radius: .6rem;
   width: 4.8rem;
   height: 4.8rem;
   padding: 1.3rem;
   cursor: pointer;
+  background: transparent;
+  border: 0.2rem solid #000;
 
   .icon {
     width: 100%;
@@ -74,8 +74,7 @@
  * ----------------------------------------------- */
 .site__header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: var(--padding-100) var(--padding-100);
   padding: var(--padding-200) var(--padding-200);
-  border-bottom: 0.1rem dashed black;
 }

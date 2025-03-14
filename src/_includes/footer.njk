@@ -1,9 +1,10 @@
   <footer class="site__footer">
     <nav class="footer__nav">
       <ul>
-        <li><a href="/me">/me</a></li>
-        <li><a href="/bookmarks">/links</a></li>
-        <li><a href="/now">/now</a></li>
+        <li class="h4">Other things...</li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/bookmarks">Links</a></li>
+        <li><a href="/now">Now</a></li>
         <li><a href="/tools">Tools</a></li>
       </ul>
     </nav>
@@ -46,6 +47,22 @@
           <li>
             <a href="{{ site.x }}" aria-label="Visit {{ site.title }}'s X/Twitter page">
               {% include 'icons/x.njk' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if site.threads %}
+          <li>
+            <a href="{{ site.threads }}" aria-label="Visit {{ site.title }}'s Threads page">
+              {% include 'icons/threads.njk' %}
+            </a>
+          </li>
+        {% endif %}
+
+        {% if site.github %}
+          <li>
+            <a href="{{ site.github }}" aria-label="Visit {{ site.title }}'s Github page">
+              {% include 'icons/github.njk' %}
             </a>
           </li>
         {% endif %}

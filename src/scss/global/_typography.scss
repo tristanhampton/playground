@@ -175,7 +175,6 @@ hr {
   height: 0.1rem;
   margin: var(--component-margin-top-first) auto;
   border: none;
-  background-image: url('../img/sketches/telephone-poles.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -186,6 +185,14 @@ hr {
   + [class*=component],
   + * {
     margin-top: var(--component-margin-top-first);
+  }
+
+  &.type--hiding {
+    background-image: url('../img/sketches/hiding.png');
+  }
+
+  &.type--phone {
+    background-image: url('../img/sketches/telephone-poles.png');
   }
 }
 

@@ -1,10 +1,12 @@
 .question-answer {
+  padding: var(--padding-400) 0;
+
   * {
     margin: 0;
   }
 
   +.question-answer {
-    margin-top: var(--padding-400);
+    border-top: 0.2rem solid #000;
   }
 
   @media screen and (max-width: 1019px) {
@@ -20,7 +22,7 @@
 
   @media screen and (min-width: 1020px) {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 
     h2,
     h3,
