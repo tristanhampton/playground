@@ -1,7 +1,7 @@
 ---
 title: "Pacific Drive"
 id: 1458140
-date: 2025-03-20T00:00:12.287Z
+date: 2025-03-21T00:00:13.075Z
 link: games/steam/recent/pacific-drive
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1458140/bea29dede5c446d40700fd6c2c74abb933559716.jpg
 playtime_2weeks: 4
