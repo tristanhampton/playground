@@ -6,7 +6,7 @@ contentSnippet: "Tristan gave 4 stars to The Gate of the Feral Gods (Dungeon Cra
       Matt Dinniman"
 date: 2025-03-06T18:39:02.000Z
 link: https://www.goodreads.com/review/show/7381014270
-cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1619824560l/57905101._SY75_.jpg
+cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1619824560l/57905101._MY75_.jpg
 author: Matt Dinniman
 category: read
 ---

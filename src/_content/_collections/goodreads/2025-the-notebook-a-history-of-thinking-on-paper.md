@@ -6,7 +6,7 @@ contentSnippet: "Tristan gave 3 stars to The Notebook: A History of Thinking on 
       Roland   Allen"
 date: 2025-03-24T21:43:59.000Z
 link: https://www.goodreads.com/review/show/7352169735
-cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1683139728l/148014534._SY75_.jpg
+cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1683139728l/148014534._MY75_.jpg
 author: Roland   Allen
 category: read
 ---
