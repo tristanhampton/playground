@@ -1,27 +1,23 @@
-{% include 'head.njk' %}
+{% include 'head.njk'%}
+{% include 'header.njk' %}
 
-<main class="column--left site__main main--projects page page--{{ title|slugify }} ">
-	<div class="window">
-		{% include 'header.njk' %}
-		<section class="banner banner--default">
-			<h1>{{ title }}</h1>
-			{% if intro %}
-				<p>{{ intro | safe }}</p>
-			{% endif %}
-		</section>
-	</div>
-	<div class="window">
-		<div class="generative-canvas" id="canvasContainer"></div>
+<main class="main--projects page page--{{ title|slugify }} ">
+	<section class="banner banner--default">
+		<h1>{{ title }}</h1>
+		{% if intro %}
+			<p>{{ intro | safe }}</p>
+		{% endif %}
+	</section>
 
-		{# Any extra markup can go here from the project file #}
-		{{ content | safe }}
-	</div>
+	<div class="generative-canvas componet component--standard-wide" id="canvasContainer"></div>
+
+	{# Any extra markup can go here from the project file #}
+	{{ content | safe }}
+
+	<h2 class="sr-only project-settings-title">{{ title }} Settings</h2>
+	<div class="project__tweak-settings component--standard-wide"></div>
 </main>
 
-<div class="column--right window">
-	<h2 class="sr-only project-settings-title">{{ title }} Settings</h2>
-	<div class="project__tweak-settings"></div>
-</div>
 
 {% for library in libraries %}
 	<script type="text/javascript" src="/js/plugins/{{ library }}"></script>
@@ -29,5 +25,4 @@
 <script src="/js/generative/{{ js_file }}.js"></script>
 <script src="/js/main.js"></script>
 
-</body>
-</html>
+{% include 'footer.njk' %}

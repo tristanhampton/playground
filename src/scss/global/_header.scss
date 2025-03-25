@@ -74,7 +74,15 @@
  * ----------------------------------------------- */
 .site__header {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   gap: var(--padding-100) var(--padding-100);
   padding: var(--padding-200) var(--padding-200);
+
+  @media screen and (min-width: 785px) {
+    .home-link,
+    .menu-toggle {
+      display: none;
+    }
+  }
 }

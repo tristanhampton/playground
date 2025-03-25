@@ -12,8 +12,9 @@ meta_description: "The full list of web projects that I have worked on, along wi
 
 <main class="site__main main--projects">
 
-	<section class="banner banner__default">
+	<section class="banner banner--default">
 		<h1>Projects</h1>
+		<p>These are websites I've worked on as a Front End Developer. Clicking any of these will take you to the live version of the site.</p>
 	</section>
 
 	<section class="component component--standard-wide">
@@ -37,8 +38,10 @@ meta_description: "The full list of web projects that I have worked on, along wi
 			{% endfor %}
 		</ul>
 
+		<hr class="type--baba space--large">
+
 		<h2>Projects with Yellow Pencil</h2>
-		<small><em>February 2022 - Present</em></small>
+		<small><em>February 2022 - December 2023</em></small>
 		<ul class="grid-wrapper grid--extra-large gap--large">
 			{% for project in collections.yellowpencil | reverse %}
 				<li class="project-item">
@@ -54,6 +57,8 @@ meta_description: "The full list of web projects that I have worked on, along wi
 				</li>
 			{% endfor %}
 		</ul>
+
+		<hr class="type--trap space--large">
 
 		<h2>Projects with Box Clever</h2>
 		<small><em>December 2020 - February 2022</em></small>

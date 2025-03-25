@@ -1,0 +1,24 @@
+.banner--home {
+  padding: var(--padding-400) 0 var(--padding-800);
+  max-width: var(--container-width-lrg);
+  margin-inline: auto;
+
+  h1,
+  .h1 {
+    font-size: var(--display-large);
+    font-weight: 700;
+    line-height: 0.85;
+  }
+
+  p {
+    font-size: var(--font-large);
+    max-width: 90ch;
+  }
+}
+
+.banner.banner__small {
+  h1,
+  .h1 {
+    font-size: var(--display-small);
+  }
+}

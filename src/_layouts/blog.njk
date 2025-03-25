@@ -1,19 +1,15 @@
 {% include 'head.njk'%}
+{% include 'header.njk' %}
 
-<div class="column--left window">
-  {% include 'header.njk' %}
-  <main class="page page--{{ title|slugify }} ">
-		<div class="banner banner--default">
-			<h1>{{ title }}</h1>
-			<p>{{ summary }}</p>
-		</div>
-		<div class="component component--standard-wide">
-			{{ content | safe }}
-		</div>
-  </main>
-</div>
+<main class="page page--{{ title|slugify }} ">
+	<section class="banner banner--default">
+		<h1>{{ title }}</h1>
+		<p>{{ summary }}</p>
+	</section>
+	
+	<section class="component component--standard-wide">
+		{{ content | safe }}
+	</section>
+</main>
 
-<div class="column--right window">
-  {% include 'latest-bookmarks.njk' %}
-  {% include 'footer.njk' %}
-</div>
+{% include 'footer.njk' %}

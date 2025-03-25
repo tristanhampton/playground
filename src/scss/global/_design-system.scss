@@ -251,6 +251,8 @@
   --padding-900: calc(var(--baseline)*9);
   --padding-1000: calc(var(--baseline)*10);
 
+  
+
   // Components
   --component-margin-top-child-pages: var(--padding-000);
   --component-margin-top-first: var(--padding-400);
@@ -268,6 +270,12 @@
   --page-margin-200: calc(var(--col)*2);
   --page-margin-300: calc(var(--col)*3);
   --page-margin-500: calc(var(--col)*5);
+
+  // Containers
+  --container-width-sm: calc(100% - var(--page-margin-500)*2);
+  --container-width-md: calc(100% - var(--page-margin-300)*2);
+  --container-width-lrg: calc(100% - var(--page-margin-200)*2);
+  --container-width-xl: calc(100% - var(--page-margin-100)*2);
 
   @media screen and (min-width: 200px) {
     --page-margin-100: calc(var(--col)*1);

@@ -7,10 +7,9 @@
  * @param {type} var Description.
  */
 p5.prototype.getCanvasWidth = function () {
-  let main = document.querySelector('.site__main');
+  let main = document.querySelector('main');
   let windowHeight = window.innerHeight;
   let width = main.offsetWidth;
-  let padding = getStyle(main, 'padding-left');
 
   if (width > windowHeight)
     return windowHeight - 50;
