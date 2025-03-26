@@ -1,5 +1,4 @@
 .site__navigation {
-  // display: none;
 
   &.active {
     display: block;
@@ -70,21 +69,25 @@
     margin: 0;
   }
 
-  li:last-child a {
-    padding-right: var(--padding-200);
-  }
-
-  @media screen and (max-width: 784px) {
+  @media screen and (max-width: 699px) {
     ul {
-      flex-direction: column;
+      max-width: var(--container-width-lrg);
+      margin-inline: auto;
+      flex-direction: row;
     }
 
     a {
-      border-top: 0.1rem dashed #000;
-      border-left: none;
+      span {
+        left: 0;
+      }
     }
-  }
 
-  @media screen and (min-width: 785px) {
+    a:hover,
+    a:focus {
+      span {
+        left: 0;
+        top: calc(100% + var(--padding-300));
+      }
+    }
   }
 }

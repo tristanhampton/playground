@@ -1,9 +1,4 @@
 <header class="site__header">
-  {% if backLink %}
-    <a href="{{ backLink }}" class="back-link">
-      {% include 'icons/arrow-left.njk' %}
-    </a>
-  {% endif %}
 
   {% if layout == 'tools' %}
     <a href="/tools" class="back-link">
@@ -11,17 +6,25 @@
     </a>
   {% endif %}
 
-  <a href="/" class="home-link">
+  {# <a href="/" class="home-link">
     {% include 'icons/home.njk' %}
   </a>
 
   <button class="menu-toggle js-menu-toggle" aria-label="Open navigation">
     {% include 'icons/menu.njk' %}
     {% include 'icons/close.njk' %}
-  </button>
+  </button> #}
 
   <nav class="site__navigation">
     <ul>
+      {% if backLink %}
+        <li>
+          <a href="{{ backLink }}" class="back-link">
+            {% include 'icons/arrow-left.njk' %}
+          </a>
+        </li> 
+      {% endif %}
+
       <li>
         <a href="/">{% include 'icons/home.njk' %}<span class="navigation__link-text">Home</span></a>
       </li>
