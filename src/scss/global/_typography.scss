@@ -171,54 +171,50 @@ s {
 }
 
 hr {
-  margin: var(--component-margin-top-default) auto;
+  margin: calc(var(--component-margin-top-default) + 10rem) auto;
   border: none;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 20rem;
-  height: 20rem;
-  border: 0.1rem solid #000;
-  background-color: #FFF;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #000;
   position: relative;
   overflow: visible;
+  
+  &::before {
+    content: '';
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    z-index: 2;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0.1rem solid #000;
+  }
+
+  &.type--hiding::before {
+    background-image: url('../img/sketches/hiding.png');
+  }
+  
+  &.type--phone::before {
+    background-image: url('../img/sketches/telephone-poles.png');
+  }
+  
+  &.type--baba::before {
+    background-image: url('../img/sketches/baba.png');
+  }
+  
+  &.type--trap::before {
+    background-image: url('../img/sketches/trap.png');
+  }
 
   + [class*=component],
   + * {
     margin-top: var(--component-margin-top-default);
-  }
-
-  &.space--large {
-    margin: var(--component-margin-top-default) auto;
-  }
-
-  &.type--hiding {
-    background-image: url('../img/sketches/hiding.png');
-  }
-
-  &.type--phone {
-    background-image: url('../img/sketches/telephone-poles.png');
-  }
-
-  &.type--baba {
-    background-image: url('../img/sketches/baba.png');
-  }
-
-  &.type--trap {
-    background-image: url('../img/sketches/trap.png');
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    width: 60rem;
-    height: 0.1rem;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
   }
 }
 
@@ -251,7 +247,8 @@ main {
   *+ul,
   *+ol,
   *+a,
-  *+address {
+  *+address,
+  *+iframe {
     margin-top: var(--vertical-type-spacing-sm);
   }
 

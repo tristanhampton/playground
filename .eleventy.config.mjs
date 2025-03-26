@@ -68,6 +68,9 @@ export default function (eleventyConfig) {
 	//--- Adds images to _site
 	eleventyConfig.addPassthroughCopy({ "src/img": "img" });
 
+	//--- Adds files to _site
+	eleventyConfig.addPassthroughCopy({ "src/files": "files" });
+
 	//--- Adds fonts to _site
 	eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
 

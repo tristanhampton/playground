@@ -8,3 +8,7 @@
 [class*="banner"] + .hidden + [class*=component] {
   margin-top: var(--component-margin-top-first)
 }
+
+[class*=component]:first-child {
+  padding-top: var(--padding-200);
+}

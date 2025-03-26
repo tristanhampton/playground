@@ -101,3 +101,11 @@
     }
   }
 }
+
+iframe.sketchbook {
+  display: block;
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  aspect-ratio: 5.7 / 8;
+}
