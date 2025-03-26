@@ -1,7 +1,7 @@
 ---
 title: "Journey to Incrementalia"
 id: 3147430
-date: 2025-03-25T00:00:07.482Z
+date: 2025-03-26T00:00:08.952Z
 link: games/steam/recent/journey-to-incrementalia
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3147430/38337bf37805dc3ac6a6af9e93854ac34fb7e463.jpg
 playtime_2weeks: 49
