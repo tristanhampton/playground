@@ -1,7 +1,7 @@
 ---
 title: "Stone Story RPG"
 id: 603390
-date: 2025-03-26T00:00:10.624Z
+date: 2025-03-27T00:00:09.680Z
 link: games/steam/recent/stone-story-rpg
 image: http://media.steampowered.com/steamcommunity/public/images/apps/603390/b9563b95f082510aa7528705c0c4bf2f5cd3a0af.jpg
 playtime_2weeks: 10
