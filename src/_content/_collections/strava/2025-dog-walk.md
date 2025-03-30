@@ -1,14 +1,14 @@
 ---
 title: "Dog walk"
-id: https://strava.com/activities/14006944234
-link: https://strava.com/activities/14006944234
-date: 2025-03-27T23:20:06.000Z
-rideDate: Thu Mar 27 2025
-pubDate: Thu, 27 Mar 2025 17:20:06 -0600
+id: https://strava.com/activities/14025382407
+link: https://strava.com/activities/14025382407
+date: 2025-03-30T02:20:48.000Z
+rideDate: Sun Mar 30 2025
+pubDate: Sat, 29 Mar 2025 20:20:48 -0600
 type: walk
-distance: 0.7km
+distance: 0.9km
 elevation: 0m
-time: 00:11:17
-speed: 3.7km/h
+time: 00:11:30
+speed: 4.8km/h
 ---
-Walk: Distance: 0.7km, Elevation Gain: 0m, Moving Time: 00:11:17, Average Speed: 3.7km/h
+Walk: Distance: 0.9km, Elevation Gain: 0m, Moving Time: 00:11:30, Average Speed: 4.8km/h
