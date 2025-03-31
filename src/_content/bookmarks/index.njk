@@ -10,32 +10,10 @@ pagination:
 permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
 
-	<div class="banner banner--default">
-		<h1>{{title}}</h1>
-		<p>This is my full collection of bookmarks. These are links to resources, articles, inspirations, and other misc. content that I've found online and want to keep track of.</p>
-	</div>
-
-	{# Form doesn't work with pagination #}
-	{# <form>
-		<div class="form-input">
-			<label for="type">Filter</label>
-			<select name="type" id="type">
-				<option value="" selected>None</option>
-				<option value="Art">Art</option>
-				<option value="Article">Article</option>
-				<option value="Accessibility">Accessibility</option>
-				<option value="Board Games">Board Games</option>
-				<option value="Books">Books</option>
-				<option value="Creative Coding">Creative Coding</option>
-				<option value="Home Lab">Home Lab</option>
-				<option value="Social Media">Social Media</option>
-				<option value="Web Development">Web Development</option>
-				<option value="Website">Website</option>
-				<option value="Video Games">Video Games</option>
-				<option value="Misc">Misc.</option>
-			</select>
-		</div>
-	</form> #}
+<div class="banner banner--default">
+	<h1>{{title}}</h1>
+	<p>This is my full collection of bookmarks. These are links to resources, articles, inspirations, and other misc. content that I've found online and want to keep track of.</p>
+</div>
 
 <div class="component component--standard-wide">
 	<ul class="bookmark-list">
@@ -59,7 +37,7 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 
 </div>
 
-<nav aria-labelledby="pagination-title" class="pagination">
+<nav aria-labelledby="pagination-title" class="pagination component--standard-wide">
 	<h2 id="pagination-title" class="sr-only">Pagination</h2>
 	<ul>
 		{%- for pageEntry in pagination.pages %}

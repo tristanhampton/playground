@@ -29,13 +29,13 @@
 
 .pagination {
   margin-top: var(--padding-600);
-  border-top: 0.1rem dashed #000;
   
   ul {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0 var(--page-margin-100);
+    padding: 0;
+    gap: 0.6rem;
   }
 
   li {
@@ -45,23 +45,15 @@
   a {
     display: block;
     padding: var(--padding-100) var(--padding-200);
-    border: 0.1rem dashed #000;
-    border-top: 0;
+    border: 0.2rem solid #000;
+    border-radius: 0.6rem;
     text-decoration: none;
 
     &:hover,
     &:focus,
     &[aria-current="page"] {
-      background-color: var(--olive-800);
-      color: var(--text-primary);
+      background-color: #000;
+      color: #FFF;
     }
-  }
-
-  li+li a {
-    border-left: none;
-  }
-
-  .page-item {
-    margin: 0 var(--padding-100);
   }
 }
