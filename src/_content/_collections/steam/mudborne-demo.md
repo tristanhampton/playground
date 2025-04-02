@@ -1,7 +1,7 @@
 ---
 title: "Mudborne Demo"
 id: 2365080
-date: 2025-04-01T00:00:12.219Z
+date: 2025-04-02T00:00:09.081Z
 link: games/steam/recent/mudborne-demo
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2365080/bc5d8b3847849b1cb2c18121cb2a24b229e35326.jpg
 playtime_2weeks: 6
