@@ -1,0 +1,24 @@
+---
+title: "Pictures"
+meta_description: 'A collection of pictures. Think of it like Instagram.'
+---
+
+<div class="banner banner--default">
+  <h1>{{title}}</h1>
+  <p>The following are posts that you might normally find on social media, but you aren't on social media.</p>
+</div>
+
+<section class="component--standard-wide">
+  <ul class="post-grid">
+    {% for post in collections.social|reverse %}
+      <li>
+        <picture>
+          <source srcset="{% getUrl post | imgSrc | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+          <source srcset="{% getUrl post | imgSrc | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+          <img src="{% getUrl post | imgSrc | resize({ height: 500, width: 500 }) | avif %}" alt="{{ post.data.alt }}">
+        </picture>
+      </li>
+      {% endfor %}
+    </ul>
+  </ul>
+</section>

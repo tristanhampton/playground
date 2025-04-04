@@ -49,6 +49,36 @@ export default function (eleventyConfig) {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
 	});
 
+	/**
+	 * Build a url to a an image in a directory
+	 */
+	eleventyConfig.addFilter("imgSrc", (post) => {
+		if (!post) {
+			console.error("No post provided");
+		}
+
+		if (!post.data) {
+			console.error("Post has no data provided");
+		}
+
+		if (!post.data.image) {
+			console.error("Post has no image value. Make sure it has an image frontmatter value.");
+		}
+
+		const imgFile = post.data.image;
+		const filePathStem = post.page.filePathStem;
+		let imgSrc = "";
+
+		// Remove the final filename from the filePathStem
+		filePathStem.split('/').forEach((segment, index) => {
+			if (index < filePathStem.split('/').length - 1) {
+				imgSrc += segment + '/';
+			}
+		});
+
+		return imgSrc += imgFile;
+	});
+
 
 	/* General Site Setup
 	 * ----------------------------------------------- */
@@ -84,6 +114,11 @@ export default function (eleventyConfig) {
 
 	//--- Projects
 	eleventyConfig.addPassthroughCopy({ "src/_content/projects/*/*.png": 'projects/img' });
+
+	//--- Social
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.jpg": 'img/social' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.png": 'img/social' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.gif": 'img/social' });
 
 	//--- Tools
 	eleventyConfig.addPassthroughCopy({ "src/_content/tools/*/*.js": 'tools/js' });
