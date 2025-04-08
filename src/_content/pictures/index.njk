@@ -11,12 +11,21 @@ meta_description: 'A collection of pictures. Think of it like Instagram.'
 <section class="component--standard-wide">
   <ul class="post-grid">
     {% for post in collections.social|reverse %}
-      <li>
+      {% if post.data.caption %}
+        {% set classes = 'has-caption' %}
+      {% else %}
+        {% set classes = 'no-caption' %}
+      {% endif %}
+      
+      <li class="{{ classes }}">
         <picture>
           <source srcset="{% getUrl post | imgSrc | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
           <source srcset="{% getUrl post | imgSrc | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
           <img src="{% getUrl post | imgSrc | resize({ height: 500, width: 500 }) | avif %}" alt="{{ post.data.alt }}">
         </picture>
+        {% if post.data.caption %}
+          <p class="caption">{{ post.data.caption }}</p>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>

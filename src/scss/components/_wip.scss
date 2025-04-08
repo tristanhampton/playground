@@ -120,17 +120,58 @@ iframe.sketchbook {
   li {
     margin: 0;
     aspect-ratio: 1 / 1;
+    position: relative;
   }
 
   picture,
   img {
     aspect-ratio: 1 / 1;
-    border-radius: 0.6rem;
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .caption {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: #FFF;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: #000A;
+    margin: 0;
+    padding: var(--padding-400);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  li.has-caption {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0.5rem;
+      z-index: 2;
+      border: 0.1rem solid #EFEFEF;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus-within {
+      .caption {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
   }
 }
