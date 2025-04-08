@@ -1,18 +1,45 @@
 .banner--home {
-  padding: var(--padding-400) 0 var(--padding-800);
-  max-width: var(--container-width-lrg);
-  margin-inline: auto;
+  padding: var(--padding-1000) var(--page-margin-200) var(--padding-1000);
+  position: relative;
+  background-color: #000;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 100%, 75% 95%, 0 100%);
 
   h1,
   .h1 {
     font-size: var(--display-large);
     font-weight: 700;
     line-height: 0.85;
+    color: #FFF;
   }
 
-  p {
+  .h1 + p {
     font-size: var(--font-large);
     max-width: 90ch;
+    padding: var(--padding-100) var(--padding-200);
+    max-width: fit-content;
+    border-radius: 0.6rem;
+    background-color: #FFF;
+  }
+
+  h1,
+  .h1,
+  p {
+    position: relative;
+    z-index: 1;
+  }
+
+  #canvasContainer {
+    position: absolute;
+    inset: 0;
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: var(--padding-500) var(--page-margin-200) var(--padding-500);
   }
 }
 

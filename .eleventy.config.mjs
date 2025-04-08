@@ -107,10 +107,10 @@ export default function (eleventyConfig) {
 	/* Content Assets
 	 * ----------------------------------------------- */
 	//--- Creative Coding
-	eleventyConfig.addPassthroughCopy({ "src/_content/generative/*/*.js": 'js/generative' });
-	eleventyConfig.addPassthroughCopy({ "src/_content/generative/*/*.png": 'img/generative' });
-	eleventyConfig.addPassthroughCopy({ "src/_content/generative/*/*.json": 'js/generative' });
-	eleventyConfig.addPassthroughCopy({ "src/_content/generative/*/*.mp3": 'mp3/generative' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.js": 'js/generative' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.png": 'img/generative' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.json": 'js/generative' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.mp3": 'mp3/generative' });
 
 	//--- Projects
 	eleventyConfig.addPassthroughCopy({ "src/_content/projects/*/*.png": 'projects/img' });
