@@ -1,4 +1,6 @@
-.layout {
+.layout--default,
+.layout--canvas,
+.layout--blog {
 
 
   @media screen and (min-width: 700px) {
@@ -13,6 +15,11 @@
       padding: var(--padding-200);
       grid-column: 1 / 2;
       grid-row: 1 / -1;
+
+      nav {
+        position: sticky;
+        top: var(--padding-200);
+      }
     }
 
     main {

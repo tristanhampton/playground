@@ -4,7 +4,7 @@ export default {
   ogType: 'website',
   meta_description: "Artwork built using p5.js",
   twitterCard: 'summary_large_image',
-  backLink: '/generative',
+  backLink: '/creative/generative',
   permalink: function ({ title }) {
     return `/creative/generative/${this.slugify(title)}/`;
   },

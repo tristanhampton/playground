@@ -87,7 +87,8 @@
 }
 
 .layout--default .site__navigation,
-.layout--canvas .site__navigation {
+.layout--canvas .site__navigation,
+.layout--blog .site__navigation {
   ul {
     display: flex;
     flex-direction: column;
