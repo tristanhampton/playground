@@ -9,7 +9,7 @@
   --baseline: 0.8rem;
   --col: 5vw;
 
-  --display-large: clamp(3em, 20vw, 9em);
+  --display-large: clamp(3em, 18vw, 9em);
   --display-small: clamp(2.8em, 15vw, 4.5em);
   --heading-1: 2.66em; // 48
   --heading-2: 2.22em; // 40
@@ -26,8 +26,10 @@
     --heading-2: 1.77em; // 32
     --heading-3: 1.55em; // 28
     --heading-4: 1.33em; // 24
-    --heading-5: 1.2em; // Not set in Manitoba yet
-    --heading-6: 1em; // Not set in Manitoba yet
+    --heading-5: 1.2em; 
+    --heading-6: 1em; 
+
+    --font-large: 1em;
   }
 
   @media screen and (min-width: 1900px) {

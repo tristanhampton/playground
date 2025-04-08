@@ -2,14 +2,13 @@
   padding: var(--padding-1000) var(--page-margin-200) var(--padding-1000);
   position: relative;
   background-color: #000;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 100%, 75% 95%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 100%, 75% 95%, 0 100%);
 
   h1,
   .h1 {
     font-size: var(--display-large);
     font-weight: 700;
     line-height: 0.85;
-    color: #FFF;
   }
 
   .h1 + p {
@@ -17,15 +16,15 @@
     max-width: 90ch;
     padding: var(--padding-100) var(--padding-200);
     max-width: fit-content;
-    border-radius: 0.6rem;
-    background-color: #FFF;
+    font-weight: 200;
   }
-
+  
   h1,
   .h1,
   p {
     position: relative;
     z-index: 1;
+    color: #EFEFEF;
   }
 
   #canvasContainer {
@@ -36,6 +35,15 @@
       width: 100% !important;
       height: 100% !important;
     }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    z-index: 1;
+    pointer-events: none;
+    border: 0.1rem solid #EFEFEF;
   }
 
   @media screen and (max-width: 768px) {
