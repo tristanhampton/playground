@@ -10,13 +10,7 @@ const settings = {
 	maxPoints: 100,
 	spawnChance: 20000,
 	endChance: 80000,
-	burstSize: 50,
-	burstDensity: 300,
 };
-
-function preload() {
-
-}
 
 function setup() {
 	settings.width = document.querySelector('#canvasContainer').offsetWidth;
@@ -25,8 +19,6 @@ function setup() {
 	// Create and place the canvas
 	const canvas = createCanvas(settings.width, settings.height);
 	canvas.parent('canvasContainer');
-	// canvas.mouseClicked(setup);
-	frameRate(60);
 	background('#000');
 	noStroke();
 	settings.points = [];
@@ -106,7 +98,6 @@ class Particle {
 
 		// Set a radndom chance that this branch will end
 		if (getRandomInt(1, this.endChance) == this.set[0]) {
-			// this.burst();
 			this.deleteSelf();
 		}
 
@@ -156,18 +147,4 @@ class Particle {
 		// remove self
 		settings.points.splice(index, 1);
 	}
-
-	burst() {
-		// End finished branches with a burst
-		let radius = noise(this.x * 0.5);
-		radius = mapRange(radius, 0, 1, 10, settings.burstSize, true);
-		fill(this.color);
-
-		for (let i = 0; i < settings.burstDensity; i++) {
-			let vector = randomInsideCircle(radius);
-			ellipse(this.x + vector.x, this.y + vector.y, 1);
-		}
-	}
 }
-
-setup();
