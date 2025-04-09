@@ -239,6 +239,11 @@ code:not([class]) {
   border-radius: 0.4rem;
 }
 
+picture:not([class]) {
+  width: 100%;
+  max-width: 90rem;
+}
+
 /* Typography Spacing
  * ----------------------------------------------- */
 main {
@@ -248,7 +253,8 @@ main {
   *+ol,
   *+a,
   *+address,
-  *+iframe {
+  *+iframe,
+  *+picture {
     margin-top: var(--vertical-type-spacing-sm);
   }
 

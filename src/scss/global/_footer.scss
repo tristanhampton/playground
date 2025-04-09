@@ -32,20 +32,62 @@
   }
 }
 
-/* Copyright
+/* Upper Footer
  * ----------------------------------------------- */
-.footer__copyright {
-  margin: 0;
-}
-
-/* Footer General Styles
- * ----------------------------------------------- */
-.site__footer {
+.footer__upper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--padding-200) var(--padding-300);
   padding: var(--padding-200) var(--page-margin-100);
+}
+
+/* Lower Footer
+ * ----------------------------------------------- */
+.footer__lower {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--padding-200) var(--padding-300);
+  flex: 1 1 100%;
+  background-color: #000;
+  margin: 0;
+  color: #FFF;
+  padding: var(--padding-200) var(--page-margin-100);
+  font-size: 1.4rem;
+
+  > * {
+    margin: 0;
+  }
+}
+
+/* Kuzco Cuonter
+ * ----------------------------------------------- */
+.kuzco-counter {
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    color: #FFF;
+    text-decoration: none;
+    border: 0.1rem solid #FFF;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 1.5em;
+    height: 1.5em;
+
+    &:hover,
+    &:focus {
+      background-color: #FFF;
+      color: #000;
+    }
+  }
+}
+
+/* Footer General Styles
+ * ----------------------------------------------- */
+.site__footer {
+  
   border-top: 0.1rem solid #000;
   margin-top: var(--component-margin-top-default);
 }
