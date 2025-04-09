@@ -2,14 +2,14 @@ const settings = {
 	width: null,
 	height: null,
 	freq: 100,
-	size: 0.2,
-	dist: 2,
+	size: 0.1,
+	dist: 0.5,
 	points: [],
 	squiggliness: 1 / 250,
-	colors: ['#555', '#555', '#555'],
+	colors: ['#FFF', '#FFF', '#FFF'],
 	maxPoints: 100,
-	spawnChance: 300,
-	endChance: 500,
+	spawnChance: 20000,
+	endChance: 80000,
 	burstSize: 50,
 	burstDensity: 300,
 };
@@ -119,7 +119,7 @@ class Particle {
 
 		// create a sort of "brush" by placing points inside a circle
 		let radius = noise(this.x * 0.5);
-		radius = mapRange(radius, 0, 1, 2, 4, true);
+		radius = mapRange(radius, 0, 1, 0.5, 1, true);
 		for (let i = 0; i < 500; i++) {
 			fill(this.color)
 			let vector = randomInsideCircle(radius);
