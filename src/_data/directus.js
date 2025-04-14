@@ -1,5 +1,11 @@
 import { createDirectus, rest } from '@directus/sdk';
 
-const directus = createDirectus('https://tristanhampton.hamserver.org').with(rest());
+let directus;
+
+try {
+  directus = createDirectus('https://tristanhampton.hamserver.org').with(rest());
+} catch (error) {
+  console.error('Error creating Directus instance:', error);
+}
 
 export default directus;
