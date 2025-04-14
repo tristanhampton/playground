@@ -1,0 +1,13 @@
+{% macro latestCard(params) %}
+  {% if params.image %}
+    {% if 'http' in params.image %}
+      {% set image = params.image %}
+    {% else %}
+      {% set image = '/img/' ~ params.image %}
+    {% endif %}
+  {% endif %}
+  <div class="latest-card">
+    <p class="h3">{{ params.title }}</p>
+    <img src="{{ image }}" alt="">
+  </div>
+{% endmacro %}

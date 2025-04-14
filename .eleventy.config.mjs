@@ -108,17 +108,17 @@ export default function (eleventyConfig) {
 	 * ----------------------------------------------- */
 	//--- Creative Coding
 	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.js": 'js/generative' });
-	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.png": 'img/generative' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.png": 'img' });
 	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.json": 'js/generative' });
 	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/creative-coding/*/*.mp3": 'mp3/generative' });
 
 	//--- Projects
-	eleventyConfig.addPassthroughCopy({ "src/_content/projects/*/*.png": 'projects/img' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/projects/*/*.png": 'img' });
 
 	//--- Social
-	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.jpg": 'img/social' });
-	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.png": 'img/social' });
-	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.gif": 'img/social' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.jpg": 'img' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.png": 'img' });
+	eleventyConfig.addPassthroughCopy({ "src/_content/_collections/social/*.gif": 'img' });
 
 	//--- Tools
 	eleventyConfig.addPassthroughCopy({ "src/_content/tools/*/*.js": 'tools/js' });
@@ -135,6 +135,31 @@ export default function (eleventyConfig) {
 	eleventyConfig.addShortcode('galleryItem', (img, caption, galleryID) => {
 		return `<a class="gallery__item" href="${img}" data-fancybox="${galleryID}" data-caption="${caption}"><img src="${img}"></a> `;
 	});
+
+	/* Custom Collections
+	 * ----------------------------------------------- */
+	eleventyConfig.addCollection("latest", function (collectionsApi) {
+    const allCollections = collectionsApi.getAll(); // Get all items from all collections
+    const collectionsByTag = {};
+
+    // Group items by their first tag
+    allCollections.forEach((item) => {
+        if (item.data.tags && item.data.tags.length > 0) {
+            const primaryTag = item.data.tags[0]; // Use the first tag as the group key
+            if (!collectionsByTag[primaryTag]) {
+                collectionsByTag[primaryTag] = [];
+            }
+            collectionsByTag[primaryTag].push(item);
+        }
+    });
+
+    // Get the most recent post from each group
+    const mostRecentPosts = Object.values(collectionsByTag).map((items) => {
+        return items.sort((a, b) => new Date(b.date) - new Date(a.date))[0]; // Sort by date descending and take the first item
+    });
+
+    return mostRecentPosts;
+});
 
 	//--- Determine if local or live
 	eleventyConfig.addGlobalData('local', function () {
