@@ -13,8 +13,6 @@
   .h1 + p {
     font-size: var(--font-large);
     max-width: 90ch;
-    padding: var(--padding-100) var(--padding-200);
-    max-width: fit-content;
     font-weight: 200;
   }
   
