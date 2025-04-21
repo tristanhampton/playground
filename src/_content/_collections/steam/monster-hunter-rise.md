@@ -1,13 +1,13 @@
 ---
 title: "MONSTER HUNTER RISE"
 id: 1446780
-date: 2025-04-20T00:00:04.638Z
+date: 2025-04-21T00:00:04.208Z
 link: games/steam/recent/monster-hunter-rise
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1446780/560dd364b52075b783424961a43c01f9b69fde15.jpg
-playtime_2weeks: 2796
-playtime_forever: 5547
+playtime_2weeks: 2631
+playtime_forever: 5715
 playtime_windows_forever: 0
 playtime_mac_forever: 0
-playtime_linux_forever: 5547
-playtime_deck_forever: 5547
+playtime_linux_forever: 5715
+playtime_deck_forever: 5715
 ---
