@@ -14,9 +14,13 @@ export default () => {
     const { data } = matter(fileContent);
 
     if (data.tags && data.tags.includes('kuzco-tracker')) {
-      totalDistance += parseFloat(data.distance || 0);
+      let distance = data.distance.replace('km', '');
+      totalDistance += parseFloat(distance || 0);
     }
   });
+  
+  // Round to 1 decimal place (e.g. 12.3)
+  totalDistance = totalDistance.toFixed(1);
 
   // Add km to the string
   totalDistance += ' km';
