@@ -1,7 +1,7 @@
 ---
 title: "DOOM"
 id: 379720
-date: 2025-05-02T00:00:07.331Z
+date: 2025-05-03T00:00:07.195Z
 link: games/steam/recent/doom
 image: http://media.steampowered.com/steamcommunity/public/images/apps/379720/b6e72ff47d1990cb644700751eeeff14e0aba6dc.jpg
 playtime_2weeks: 18
