@@ -1,7 +1,7 @@
 ---
 title: "Darkest Dungeon® II"
 id: 1940340
-date: 2025-05-28T02:00:04.135Z
+date: 2025-05-29T00:00:05.301Z
 link: games/steam/recent/darkest-dungeon-ii
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1940340/ec502cc4a786955cf7032b70351cf36c4b06114c.jpg
 playtime_2weeks: 47
