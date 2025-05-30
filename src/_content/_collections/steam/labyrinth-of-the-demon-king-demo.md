@@ -1,7 +1,7 @@
 ---
 title: "Labyrinth Of The Demon King Demo"
 id: 3308290
-date: 2025-05-29T00:00:06.582Z
+date: 2025-05-30T00:00:07.699Z
 link: games/steam/recent/labyrinth-of-the-demon-king-demo
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3308290/df2e521d5fcac2bf1f1f5077bf29b48504215025.jpg
 playtime_2weeks: 16
