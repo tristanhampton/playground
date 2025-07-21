@@ -1,6 +1,6 @@
-import directus from './directus.js';
-import { readSingleton } from '@directus/sdk';
+// import directus from './directus.js';
+// import { readSingleton } from '@directus/sdk';
 
-export default async () => {
-    return await directus.request(readSingleton('global'))
-}
+// export default async () => {
+//     return await directus.request(readSingleton('global'))
+// }
