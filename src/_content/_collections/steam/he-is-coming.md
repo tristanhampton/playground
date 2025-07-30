@@ -1,7 +1,7 @@
 ---
 title: "He is Coming"
 id: 2824490
-date: 2025-07-29T05:00:06.991Z
+date: 2025-07-30T05:00:06.817Z
 link: games/steam/recent/he-is-coming
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2824490/2c468a99d9248de6c2ab26ddbc2db2ce1f731805.jpg
 playtime_2weeks: 73
