@@ -7,6 +7,6 @@ content:
       - name: title
         label: Title
         type: string
-      - name: content
-        label: Content
+      - name: post
+        label: Post
         type: rich-text
