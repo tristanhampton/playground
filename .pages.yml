@@ -1,0 +1,12 @@
+content:
+  - name: posts
+    label: Posts
+    path: src/_content/_collections/posts
+    type: collection
+    fields:
+      - name: title
+        label: Title
+        type: block
+      - name: content
+        label: Content
+        type: rich-text
