@@ -14,3 +14,7 @@ content:
       - name: post
         label: Post
         type: rich-text
+      - name: tags
+        hidden: true
+        label: Tags
+        default: blog
