@@ -11,6 +11,9 @@ content:
         label: Published
         type: boolean
         default: false
+      - name: summary
+        label: Summary
+        type: text
       - name: post
         label: Post
         type: rich-text
