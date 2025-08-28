@@ -1,7 +1,7 @@
 ---
 title: "LEGO® Harry Potter: Years 1-4"
 id: 21130
-date: 2025-08-27T05:00:07.270Z
+date: 2025-08-28T05:00:07.949Z
 link: games/steam/recent/lego-harry-potter-years-14
 image: http://media.steampowered.com/steamcommunity/public/images/apps/21130/49af7348b4b6c51181c6210cb91b858d497610a2.jpg
 playtime_2weeks: 96
