@@ -1,9 +1,9 @@
 ---
 title: "Hollow Knight"
 id: 367520
-date: 2025-08-27T05:00:06.563Z
+date: 2025-08-28T05:00:07.288Z
 link: games/steam/recent/hollow-knight
-image: http://media.steampowered.com/steamcommunity/public/images/apps/367520/7b87aecda896ae747a6e40e3eb63498cb8b84df2.jpg
+image: http://media.steampowered.com/steamcommunity/public/images/apps/367520/f6ab055c2366237200b1a31cccbd6cf81e436d72.jpg
 playtime_2weeks: 104
 playtime_forever: 169
 playtime_windows_forever: 0
