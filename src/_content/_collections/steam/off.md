@@ -1,7 +1,7 @@
 ---
 title: "OFF"
 id: 3339880
-date: 2025-08-29T05:00:07.230Z
+date: 2025-08-30T05:00:06.227Z
 link: games/steam/recent/off
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3339880/eacbaf86a0ce7d8f36b26982cc4acbd52c65b673.jpg
 playtime_2weeks: 613
