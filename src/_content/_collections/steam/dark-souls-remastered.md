@@ -1,7 +1,7 @@
 ---
 title: "DARK SOULS™: REMASTERED"
 id: 570940
-date: 2025-09-05T05:00:10.616Z
+date: 2025-09-06T05:00:07.443Z
 link: games/steam/recent/dark-souls-remastered
 image: http://media.steampowered.com/steamcommunity/public/images/apps/570940/d74cfa4f3a2070f45ad8ce44e5f61a6507ee00b6.jpg
 playtime_2weeks: 26
