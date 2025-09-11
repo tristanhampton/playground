@@ -1,0 +1,36 @@
+---
+layout: default
+siteTitle: "Tristan Hampton"
+title: "Bookbinding"
+meta_description: 'My latest interest in bookbinding'
+backLink: /creative
+---
+
+<section class="component component--standard-wide">
+  <h1>{{ title }}</h1>
+
+  <p>I've been messing around with bookbinding over the last few months, which has been a lot of fun.</p>
+
+  <p>I started with rebinding some trade paperback books like Gardens of the Moon and The Eye of the World. Then I started making some blank notebooks and sewing the pages together.</p>
+
+  <p>Eventually I learned how to use LaTeX to typeset a collection of my dad's short stories, print it, and bind it into a single book</p>
+
+  <p>My wife helped me with a few gifts by either embroidering the covers, or helping me with her cricut to make some covers as well.</p>
+
+  <p>The following images are in no particular order</p>
+
+  <div class="grid-wrapper tile--large">
+    {% set imgRoot = '/../img/bookbinding/' %}
+    {% for i in range(1, 41) %}
+      {% set imgPath = imgRoot ~ 'bookbinding-' ~ i ~ '.jpeg' %}
+      <picture>
+        <source srcset="{% getUrl imgPath | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+        <source srcset="{% getUrl imgPath | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+        <img src="{% getUrl imgPath | resize({ height: 500, width: 500 }) | avif %}" alt="">
+      </picture>
+
+    {% endfor %}
+
+  </div>
+</section>
+

@@ -64,6 +64,10 @@ picture {
 	&.gap--large {
 		gap: var(--padding-400);
 	}
+
+	&.tile--large {
+		grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+	}
 	
 	@media screen and (min-width: 551px) {
 		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
