@@ -1,7 +1,7 @@
 ---
 title: "Eldest Souls"
 id: 1108590
-date: 2025-09-11T05:00:07.807Z
+date: 2025-09-12T05:00:07.007Z
 link: games/steam/recent/eldest-souls
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1108590/415972b4704c3a976ad04e502ecedc0fad54fbb7.jpg
 playtime_2weeks: 12
