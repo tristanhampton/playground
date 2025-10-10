@@ -44,6 +44,7 @@ content:
       - name: date
         label: Date
         type: date
+        time: true
       - name: published
         label: Published
         type: boolean
