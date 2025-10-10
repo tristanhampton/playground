@@ -1,7 +1,11 @@
 .banner--home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: var(--padding-1000) var(--page-margin-200) var(--padding-1000);
   position: relative;
   background-color: #000;
+  min-height: 100vh;
 
   h1,
   .h1 {
