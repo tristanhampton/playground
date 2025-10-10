@@ -41,6 +41,9 @@ content:
       - name: caption
         label: Caption
         type: string
+      - name: date
+        label: Date
+        type: date
       - name: published
         label: Published
         type: boolean
