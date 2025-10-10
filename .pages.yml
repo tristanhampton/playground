@@ -71,16 +71,4 @@ content:
         type: select 
         options:
           multiple: true
-          values: [ 
-            Web Development,
-            Website,
-            Social Media,
-            Art,
-            Creative Coding,
-            Book Binding,
-            Article,
-            Misc,
-            Video Games,
-            Home Lab,
-            Accessibility
-          ]
+          values: [ Web Development, Website, Social Media, Art, Creative Coding, Book Binding, Article, Misc, Video Games, Home Lab, Accessibility ]
