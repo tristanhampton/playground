@@ -91,4 +91,4 @@ content:
         type: date
         options:  
           time: true
-          format: yyyy-MM-DDTHH:mm:ssZ
+          format: yyyy-MM-ddTHH:mm:ssZ
