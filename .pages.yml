@@ -29,12 +29,16 @@ content:
     path: src/_content/_collections/fakestagram
     type: collection
     fields: 
+      - name: photo
+        label: Photo
+        type: image
+      - name: alt
+        label: Alt text
+        type: string
+      - name: caption
+        label: caption
+        type: string
       - name: published
         label: Published
         type: boolean
         default: true
-      - name: alt
-        label: Alt text
-      - name: photo
-        label: Photo
-        type: image
