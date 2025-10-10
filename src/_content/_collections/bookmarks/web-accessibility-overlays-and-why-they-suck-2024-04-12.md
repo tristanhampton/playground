@@ -6,7 +6,7 @@ link: https://overlayfactsheet.com/en/
 description: Very interesting read on how accessibility overlays don't really
   work, and are often just band-aids that fool accessibility audits without
   improving the experience of people who need them.
-date: 2024-04-12T18:55:40.467Z
+date: 2024-04-12
 type:
   - Accessibility
   - Article
