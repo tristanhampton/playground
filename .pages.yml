@@ -92,3 +92,8 @@ content:
         options:  
           time: true
           format: yyyy-MM-dd'T'HH:mm:ss'Z'
+      - name: category
+        label: Category
+        type: select
+        options:  
+          values: [ read, dnf ]
