@@ -193,10 +193,10 @@ content:
         type: date
         options:
           time: true
-          format: yyyy-MM-dd'T'HH:mm:ss.000'Z'
+          format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
       - name: image
         label: Image
-        type: 
+        type: string
       - name: link
         label: Link
         type: string
@@ -210,12 +210,15 @@ content:
       - name: playtime_windows_forever
         label: Playtime - Windows
         type: string
+        hidden: true
       - name: playtime_mac_forever
         label: Playtime - Mac
         type: string
+        hidden: true
       - name: playtime_linux_forever
         label: Playtime - Linux
         type: string
+        hidden: true
       - name: playtime_deck_forever
         label: Playtime - Steam Deck
         type: string
