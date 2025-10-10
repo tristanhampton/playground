@@ -5,12 +5,12 @@ meta_description: 'A collection of pictures. Think of it like Instagram.'
 
 <div class="banner banner--default">
   <h1>{{title}}</h1>
-  <p>The following are posts that you might normally find on social media, but you aren't on social media.</p>
+  <p>The following are posts that you might normally find on social media, but not on social media.</p>
 </div>
 
 <section class="component--standard-wide">
   <ul class="post-grid">
-    {% for post in collections.social|reverse %}
+    {% for post in collections.fakestagram|reverse %}
       {% if post.data.caption %}
         {% set classes = 'has-caption' %}
       {% else %}
@@ -18,10 +18,11 @@ meta_description: 'A collection of pictures. Think of it like Instagram.'
       {% endif %}
       
       <li class="{{ classes }}">
+        {% set imgPath = 'src' + post.data.photo %}
         <picture>
-          <source srcset="{% getUrl post | imgSrc | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
-          <source srcset="{% getUrl post | imgSrc | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
-          <img src="{% getUrl post | imgSrc | resize({ height: 500, width: 500 }) | avif %}" alt="{{ post.data.alt }}">
+          <source srcset="{% getUrl imgPath | resize({ height: 300, width: 300 }) | avif %}" media="(max-width: 768px)">
+          <source srcset="{% getUrl imgPath | resize({ height: 500, width: 500 }) | avif %}" media="(min-width: 769px)">
+          <img src="{% getUrl imgPath | resize({ height: 500, width: 500 }) | avif %}" alt="{{ post.data.alt }}">
         </picture>
         {% if post.data.caption %}
           <p class="caption">{{ post.data.caption }}</p>
