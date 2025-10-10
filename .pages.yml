@@ -29,6 +29,9 @@ content:
     path: src/_content/_collections/fakestagram
     type: collection
     fields: 
+      - name: title
+        label: Title
+        type: string
       - name: photo
         label: Photo
         type: image
@@ -36,7 +39,7 @@ content:
         label: Alt text
         type: string
       - name: caption
-        label: caption
+        label: Caption
         type: string
       - name: published
         label: Published
