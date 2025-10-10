@@ -86,3 +86,8 @@ content:
       - name: cover
         label: Cover
         type: string
+      - name: date
+        label: Date Read
+        type: date
+        options:  
+          time: true
