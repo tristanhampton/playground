@@ -60,7 +60,7 @@ content:
       - name: date
         label: Date
         type: date
-      - link: link
+      - name: link
         label: Link
         type: string
       - name: description
