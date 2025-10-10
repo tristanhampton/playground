@@ -21,3 +21,17 @@ content:
         hidden: true
         label: Tags
         default: blog
+  - name: fakestagram
+    label: Fakestagram
+    path: src/_content/_collections/fakestagram
+    type: collection
+    fields: 
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+      - name: alt
+        label: Alt text
+      - name: photo
+        label: Photo
+        type: image
