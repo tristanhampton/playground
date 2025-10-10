@@ -72,3 +72,17 @@ content:
         options:
           multiple: true
           values: [ Web Development, Website, Social Media, Art, Creative Coding, Book Binding, Article, Misc, Video Games, Home Lab, Accessibility ]
+  - name: goodreads
+    label: Goodreads
+    path: src/_content/_collections/goodreads
+    type: collection
+    fields:
+      - name: title
+        label: Title 
+        type: string
+      - name: author
+        label: Author
+        type: string
+      - name: cover
+        label: Cover
+        type: string
