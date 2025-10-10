@@ -126,7 +126,7 @@ content:
         type: string
         hidden: true
   - name: strava
-    label: Strave
+    label: Strava
     path: src/_content/_collections/strava
     type: collection
     fields:
@@ -150,6 +150,7 @@ content:
       - name: rideDate
         label: Ride Date
         types: string
+        hidden: true
       - name: pubDate
         label: Publish Date
         types: string
