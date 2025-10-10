@@ -177,3 +177,45 @@ content:
         type: select
         options:  
           values: [ kuzco-tracker ]
+  - name: steam
+    label: Steam
+    path: src/_content/_collections/steam
+    type: collection
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: id
+        label: Game ID
+        type: string
+      - name: data
+        label: Date
+        type: date
+        options:
+          time: true
+          format: yyyy-MM-dd'T'HH:mm:ss.000'Z'
+      - name: image
+        label: Image
+        type: 
+      - name: link
+        label: Link
+        type: string
+        hidden: true
+      - name: playtime_2weeks
+        label: Playtime - Last Two Weeks
+        type: string
+      - name: playtime_forever
+        label: Playtime - Forever
+        type: string
+      - name: playtime_windows_forever
+        label: Playtime - Windows
+        type: string
+      - name: playtime_mac_forever
+        label: Playtime - Mac
+        type: string
+      - name: playtime_linux_forever
+        label: Playtime - Linux
+        type: string
+      - name: playtime_deck_forever
+        label: Playtime - Steam Deck
+        type: string
