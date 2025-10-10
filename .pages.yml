@@ -49,3 +49,38 @@ content:
         label: Published
         type: boolean
         default: true
+  - name: bookmarks
+    label: Bookmarks
+    path: src/_content/_collections/bookmarks
+    type: collection
+    fields: 
+      - name: title
+        label: Title 
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - link: link
+        label: Link
+        type: string
+      - name: description
+        label: description
+        type: text
+      - name: type
+        label: Type
+        type: select 
+        options:
+          multiple: true
+          values: [ 
+            Web Development,
+            Website,
+            Social Media,
+            Art,
+            Creative Coding,
+            Book Binding,
+            Article,
+            Misc,
+            Video Games,
+            Home Lab,
+            Accessibility
+          ]
