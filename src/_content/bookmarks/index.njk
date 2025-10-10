@@ -3,7 +3,7 @@ siteTitle: "Tristan Hampton"
 title: "Bookmarks"
 meta_description: "Curated list of bookmarks to things that I either found interesting and wanted to save, or that looked interesting and I wanted to read later."
 pagination:
-  data: d_bookmarks
+  data: collections.bookmark
   size: 10
   reverse: true
 permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
@@ -17,18 +17,18 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 <div class="component component--standard-wide">
 	<ul class="bookmark-list">
 		{% for bookmark in pagination.items %}
-			<li class="bookmark-item" data-type="{{ bookmark.type }}">
+			<li class="bookmark-item" data-type="{{ bookmark.data.type }}">
 				<div class="tags">
-					{% for type in bookmark.type %}
+					{% for type in bookmark.data.type %}
 						<span class="tag">
 							<span class="sr-only">Tag: </span>{{ type }}</span>
 					{% endfor %}
 				</div>
 				<p class="bookmark-link h4">
-					<a href="{{bookmark.link}}">{{ bookmark.title }}<span class="sr-only">(external link)</span></a>
+					<a href="{{bookmark.data.link}}">{{ bookmark.data.title }}<span class="sr-only">(external link)</span></a>
 				</p>
-				{% if bookmark.description %}
-					{{ bookmark.description|markdown|safe }}
+				{% if bookmark.data.description %}
+					{{ bookmark.data.description|markdown|safe }}
 				{% endif %}
 			</li>
 		{% endfor %}
@@ -46,42 +46,3 @@ permalink: bookmarks/{% if pagination.pageNumber >=1 %}page-{{ pagination.pageNu
 		{%- endfor %}
 	</ul>
 </nav>
-
-{# <script>
-	const bookmarks = document.querySelectorAll('.bookmark-item');
-	const filter = document.querySelector('select#type');
-
-	if (bookmarks && filter) {
-		filter.addEventListener('change', function (e) {
-			const targetType = e
-				.target
-				.value
-
-				bookmarks
-				.forEach(bookmark => {
-					const bookmarkTypes = bookmark
-						set
-						.type
-						.split(',');
-
-					if (bookmarkTypes.includes(targetType)) {
-						bookmark
-							.classList
-							.remove('hidden');
-					} else {
-						bookmark
-							.classList
-							.add('hidden');
-					}
-				});
-
-			if (targetType == '') {
-				bookmarks.forEach(bookmark => {
-					bookmark
-						.classList
-						.remove('hidden');
-				})
-			}
-		});
-	}
-</script>
