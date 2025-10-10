@@ -2,7 +2,7 @@
 title: "Stumbled on an ice cream truck"
 id: https://strava.com/activities/5746188344
 link: https://strava.com/activities/5746188344
-date: 2021-08-06T01:58:51:00Z
+date: 2021-08-06T01:58:51.000Z
 rideDate: Thu Aug 05 2021
 pubDate: Thu, 05 Aug 2021 19:58:51 -0600
 type: ride

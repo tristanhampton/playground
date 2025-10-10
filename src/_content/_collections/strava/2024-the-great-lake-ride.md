@@ -2,7 +2,7 @@
 title: "The Great Lake Ride"
 id: https://strava.com/activities/12005907278
 link: https://strava.com/activities/12005907278
-date: 2024-07-28T20:50:57:00Z
+date: 2024-07-28T20:50:57.000Z
 rideDate: Sun Jul 28 2024
 pubDate: Sun, 28 Jul 2024 14:50:57 -0600
 type: ride

@@ -2,7 +2,7 @@
 title: "Dog Walk"
 id: https://strava.com/activities/8939194960
 link: https://strava.com/activities/8939194960
-date: 2023-04-22T21:25:48:00Z
+date: 2023-04-22T21:25:48.000Z
 rideDate: Sat Apr 22 2023
 pubDate: Sat, 22 Apr 2023 15:25:48 -0600
 type: walk

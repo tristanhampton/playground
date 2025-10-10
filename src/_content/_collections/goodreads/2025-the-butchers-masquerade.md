@@ -4,7 +4,7 @@ id: Review7431728586
 contentSnippet: "Tristan gave 4 stars to The Butcher's Masquerade (Dungeon Crawler Carl, #5)
       by
       Matt Dinniman"
-date: 2025-03-30T01:54:42:00Z
+date: 2025-03-30T01:54:42.000Z
 link: https://www.goodreads.com/review/show/7431728586
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1734202962l/60233239._MY75_.jpg
 author: Matt Dinniman

@@ -8,7 +8,7 @@ contentSnippet: "Tristan gave 3 stars to The Grace of Kings (The Dandelion Dynas
       
 
         Very well written, just not my type of fantasy"
-date: 2024-03-31T22:57:09:00Z
+date: 2024-03-31T22:57:09.000Z
 link: https://www.goodreads.com/review/show/6384661399
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1403024981l/18952341._MY75_.jpg
 author: Ken Liu

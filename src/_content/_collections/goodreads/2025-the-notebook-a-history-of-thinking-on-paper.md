@@ -4,7 +4,7 @@ id: Review7352169735
 contentSnippet: "Tristan gave 3 stars to The Notebook: A History of Thinking on Paper (Kindle Edition)
       by
       Roland   Allen"
-date: 2025-03-24T21:43:59:00Z
+date: 2025-03-24T21:43:59.000Z
 link: https://www.goodreads.com/review/show/7352169735
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1683139728l/148014534._MY75_.jpg
 author: Roland   Allen

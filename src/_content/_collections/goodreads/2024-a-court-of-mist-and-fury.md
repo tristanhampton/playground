@@ -4,7 +4,7 @@ id: Review6940702896
 contentSnippet: "Tristan gave 4 stars to A Court of Mist and Fury (A Court of Thorns and Roses, #2)
       by
       Sarah J. Maas"
-date: 2024-10-20T15:44:47:00Z
+date: 2024-10-20T15:44:47.000Z
 link: https://www.goodreads.com/review/show/6940702896
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1620325671l/50659468._MY75_.jpg
 author: Sarah J. Maas

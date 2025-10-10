@@ -4,7 +4,7 @@ id: Review7877290212
 contentSnippet: "Tristan gave 4 stars to Empire of Storms (Throne of Glass, #5)
       by
       Sarah J. Maas"
-date: 2025-08-31T21:17:04:00Z
+date: 2025-08-31T21:17:04.000Z
 link: https://www.goodreads.com/review/show/7877290212
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1676979605l/76713323._MY75_.jpg
 author: Sarah J. Maas

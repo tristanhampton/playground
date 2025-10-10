@@ -2,7 +2,7 @@
 title: "Evening Ride"
 id: https://strava.com/activities/9097926119
 link: https://strava.com/activities/9097926119
-date: 2023-05-19T02:36:21:00Z
+date: 2023-05-19T02:36:21.000Z
 rideDate: Thu May 18 2023
 pubDate: Thu, 18 May 2023 20:36:21 -0600
 type: ride

@@ -4,7 +4,7 @@ id: Review7095480931
 contentSnippet: "Tristan gave 5 stars to Wind and Truth (The Stormlight Archive, #5)
       by
       Brandon Sanderson"
-date: 2024-12-18T08:08:33:00Z
+date: 2024-12-18T08:08:33.000Z
 link: https://www.goodreads.com/review/show/7095480931
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1724944713l/203578847._MY75_.jpg
 author: Brandon Sanderson

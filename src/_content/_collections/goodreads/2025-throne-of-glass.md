@@ -4,7 +4,7 @@ id: Review7732816940
 contentSnippet: "Tristan gave 4 stars to Throne of Glass (Throne of Glass, #1)
       by
       Sarah J. Maas"
-date: 2025-07-12T22:46:40:00Z
+date: 2025-07-12T22:46:40.000Z
 link: https://www.goodreads.com/review/show/7732816940
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1673566495l/76703559._MY75_.jpg
 author: Sarah J. Maas

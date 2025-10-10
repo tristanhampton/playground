@@ -2,7 +2,7 @@
 title: "The trees by the cemetery are gone"
 id: https://strava.com/activities/6928325549
 link: https://strava.com/activities/6928325549
-date: 2022-04-03T23:33:48:00Z
+date: 2022-04-03T23:33:48.000Z
 rideDate: Sun Apr 03 2022
 pubDate: Sun, 03 Apr 2022 17:33:48 -0600
 type: ride

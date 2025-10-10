@@ -2,7 +2,7 @@
 title: "Smells Like Bison"
 id: https://strava.com/activities/5981502710
 link: https://strava.com/activities/5981502710
-date: 2021-09-18T16:49:59:00Z
+date: 2021-09-18T16:49:59.000Z
 rideDate: Sat Sep 18 2021
 pubDate: Sat, 18 Sep 2021 10:49:59 -0600
 type: ride

@@ -2,7 +2,7 @@
 title: "Just Explorin’ the New Neighbourhood "
 id: https://strava.com/activities/7486194456
 link: https://strava.com/activities/7486194456
-date: 2022-07-17T20:51:17:00Z
+date: 2022-07-17T20:51:17.000Z
 rideDate: Sun Jul 17 2022
 pubDate: Sun, 17 Jul 2022 14:51:17 -0600
 type: ride

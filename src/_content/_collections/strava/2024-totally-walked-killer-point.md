@@ -2,7 +2,7 @@
 title: "Totally walked Killer Point"
 id: https://strava.com/activities/11277624817
 link: https://strava.com/activities/11277624817
-date: 2024-04-27T15:52:28:00Z
+date: 2024-04-27T15:52:28.000Z
 rideDate: Sat Apr 27 2024
 pubDate: Sat, 27 Apr 2024 09:52:28 -0600
 type: ride

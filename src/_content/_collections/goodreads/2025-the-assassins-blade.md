@@ -4,7 +4,7 @@ id: Review7695580764
 contentSnippet: "Tristan gave 4 stars to The Assassin's Blade (Throne of Glass, #0.1-0.5)
       by
       Sarah J. Maas"
-date: 2025-06-30T00:22:53:00Z
+date: 2025-06-30T00:22:53.000Z
 link: https://www.goodreads.com/review/show/7695580764
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1680869667l/126062562._MY75_.jpg
 author: Sarah J. Maas

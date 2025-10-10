@@ -2,7 +2,7 @@
 title: "This year I’m walking the hills"
 id: https://strava.com/activities/7644671620
 link: https://strava.com/activities/7644671620
-date: 2022-08-08T01:13:28:00Z
+date: 2022-08-08T01:13:28.000Z
 rideDate: Sun Aug 07 2022
 pubDate: Sun, 07 Aug 2022 19:13:28 -0600
 type: ride

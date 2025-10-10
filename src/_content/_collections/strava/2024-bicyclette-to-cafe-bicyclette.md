@@ -2,7 +2,7 @@
 title: "Bicyclette to Cafe Bicyclette"
 id: https://strava.com/activities/5759861067
 link: https://strava.com/activities/5759861067
-date: 2021-08-08T14:55:36:00Z
+date: 2021-08-08T14:55:36.000Z
 rideDate: Sun Aug 08 2021
 pubDate: Sun, 08 Aug 2021 08:55:36 -0600
 type: ride

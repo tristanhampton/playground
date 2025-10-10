@@ -2,7 +2,7 @@
 title: "Rhubarb Crisp Ice Cream is Good"
 id: https://strava.com/activities/11365629951
 link: https://strava.com/activities/11365629951
-date: 2024-05-09T00:51:40:00Z
+date: 2024-05-09T00:51:40.000Z
 rideDate: Wed May 08 2024
 pubDate: Wed, 08 May 2024 18:51:40 -0600
 type: ride

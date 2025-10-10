@@ -2,7 +2,7 @@
 title: "Hit and Run"
 id: https://strava.com/activities/5735442691
 link: https://strava.com/activities/5735442691
-date: 2021-08-04T01:41:47:00Z
+date: 2021-08-04T01:41:47.000Z
 rideDate: Tue Aug 03 2021
 pubDate: Tue, 03 Aug 2021 19:41:47 -0600
 type: ride

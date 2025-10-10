@@ -4,7 +4,7 @@ id: Review7572985712
 contentSnippet: "Tristan gave 4 stars to This Inevitable Ruin (Dungeon Crawler Carl, #7)
       by
       Matt Dinniman"
-date: 2025-05-16T03:50:21:00Z
+date: 2025-05-16T03:50:21.000Z
 link: https://www.goodreads.com/review/show/7572985712
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1721753342l/216017751._MY75_.jpg
 author: Matt Dinniman
