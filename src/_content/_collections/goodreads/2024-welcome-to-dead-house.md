@@ -4,7 +4,7 @@ id: Review6710798470
 contentSnippet: "Tristan gave 3 stars to Welcome to Dead House (Goosebumps, #1)
       by
       R.L. Stine"
-date: 2024-07-29T05:13:45.000Z
+date: 2024-07-29T05:13:45:00Z
 link: https://www.goodreads.com/review/show/6710798470
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328867798l/125553._MX50_.jpg
 author: R.L. Stine

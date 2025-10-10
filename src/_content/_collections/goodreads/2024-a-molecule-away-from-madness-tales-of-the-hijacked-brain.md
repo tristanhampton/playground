@@ -4,7 +4,7 @@ id: Review5954713306
 contentSnippet: "Tristan gave 5 stars to A Molecule Away from Madness: Tales of the Hijacked Brain (Hardcover)
       by
       Sara Manning Peskin"
-date: 2024-06-07T02:27:01.000Z
+date: 2024-06-07T02:27:01:00Z
 link: https://www.goodreads.com/review/show/5954713306
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1641271142l/58085250._MY75_.jpg
 author: Sara Manning Peskin

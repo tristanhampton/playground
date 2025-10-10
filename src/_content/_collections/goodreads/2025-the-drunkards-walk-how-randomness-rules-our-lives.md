@@ -4,7 +4,7 @@ id: Review7486163945
 contentSnippet: "Tristan gave 3 stars to The Drunkard's Walk: How Randomness Rules Our Lives (Hardcover)
       by
       Leonard Mlodinow"
-date: 2025-04-13T22:41:09.000Z
+date: 2025-04-13T22:41:09:00Z
 link: https://www.goodreads.com/review/show/7486163945
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320392907l/2272880._MX50_.jpg
 author: Leonard Mlodinow

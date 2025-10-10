@@ -4,7 +4,7 @@ id: Review6678203168
 contentSnippet: "Tristan gave 5 stars to Ghost in the Wires: My Adventures as the World's Most Wanted Hacker (Hardcover)
       by
       Kevin D. Mitnick"
-date: 2025-06-13T00:14:25.000Z
+date: 2025-06-13T00:14:25:00Z
 link: https://www.goodreads.com/review/show/6678203168
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1344265017l/10256723._MY75_.jpg
 author: Kevin D. Mitnick

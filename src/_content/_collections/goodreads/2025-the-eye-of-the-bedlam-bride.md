@@ -4,7 +4,7 @@ id: Review7506969643
 contentSnippet: "Tristan gave 4 stars to The Eye of the Bedlam Bride (Dungeon Crawler Carl, #6)
       by
       Matt Dinniman"
-date: 2025-04-21T18:39:50.000Z
+date: 2025-04-21T18:39:50:00Z
 link: https://www.goodreads.com/review/show/7506969643
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1680906599l/125887685._MY75_.jpg
 author: Matt Dinniman

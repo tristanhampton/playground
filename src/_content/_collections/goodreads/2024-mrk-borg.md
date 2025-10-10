@@ -4,7 +4,7 @@ id: Review6574406449
 contentSnippet: "Tristan gave 5 stars to Mörk Borg (Hardcover)
       by
       Pelle Nilsson"
-date: 2024-06-10T04:55:45.000Z
+date: 2024-06-10T04:55:45:00Z
 link: https://www.goodreads.com/review/show/6574406449
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1573591046l/48759118._MX50_.jpg
 author: Pelle Nilsson

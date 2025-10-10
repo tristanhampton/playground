@@ -4,7 +4,7 @@ id: Review6971340321
 contentSnippet: "Tristan gave 4 stars to A Court of Wings and Ruin (A Court of Thorns and Roses, #3)
       by
       Sarah J. Maas"
-date: 2024-11-01T19:48:30.000Z
+date: 2024-11-01T19:48:30:00Z
 link: https://www.goodreads.com/review/show/6971340321
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1585623092l/50659472._MX50_.jpg
 author: Sarah J. Maas

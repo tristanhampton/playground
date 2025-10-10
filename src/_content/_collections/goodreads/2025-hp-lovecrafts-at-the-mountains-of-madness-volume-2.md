@@ -4,7 +4,7 @@ id: Review7755742160
 contentSnippet: "Tristan gave 4 stars to H.P. Lovecraft's At the Mountains of Madness, Volume 2 (Paperback)
       by
       Gou Tanabe"
-date: 2025-07-21T02:57:09.000Z
+date: 2025-07-21T02:57:09:00Z
 link: https://www.goodreads.com/review/show/7755742160
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1568320349l/44059077._MX50_.jpg
 author: Gou Tanabe

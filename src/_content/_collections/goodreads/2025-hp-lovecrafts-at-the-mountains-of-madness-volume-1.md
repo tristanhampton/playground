@@ -4,7 +4,7 @@ id: Review7755741360
 contentSnippet: "Tristan gave 4 stars to H.P. Lovecraft's At the Mountains of Madness, Volume 1 (Paperback)
       by
       Gou Tanabe"
-date: 2025-07-20T18:54:39.000Z
+date: 2025-07-20T18:54:39:00Z
 link: https://www.goodreads.com/review/show/7755741360
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1556186116l/42875804._MX50_.jpg
 author: Gou Tanabe

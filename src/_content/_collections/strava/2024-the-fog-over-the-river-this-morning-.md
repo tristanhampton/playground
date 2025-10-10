@@ -2,7 +2,7 @@
 title: "The fog over the river this morning 👌🏻"
 id: https://strava.com/activities/5904745855
 link: https://strava.com/activities/5904745855
-date: 2021-09-04T14:15:53.000Z
+date: 2021-09-04T14:15:53:00Z
 rideDate: Sat Sep 04 2021
 pubDate: Sat, 04 Sep 2021 08:15:53 -0600
 type: ride

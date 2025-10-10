@@ -2,7 +2,7 @@
 title: "Putting the Pleasant in Pleasantview"
 id: https://strava.com/activities/5913350406
 link: https://strava.com/activities/5913350406
-date: 2021-09-05T14:25:06.000Z
+date: 2021-09-05T14:25:06:00Z
 rideDate: Sun Sep 05 2021
 pubDate: Sun, 05 Sep 2021 08:25:06 -0600
 type: ride

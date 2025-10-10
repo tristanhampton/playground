@@ -2,7 +2,7 @@
 title: "Ignore me walking around the apartment at the end"
 id: https://strava.com/activities/5869084854
 link: https://strava.com/activities/5869084854
-date: 2021-08-28T20:39:35.000Z
+date: 2021-08-28T20:39:35:00Z
 rideDate: Sat Aug 28 2021
 pubDate: Sat, 28 Aug 2021 14:39:35 -0600
 type: ride

@@ -4,7 +4,7 @@ id: Review7288812502
 contentSnippet: "Tristan gave 5 stars to A ​Court of Silver Flames (A Court of Thorns and Roses, #4)
       by
       Sarah J. Maas"
-date: 2025-02-04T06:18:56.000Z
+date: 2025-02-04T06:18:56:00Z
 link: https://www.goodreads.com/review/show/7288812502
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1734440950l/53138095._MY75_.jpg
 author: Sarah J. Maas

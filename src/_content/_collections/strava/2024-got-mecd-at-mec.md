@@ -2,7 +2,7 @@
 title: "Got MEC’d at MEC"
 id: https://strava.com/activities/7181990979
 link: https://strava.com/activities/7181990979
-date: 2022-05-21T20:13:34.000Z
+date: 2022-05-21T20:13:34:00Z
 rideDate: Sat May 21 2022
 pubDate: Sat, 21 May 2022 14:13:34 -0600
 type: ride

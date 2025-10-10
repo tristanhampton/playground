@@ -2,7 +2,7 @@
 title: "8 months of winter has not affected my tshirt size 🫠"
 id: https://strava.com/activities/7036392071
 link: https://strava.com/activities/7036392071
-date: 2022-04-24T22:02:35.000Z
+date: 2022-04-24T22:02:35:00Z
 rideDate: Sun Apr 24 2022
 pubDate: Sun, 24 Apr 2022 16:02:35 -0600
 type: ride

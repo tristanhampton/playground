@@ -4,7 +4,7 @@ id: Review6385251984
 contentSnippet: "Tristan gave 4 stars to Between Two Fires (Hardcover)
       by
       Christopher Buehlman"
-date: 2025-01-05T05:33:45.000Z
+date: 2025-01-05T05:33:45:00Z
 link: https://www.goodreads.com/review/show/6385251984
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1710293039l/13543121._MY75_.jpg
 author: Christopher Buehlman

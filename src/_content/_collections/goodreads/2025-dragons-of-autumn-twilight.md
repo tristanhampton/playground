@@ -4,7 +4,7 @@ id: Review7763579753
 contentSnippet: "Tristan gave 3 stars to Dragons of Autumn Twilight  (Dragonlance: Chronicles, #1)
       by
       Margaret Weis"
-date: 2025-07-23T04:49:43.000Z
+date: 2025-07-23T04:49:43:00Z
 link: https://www.goodreads.com/review/show/7763579753
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1390668127l/259836._MY75_.jpg
 author: Margaret Weis

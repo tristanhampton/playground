@@ -4,7 +4,7 @@ id: Review7478648789
 contentSnippet: "Tristan gave 4 stars to Designing Content Authoring Experiences (Paperback)
       by
       Greg Dunlap"
-date: 2025-04-10T21:37:48.000Z
+date: 2025-04-10T21:37:48:00Z
 link: https://www.goodreads.com/review/show/7478648789
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1737084391l/223598420._MY75_.jpg
 author: Greg Dunlap

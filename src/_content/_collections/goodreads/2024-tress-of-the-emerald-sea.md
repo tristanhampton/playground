@@ -4,7 +4,7 @@ id: Review5669963443
 contentSnippet: "Tristan gave 5 stars to Tress of the Emerald Sea (Kindle Edition)
       by
       Brandon Sanderson"
-date: 2024-07-07T02:56:46.000Z
+date: 2024-07-07T02:56:46:00Z
 link: https://www.goodreads.com/review/show/5669963443
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1672574587l/60531406._MY75_.jpg
 author: Brandon Sanderson

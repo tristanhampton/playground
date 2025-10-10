@@ -4,7 +4,7 @@ id: Review7789754368
 contentSnippet: "Tristan gave 4 stars to Crown of Midnight (Throne of Glass, #2)
       by
       Sarah J. Maas"
-date: 2025-08-01T02:33:28.000Z
+date: 2025-08-01T02:33:28:00Z
 link: https://www.goodreads.com/review/show/7789754368
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1673566594l/76705490._MY75_.jpg
 author: Sarah J. Maas

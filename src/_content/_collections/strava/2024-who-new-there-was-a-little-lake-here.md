@@ -2,7 +2,7 @@
 title: "Who new there was a little lake here"
 id: https://strava.com/activities/7644879330
 link: https://strava.com/activities/7644879330
-date: 2022-08-15T22:44:51.000Z
+date: 2022-08-15T22:44:51:00Z
 rideDate: Mon Aug 15 2022
 pubDate: Mon, 15 Aug 2022 16:44:51 -0600
 type: ride

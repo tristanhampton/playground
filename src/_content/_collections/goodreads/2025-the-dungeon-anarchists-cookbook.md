@@ -4,7 +4,7 @@ id: Review7320534250
 contentSnippet: "Tristan gave 4 stars to The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)
       by
       Matt Dinniman"
-date: 2025-02-24T23:04:50.000Z
+date: 2025-02-24T23:04:50:00Z
 link: https://www.goodreads.com/review/show/7320534250
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612814290l/57001971._MY75_.jpg
 author: Matt Dinniman
