@@ -1,3 +1,6 @@
+media:
+  input: src/uploads
+  output: /uploads
 content:
   - name: posts
     label: Posts
