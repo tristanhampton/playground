@@ -1,7 +1,7 @@
 ---
 title: "Brotato"
 id: 1942280
-date: 2025-11-05T05:00:08.898Z
+date: 2025-11-06T05:00:09.486Z
 link: games/steam/recent/brotato
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1942280/d9dfcab8f300a9548439f70bef7b5f4e53d0fc28.jpg
 playtime_2weeks: 15
