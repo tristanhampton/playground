@@ -1,7 +1,7 @@
 ---
 title: "Necesse"
 id: 1169040
-date: 2025-11-10T05:00:12.943Z
+date: 2025-11-11T05:00:09.724Z
 link: games/steam/recent/necesse
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1169040/b9e3becff5c706c4e57db3699ab7451cd178394e.jpg
 playtime_2weeks: 4
