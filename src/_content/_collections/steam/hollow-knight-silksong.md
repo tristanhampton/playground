@@ -1,7 +1,7 @@
 ---
 title: "Hollow Knight: Silksong"
 id: 1030300
-date: 2025-11-18T05:00:08.177Z
+date: 2025-11-19T05:00:08.439Z
 link: games/steam/recent/hollow-knight-silksong
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1030300/b4a999c1302e3ac123c041fd41bb8a34528c6ab5.jpg
 playtime_2weeks: 14
