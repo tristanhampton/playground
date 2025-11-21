@@ -1,10 +1,10 @@
 ---
 title: "Megabonk"
 id: 3405340
-date: 2025-11-20T05:00:06.196Z
+date: 2025-11-21T05:00:05.177Z
 link: games/steam/recent/megabonk
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3405340/8e0ff36cdb1076d69347a2796c7ef5ee18b2fee8.jpg
-playtime_2weeks: 609
+playtime_2weeks: 593
 playtime_forever: 2632
 playtime_windows_forever: 0
 playtime_mac_forever: 0
