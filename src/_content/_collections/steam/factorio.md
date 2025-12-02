@@ -1,10 +1,10 @@
 ---
 title: "Factorio"
 id: 427520
-date: 2025-12-01T05:00:06.843Z
+date: 2025-12-02T05:00:07.789Z
 link: games/steam/recent/factorio
 image: http://media.steampowered.com/steamcommunity/public/images/apps/427520/267f5a89f36ab287e600a4e7d4e73d3d11f0fd7d.jpg
-playtime_2weeks: 135
+playtime_2weeks: 1
 playtime_forever: 5497
 playtime_windows_forever: 205
 playtime_mac_forever: 5040
