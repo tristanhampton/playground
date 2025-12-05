@@ -1,7 +1,7 @@
 ---
 title: "The Witcher 3: Wild Hunt"
 id: 292030
-date: 2025-12-04T05:00:06.545Z
+date: 2025-12-05T05:00:05.007Z
 link: games/steam/recent/the-witcher-3-wild-hunt
 image: http://media.steampowered.com/steamcommunity/public/images/apps/292030/78d0ff98b67851f24539cdf2402cf147679134f4.jpg
 playtime_2weeks: 1298
