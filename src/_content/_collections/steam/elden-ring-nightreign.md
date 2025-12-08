@@ -1,7 +1,7 @@
 ---
 title: "ELDEN RING NIGHTREIGN"
 id: 2622380
-date: 2025-12-07T05:00:05.838Z
+date: 2025-12-08T05:00:07.790Z
 link: games/steam/recent/elden-ring-nightreign
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2622380/c59f3732d379c9667450b174353d69d5bcea95a5.jpg
 playtime_2weeks: 79
