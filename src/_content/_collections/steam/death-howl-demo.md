@@ -1,7 +1,7 @@
 ---
 title: "Death Howl Demo"
 id: 3365740
-date: 2025-12-18T05:00:06.706Z
+date: 2025-12-19T05:00:08.908Z
 link: games/steam/recent/death-howl-demo
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3365740/cdeaf947bc0c3d1e60e8708413ae829c6d2c4f66.jpg
 playtime_2weeks: 19
