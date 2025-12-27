@@ -1,7 +1,7 @@
 ---
 title: "BALL x PIT"
 id: 2062430
-date: 2025-12-26T05:00:06.697Z
+date: 2025-12-27T05:00:07.602Z
 link: games/steam/recent/ball-x-pit
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2062430/7651f4667f6084ef598a2da930d11e26d0aa5f82.jpg
 playtime_2weeks: 86
