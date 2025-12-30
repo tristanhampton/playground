@@ -1,7 +1,7 @@
 ---
 title: "Halls of Torment"
 id: 2218750
-date: 2025-12-29T05:00:05.636Z
+date: 2025-12-30T05:00:06.321Z
 link: games/steam/recent/halls-of-torment
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2218750/9fec2ded1ecfea4bc04814440294bde9f235684e.jpg
 playtime_2weeks: 555
