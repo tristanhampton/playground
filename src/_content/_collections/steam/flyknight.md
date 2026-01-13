@@ -1,7 +1,7 @@
 ---
 title: "FlyKnight"
 id: 3108510
-date: 2026-01-12T05:00:10.473Z
+date: 2026-01-13T05:00:10.959Z
 link: games/steam/recent/flyknight
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3108510/add1e5a6526f7271a89271c6b16d282acb982173.jpg
 playtime_2weeks: 10
