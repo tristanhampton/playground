@@ -1,7 +1,7 @@
 ---
 title: "SKALD: Against the Black Priory"
 id: 1069160
-date: 2026-01-14T05:00:08.739Z
+date: 2026-01-15T05:00:08.054Z
 link: games/steam/recent/skald-against-the-black-priory
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1069160/1f66c5c2494a06fc5ba643e70fde390868ce9636.jpg
 playtime_2weeks: 49
