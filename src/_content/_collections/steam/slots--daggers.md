@@ -1,7 +1,7 @@
 ---
 title: "Slots & Daggers"
 id: 3631290
-date: 2026-01-16T05:00:06.610Z
+date: 2026-01-17T05:00:05.167Z
 link: games/steam/recent/slots--daggers
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3631290/bb96d9504759b09d384a4bf934dfe94fc19f57e3.jpg
 playtime_2weeks: 294
