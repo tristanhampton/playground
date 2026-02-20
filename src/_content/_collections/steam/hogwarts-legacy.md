@@ -1,7 +1,7 @@
 ---
 title: "Hogwarts Legacy"
 id: 990080
-date: 2026-02-19T05:00:05.375Z
+date: 2026-02-20T05:00:05.804Z
 link: games/steam/recent/hogwarts-legacy
 image: http://media.steampowered.com/steamcommunity/public/images/apps/990080/a9ecb94f249768d0ee5ccecbffe8d8c06d9bed59.jpg
 playtime_2weeks: 2003
