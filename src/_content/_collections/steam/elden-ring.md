@@ -1,7 +1,7 @@
 ---
 title: "ELDEN RING"
 id: 1245620
-date: 2026-02-22T05:00:06.142Z
+date: 2026-02-23T05:00:06.887Z
 link: games/steam/recent/elden-ring
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1245620/b6e290dd5a92ce98f89089a207733c70c41a1871.jpg
 playtime_2weeks: 28
