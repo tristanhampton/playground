@@ -1,13 +1,13 @@
 ---
 title: "Slay the Spire 2"
 id: 2868840
-date: 2026-03-16T05:00:07.908Z
+date: 2026-03-17T05:00:05.198Z
 link: games/steam/recent/slay-the-spire-2
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2868840/f92b09dab91f1d1738f72fe0dd9be18dcc2901f9.jpg
-playtime_2weeks: 774
-playtime_forever: 774
+playtime_2weeks: 897
+playtime_forever: 897
 playtime_windows_forever: 0
 playtime_mac_forever: 0
-playtime_linux_forever: 774
-playtime_deck_forever: 774
+playtime_linux_forever: 897
+playtime_deck_forever: 897
 ---
