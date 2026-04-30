@@ -1,7 +1,7 @@
 ---
 title: "Creature Kitchen"
 id: 3097300
-date: 2026-04-29T05:00:07.925Z
+date: 2026-04-30T05:00:06.394Z
 link: games/steam/recent/creature-kitchen
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3097300/8abb4059bb620036becde7f6f40ee69bcf271a94.jpg
 playtime_2weeks: 26
