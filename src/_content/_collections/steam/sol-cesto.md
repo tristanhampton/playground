@@ -1,10 +1,10 @@
 ---
 title: "Sol Cesto"
 id: 2738490
-date: 2026-05-10T05:00:07.853Z
+date: 2026-05-11T05:00:06.616Z
 link: games/steam/recent/sol-cesto
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2738490/f17bb84190fd7f6a8f34941034d24ec8a4b284cf.jpg
-playtime_2weeks: 6
+playtime_2weeks: 1
 playtime_forever: 54
 playtime_windows_forever: 0
 playtime_mac_forever: 0
