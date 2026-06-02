@@ -1,7 +1,7 @@
 ---
 title: "Stardew Valley"
 id: 413150
-date: 2026-06-01T05:00:05.789Z
+date: 2026-06-02T05:00:08.067Z
 link: games/steam/recent/stardew-valley
 image: http://media.steampowered.com/steamcommunity/public/images/apps/413150/35d1377200084a4034238c05b0c8930451e2fb40.jpg
 playtime_2weeks: 3
