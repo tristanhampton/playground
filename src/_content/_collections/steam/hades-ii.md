@@ -1,7 +1,7 @@
 ---
 title: "Hades II"
 id: 1145350
-date: 2026-08-18T05:00:09.394Z
+date: 2026-08-19T05:00:05.519Z
 link: games/steam/recent/hades-ii
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1145350/621d9f1cfa204c0bae07a981f41007d2cf03a56c.jpg
 playtime_2weeks: 599
