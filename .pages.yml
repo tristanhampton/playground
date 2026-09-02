@@ -252,7 +252,7 @@ content:
         label: Cover URL
         type: string 
       - name: date
-        label: Date Read
+        label: Date Added
         type: date
         options:  
           time: true
