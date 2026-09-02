@@ -237,3 +237,25 @@ content:
       - name: playtime_deck_forever
         label: Playtime - Steam Deck
         type: string
+  - name: music
+    label: Music 
+    path: src/_content/_collections/music
+    type: collection 
+    fields: 
+      - name: title
+        label: Album Title 
+        type: string 
+      - name: artist
+        label: Artist 
+        type: string 
+      - name: cover
+        label: Cover URL
+        type: string 
+      - name: date
+        label: Date Read
+        type: date
+        options:  
+          time: true
+          format: yyyy-MM-dd'T'HH:mm:ss.000'Z'
+
+    
