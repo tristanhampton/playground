@@ -14,12 +14,17 @@
 
     img {
       width: 100%;
-      aspect-ratio: 2/3;
     }
   }
 
   &.shelf--books .shelf__item img {
     border-radius: 0 1rem 1rem 0;
+    aspect-ratio: 2/3;
+  }
+
+  &.shelf--music .shelf__item img {
+    border-radius: 1rem;
+    aspect-ratio: 1 / 1;
   }
 
   @media screen and (max-width: 500px) {

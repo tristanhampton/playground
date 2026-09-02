@@ -1,0 +1,27 @@
+---
+backLink: '/me'
+title: "Musicshelf"
+meta_description: 'A collection of music that I enjoy.'
+---
+<div class="banner banner--default">
+  <h1>Musicshelf</h1>
+  <p>A collection of music that I enjoy.</p>
+</div>
+
+<div class="component component--shelf shelf--music grid-wrapper">
+  {% set currentYear = null %}
+  {% for album in collections.music|reverse %}
+
+    {% if album.data.date|year != currentYear %}
+      <h2>{{ album.data.date|year }}</h2>
+      {% set currentYear = album.data.date|year %}
+    {% endif %}
+    
+    <div class="shelf__item">
+      <img src="{{ album.data.cover }}" alt="{{ album.data.title }} cover">
+      <p>
+        <em>{{ album.data.title }}</em> </br>{{ album.data.artist }}
+      </p>
+    </div>
+  {% endfor %}
+</div>

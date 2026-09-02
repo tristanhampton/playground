@@ -66,7 +66,28 @@ meta_description: 'Personal things relating to Tristan Hampton'
   </div>
 {% endif %}
 
-{% if collections.strava.length > 0 %}
+{% if collections.music.length > 0 %}
+  <div class="component--standard-wide component">
+    <h2>Listening...</h2>
+    <ul class="grid-wrapper grid--large">
+      {% set count = 0 %}
+      {% for album in collections.music | reverse %}
+        {% if count < 8 %}
+          <li>
+            <img src="{{ album.data.cover }}" alt="{{ album.data.title }} cover">
+            <p>
+              <em>{{ album.data.title }}</em> </br>{{ album.data.artist }}</p>
+          </li>
+          {% set count = count + 1 %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    <p><a href="/me/musicshelf" class="btn-primary">View full bookshelf</a></p>
+  </div>
+{% endif %}
+
+{# {% if collections.strava.length > 0 %}
   <div class="component component--standard-wide">
     <h2>Biking...</h2>
     <ul class="strava flex-wrapper">
@@ -85,9 +106,9 @@ meta_description: 'Personal things relating to Tristan Hampton'
       {% endfor %}
     </ul>
   </div>
-{% endif %}
+{% endif %} #}
 
-{% if mtg.recordsByPrice.length %}
+{# {% if mtg.recordsByPrice.length %}
   <div class="component component--standard-wide">
     <h2>Collecting...</h2>
     <p>These are my top 10 Magic the Gathering cards out of {{ mtg.numCards }}, collected in the <a href="https://manabox.app/">Mana Box</a> app for IOS.</p>
@@ -118,4 +139,4 @@ meta_description: 'Personal things relating to Tristan Hampton'
       </tbody>
     </table>
   </div>
-{% endif %}
+{% endif %} #}
