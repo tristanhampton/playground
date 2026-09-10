@@ -1,7 +1,7 @@
 ---
 title: "Scythe: Digital Edition"
 id: 718560
-date: 2026-09-09T05:00:05.867Z
+date: 2026-09-10T05:00:08.422Z
 link: games/steam/recent/scythe-digital-edition
 image: http://media.steampowered.com/steamcommunity/public/images/apps/718560/215ecc3515a76492bb00c80026cee3013ac07232.jpg
 playtime_2weeks: 190
