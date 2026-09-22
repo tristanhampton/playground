@@ -1,0 +1,13 @@
+---
+title: "Resident Evil 2"
+id: 883710
+date: 2026-09-22T05:00:06.976Z
+link: games/steam/recent/resident-evil-2
+image: http://media.steampowered.com/steamcommunity/public/images/apps/883710/86ef2fdebeced746313994ccf2d7afb1f2887bf0.jpg
+playtime_2weeks: 73
+playtime_forever: 73
+playtime_windows_forever: 0
+playtime_mac_forever: 0
+playtime_linux_forever: 73
+playtime_deck_forever: 73
+---
