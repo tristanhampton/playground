@@ -1,7 +1,7 @@
 ---
 title: "Zorbus"
 id: 2125420
-date: 2026-09-27T05:00:12.808Z
+date: 2026-09-28T05:00:11.755Z
 link: games/steam/recent/zorbus
 image: http://media.steampowered.com/steamcommunity/public/images/apps/2125420/551ca649079ef347f597fcb57b3ef5f0738b4af0.jpg
 playtime_2weeks: 1
