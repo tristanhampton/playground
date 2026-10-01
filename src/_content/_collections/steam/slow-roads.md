@@ -1,7 +1,7 @@
 ---
 title: "Slow Roads"
 id: 3431300
-date: 2026-09-30T05:00:10.106Z
+date: 2026-10-01T05:00:12.996Z
 link: games/steam/recent/slow-roads
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3431300/faf5987efbe2f121dc446fc422ceb901f77685b8.jpg
 playtime_2weeks: 19
