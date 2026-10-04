@@ -1,7 +1,7 @@
 ---
 title: "Stellaris"
 id: 281990
-date: 2026-10-03T05:00:11.881Z
+date: 2026-10-04T05:00:16.931Z
 link: games/steam/recent/stellaris
 image: http://media.steampowered.com/steamcommunity/public/images/apps/281990/cb4a03deab1e34ed2a5cbbdf419c66bb6459625f.jpg
 playtime_2weeks: 13
