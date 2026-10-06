@@ -1,7 +1,7 @@
 ---
 title: "Disco Elysium"
 id: 632470
-date: 2026-10-05T05:00:08.459Z
+date: 2026-10-06T05:00:09.269Z
 link: games/steam/recent/disco-elysium
 image: http://media.steampowered.com/steamcommunity/public/images/apps/632470/b681544caa931c7c1a6788e6e3e33cb42892d17c.jpg
 playtime_2weeks: 106
