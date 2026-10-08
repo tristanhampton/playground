@@ -1,7 +1,7 @@
 ---
 title: "Hades"
 id: 1145360
-date: 2026-10-07T05:00:08.336Z
+date: 2026-10-08T05:00:10.647Z
 link: games/steam/recent/hades
 image: http://media.steampowered.com/steamcommunity/public/images/apps/1145360/8a3fca36a00883e8066263ad35dd15d77a1f9abc.jpg
 playtime_2weeks: 32
