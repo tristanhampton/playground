@@ -1,13 +1,13 @@
 ---
 title: "The Lantern of the Laughless Saint"
 id: 3849000
-date: 2026-10-11T05:00:05.120Z
+date: 2026-10-12T05:00:04.803Z
 link: games/steam/recent/the-lantern-of-the-laughless-saint
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3849000/4b2e07dbef0f9d35009b5a81d003de4d8ee16b7c.jpg
-playtime_2weeks: 1700
-playtime_forever: 1700
+playtime_2weeks: 1701
+playtime_forever: 1701
 playtime_windows_forever: 0
 playtime_mac_forever: 0
-playtime_linux_forever: 1700
-playtime_deck_forever: 1700
+playtime_linux_forever: 1701
+playtime_deck_forever: 1701
 ---
