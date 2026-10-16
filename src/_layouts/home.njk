@@ -1,13 +1,12 @@
 {% include 'head.njk'%}
 
-<main class="page page--{{ title|slugify }} ">
-  <div class="banner banner--home">
+<main class="page page--{{ title|slugify }} bento">
+  <div class="banner banner--home tile tile-8x6">
     <div id="canvasContainer"></div>
     <h1 class="sr-only">Home</h1>
     <p class="h1">TITLE PENDING</p>
     <p>This is my little corner of the internet. </br>Don't take it too seriously.</p>
   </div>
-  {% include 'navigation.njk' %}
   {{ content | safe }}
 </main>
 

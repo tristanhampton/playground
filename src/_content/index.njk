@@ -5,7 +5,19 @@ og_title: "11ty Starter Home Page"
 layout: home
 ---
 
-<div class="component--standard-wide">
-  <p>This website is hard for me to define. It has elements of a blog, digital garden, or second brain. I've read about lots of these topics, but I don't think this fits into any of them perfectly. Ultimately it's a place for me to share things I like and find interesting. To try new things and see how they turn out.</p>
-  <p>I moved my "official" portfolio to <a href="https://portfolio.tristanhampton.ca">portfolio.tristanhampton.ca</a> so that this could be what I like to call my Playground.</p>
+<div class="tile tile-4x2 tile--dotted">
+  <p class="h1">Under Construction</p>
+</div>
+<div class="tile tile-2x2">
+  {% include "../_includes/latest-book.njk" %}
+</div>
+<div class="tile tile-2x2 tile--bare tile--image">
+  <img src="/img/sketches/mindless.png" alt="">
+</div>
+<div class="tile tile-4x4 tile--shadow">
+  {% set bookmark_limit = 3 %}
+  {% include "../_includes/latest-bookmarks.njk" %}
+</div>
+<div class="tile tile-3x2 tile--dashed">
+  {% include "../_includes/kuzco-counter.njk" %}
 </div>

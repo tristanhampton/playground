@@ -1,0 +1,6 @@
+{% set book = collections.goodreads|reverse|first %}
+
+<div class="latest-book">
+  <h2 class="h6">Just <span class="color--red">Read</span></h2>
+  <img src="{{ book.data.cover }}" alt="{{ book.data.title }} cover">
+</div>

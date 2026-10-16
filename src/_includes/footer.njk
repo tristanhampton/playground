@@ -1,14 +1,14 @@
   <footer class="site__footer">
     <div class="footer__upper">
-      <nav class="footer__nav">
+      {# <nav class="footer__nav">
         <ul>
           <li class="h4">Other things...</li>
-          {# <li><a href="/now">Now</a></li> #}
+          <li><a href="/now">Now</a></li>
           <li><a href="/posts">Posts</a></li>
           <li><a href="/bookmarks">Bookmarks</a></li>
           <li><a href="/projects">Web Projects</a></li>
         </ul>
-      </nav>
+      </nav> #}
 
       {% if site.facebook or site.instagram or site.linkedin or site.youtube or site.x %}
         <ul class="footer__socials">
@@ -72,7 +72,6 @@
     </div>
 
     <div class="footer__lower">
-      <p class="kuzco-counter">Kuzco Counter: {{ kuzcoTracker.totalDistance }} <a href="/creative/kuzco-counter/" aria-label="What is this counter?">?</a></p>
       <p class="copyright">&copy; {{ helpers.currentYear() }} Tristan Hampton</p>
     </div>
   </footer>

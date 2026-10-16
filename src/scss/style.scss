@@ -11,6 +11,8 @@
 @import "global/buttons";
 @import "global/form";
 
+@import "layouts/bento";
+
 /* Vendors
  * ----------------------------------------------- */
 @import "vendors/fancybox.min.css";
@@ -44,5 +46,6 @@
 /* Layouts
  * ----------------------------------------------- */
 @import "layouts/default";
+
 @import "layouts/canvas";
 @import "layouts/home";
