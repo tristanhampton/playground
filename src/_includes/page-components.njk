@@ -1,4 +1,0 @@
-{% for component in page.page_components %}
-  {% set template = component.collection|replace('_', '-') %}
-  {% include "_components/" ~ template ~ ".njk" %}
-{% endfor %}

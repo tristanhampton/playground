@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import Shelf from '~/components/Shelf.astro';
+
+const items = (await getCollection('letterboxd'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .filter((movie) => movie.data.poster)
+  .map((movie) => ({
+    image: movie.data.poster!,
+    alt: `${movie.data.title} poster`,
+    title: movie.data.title,
+    year: movie.data.date.getFullYear(),
+  }));
+---
+
+<Default
+  title="Movieshelf"
+  backLink="/me"
+  description="A collection of movies that I have watched. This data is sourced directly from my Letterboxd account."
+>
+  <div class="banner banner--default">
+    <h1>Movieshelf</h1>
+    <p>
+      This is a collection of movies that I've watched. This data is sourced directly from my
+      Letterboxd account.
+    </p>
+  </div>
+
+  <Shelf items={items} variant="shelf--movies" />
+</Default>

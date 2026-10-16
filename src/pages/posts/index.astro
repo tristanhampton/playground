@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+
+// Listing every post, which is what 11ty did: the `published` and `draft`
+// flags on these entries were never actually honoured here.
+const posts = (await getCollection('posts')).sort(
+  (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
+);
+---
+
+<Default title="Posts" description="Some things that I've written. I don't write often.">
+  <section class="component component--standard-wide">
+    <h1>Posts</h1>
+    <ul class="blog-list">
+      {
+        posts.map((post) => (
+          <li>
+            <h2 class="h4">
+              <a href={`/notes/long-form/${post.id}/`}>{post.data.title}</a>
+            </h2>
+            <p>
+              <small>{post.data.summary}</small>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Default>

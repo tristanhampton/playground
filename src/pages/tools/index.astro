@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+
+const tools = (await getCollection('tools')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<Default
+  title="Tools"
+  description="Sometimes I make things to make my life easier, and post them here."
+>
+  <section class="banner banner--default">
+    <h1>Tools</h1>
+    <p>
+      Sometimes I have to make something to make my life easier, or just becuase I think it's neat.
+      They're listed here!
+    </p>
+  </section>
+
+  <section class="component component--standard-wide">
+    <ul class="blog-list">
+      {
+        tools.map((tool) => (
+          <li>
+            <h2 class="h4">
+              <a href={`/tools/${tool.id}/`}>{tool.data.title}</a>
+            </h2>
+            <p>{tool.data.summary}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Default>

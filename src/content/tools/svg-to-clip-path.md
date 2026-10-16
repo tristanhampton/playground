@@ -1,0 +1,43 @@
+---
+date: 2022-08-25
+title: SVG to CSS Polygon
+summary: Converts simple SVG paths to CSS polygon shapes for use with the clip-path property
+styles:
+- /css/plugins/a11y-dark.min.css
+scripts:
+- /js/plugins/highlight.min.js
+- /tools/js/clip-path.js
+---
+
+<section class="banner banner--default">
+  <h1>SVG to CSS Polygon</h1>
+  <p>Convert SVG paths into CSS polygon shapes.</p>
+</section>
+
+<section class="component component--standard-wide">
+  <p>Right now, it can only handle simpler SVG's that don't have multiple path properties.</p>
+  <p>The CSS polygon property can only handle straight lines, so the more points used the smoother curves will be. The lower the point density value, the more points will be used to create the clip path.</p>
+
+  <form action="">
+    <div class="form-item">
+      <label for="numberOfPoints">Point Density</label>
+      <input id="numberOfPoints" type="number" min="2" max="8" value="4">
+    </div>
+
+    <div class="form-item type--file">
+      <label for="svgFile">Upload SVG</label>
+      <input id="svgFile" type="file" accept=".svg">
+    </div>
+
+    <button class="btn submit" type="submit">Generate CSS</button>
+  </form>
+
+  <h2>CSS Output</h2>
+  <pre><code class="output code language-css">clip-path: polygon();</code></pre>
+
+  <div class="output images"></div>
+
+  <button class="copy btn">Copy CSS</button>
+</section>
+
+<script>hljs.highlightAll();</script>

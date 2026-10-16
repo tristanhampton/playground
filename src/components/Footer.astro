@@ -1,0 +1,42 @@
+---
+import site from '~/data/site.json';
+import Facebook from './icons/Facebook.astro';
+import Instagram from './icons/Instagram.astro';
+import Youtube from './icons/Youtube.astro';
+import Linkedin from './icons/Linkedin.astro';
+import X from './icons/X.astro';
+import Github from './icons/Github.astro';
+
+const socials = [
+  { url: site.facebook, label: 'Facebook', Icon: Facebook },
+  { url: site.instagram, label: 'Instagram', Icon: Instagram },
+  { url: site.youtube, label: 'Youtube', Icon: Youtube },
+  { url: site.linkedin, label: 'Linkedin', Icon: Linkedin },
+  { url: site.x, label: 'X/Twitter', Icon: X },
+  { url: site.github, label: 'Github', Icon: Github },
+].filter((social): social is { url: string; label: string; Icon: typeof Github } =>
+  Boolean(social.url),
+);
+---
+
+<footer class="site__footer">
+  <div class="footer__upper">
+    {
+      socials.length > 0 && (
+        <ul class="footer__socials">
+          {socials.map(({ url, label, Icon }) => (
+            <li>
+              <a href={url} aria-label={`Visit ${site.title}'s ${label} page`}>
+                <Icon />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+
+  <div class="footer__lower">
+    <p class="copyright">&copy; {new Date().getFullYear()} Tristan Hampton</p>
+  </div>
+</footer>

@@ -1,0 +1,44 @@
+---
+import Base, { type BaseProps } from './Base.astro';
+import Header from '~/components/Header.astro';
+
+export interface Props extends BaseProps {
+  backLink?: string | false;
+  intro?: string;
+  /**
+   * Vendored p5 libraries, loaded in order from /js/plugins/ before the sketch.
+   * These are classic (non-module) scripts that install globals, so they must
+   * not be bundled -- hence `is:inline` on every tag below.
+   */
+  libraries?: string[];
+  /** Basename of the sketch in /js/generative/, i.e. the entry slug. */
+  sketch: string;
+}
+
+const { backLink, intro, libraries = [], sketch, ...base } = Astro.props;
+const slug = (base.title ?? '').toLowerCase().replace(/\s+/g, '-');
+---
+
+<Base {...base} layout="canvas">
+  <Header backLink={backLink} />
+
+  <main class={`main--projects page page--${slug}`}>
+    <section class="banner banner--default">
+      <h1>{base.title}</h1>
+      {intro && <p set:html={intro} />}
+    </section>
+
+    <div class="generative-canvas componet component--standard-wide" id="canvasContainer"></div>
+
+    {/* Any extra markup from the sketch's own entry body */}
+    <slot />
+
+    <h2 class="sr-only project-settings-title">{base.title} Settings</h2>
+    <div class="project__tweak-settings component--standard-wide"></div>
+  </main>
+
+  <Fragment slot="scripts">
+    {libraries.map((library) => <script is:inline src={`/js/plugins/${library}`}></script>)}
+    <script is:inline src={`/js/generative/${sketch}.js`}></script>
+  </Fragment>
+</Base>

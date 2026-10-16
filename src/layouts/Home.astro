@@ -1,0 +1,24 @@
+---
+import Base, { type BaseProps } from './Base.astro';
+
+const props = Astro.props as BaseProps;
+---
+
+<Base {...props} layout="home">
+  <main class="page page--home bento">
+    <div class="banner banner--home tile tile-8x6">
+      <div id="canvasContainer"></div>
+      <h1 class="sr-only">Home</h1>
+      <p class="h1">TITLE PENDING</p>
+      <p>This is my little corner of the internet. <br />Don't take it too seriously.</p>
+    </div>
+    <slot />
+  </main>
+
+  <Fragment slot="scripts">
+    {/* Classic scripts: the banner sketch runs p5 in global mode. */}
+    <script is:inline src="/js/plugins/p5.min.js"></script>
+    <script is:inline src="/js/plugins/p5-custom-library.js"></script>
+    <script is:inline src="/js/generative/home-banner.js"></script>
+  </Fragment>
+</Base>

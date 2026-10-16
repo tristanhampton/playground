@@ -1,42 +1,38 @@
 {
-  "name": "11ty-starter-2024",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build:site": "npx @11ty/eleventy --config=.eleventy.config.mjs",
-    "build:assets": "webpack --config webpack.config.prod.cjs",
-    "build": "npm-run-all build:assets build:site",
-    "dev:site": "npx @11ty/eleventy --config=.eleventy.config.mjs --serve --quiet",
-    "dev:assets": "webpack --config webpack.config.dev.cjs",
-    "dev": "npm-run-all --parallel dev:assets dev:site",
-    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --config=.eleventy.config.mjs"
+  "name": "tristanhampton-playground",
+  "version": "2.0.0",
+  "description": "Personal site and creative coding playground",
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tristanhampton/playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tristanhampton/playground/issues"
+  },
+  "homepage": "https://github.com/tristanhampton/playground#readme",
+  "author": "Tristan Hampton",
   "license": "ISC",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro"
+  },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^6.0.1",
-    "@11ty/eleventy-upgrade-help": "^3.0.1",
-    "@codestitchofficial/eleventy-plugin-sharp-images": "^1.0.7",
-    "@directus/sdk": "^18.0.0",
-    "@sindresorhus/slugify": "^2.2.1",
-    "luxon": "^3.5.0",
-    "markdown-it": "^14.1.0",
-    "netlify-plugin-cache": "^1.0.3"
+    "astro": "^7.4.0",
+    "markdown-it": "^15.0.3",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@jamshop/eleventy-filter-dump": "^1.0.4",
-    "css-loader": "^7.1.2",
-    "mini-css-extract-plugin": "^2.9.0",
-    "npm-run-all": "^4.1.5",
-    "sass": "^1.77.8",
-    "sass-loader": "^16.0.0",
-    "terser-webpack-plugin": "^5.3.10",
-    "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-merge": "^6.0.1"
-  },
-  "type": "module"
+    "@astrojs/check": "^0.9.10",
+    "@types/markdown-it": "^14.2.0",
+    "sass": "^1.105.2",
+    "typescript": "^6.0.3"
+  }
 }

@@ -1,0 +1,28 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Blog from '~/layouts/Blog.astro';
+import { renderMarkdown } from '~/lib/markdown';
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Blog
+  title={post.data.title}
+  summary={post.data.summary}
+  description={post.data.summary}
+  backLink="/posts"
+>
+  <Content />
+  {/* Two older posts keep their body in a `post` frontmatter key. */}
+  {post.data.post && <Fragment set:html={renderMarkdown(post.data.post)} />}
+</Blog>

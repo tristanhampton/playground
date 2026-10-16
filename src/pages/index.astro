@@ -1,0 +1,28 @@
+---
+import Home from '~/layouts/Home.astro';
+import LatestBook from '~/components/LatestBook.astro';
+import LatestBookmarks from '~/components/LatestBookmarks.astro';
+import KuzcoCounter from '~/components/KuzcoCounter.astro';
+---
+
+<Home
+  title="Home"
+  ogTitle="Tristan Hampton"
+  description="My little corner of the internet. Creative coding, pictures, notes and whatever else."
+>
+  <div class="tile tile-4x2 tile--dotted">
+    <p class="h1">Under Construction</p>
+  </div>
+  <div class="tile tile-2x2">
+    <LatestBook />
+  </div>
+  <div class="tile tile-2x2 tile--bare tile--image">
+    <img src="/img/sketches/mindless.png" alt="" />
+  </div>
+  <div class="tile tile-4x4 tile--shadow">
+    <LatestBookmarks limit={3} />
+  </div>
+  <div class="tile tile-3x2 tile--dashed">
+    <KuzcoCounter />
+  </div>
+</Home>

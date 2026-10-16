@@ -1,0 +1,91 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import SquarePicture from '~/components/SquarePicture.astro';
+
+const all = (await getCollection('projects')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const byTag = (tag: string) =>
+  all.filter((project) => project.data.tags.includes(tag) && project.data.published);
+
+const groups = [
+  { heading: 'Projects with Northern', dates: 'January 2024 - Present', tag: 'northern', rule: 'type--baba' },
+  { heading: 'Freelance Projects', dates: null, tag: 'somethingclever', rule: 'type--phone' },
+  { heading: 'Projects with Yellow Pencil', dates: 'February 2022 - December 2023', tag: 'yellowpencil', rule: 'type--trap' },
+  { heading: 'Projects with Box Clever', dates: 'December 2020 - February 2022', tag: 'boxclever', rule: null },
+].map((group) => ({ ...group, projects: byTag(group.tag) }));
+---
+
+<Default
+  title="Projects"
+  pageSlug="projects"
+  description="The full list of web projects that I have worked on, along with links to view the real project."
+>
+  <section class="banner banner--default">
+    <h1>Projects</h1>
+    <p>
+      These are websites I've worked on as a Front End Developer. Clicking any of these will take
+      you to the live version of the site.
+    </p>
+  </section>
+
+  <section class="component component--standard-wide">
+    {
+      groups.map((group, index) => (
+        <Fragment>
+          {index > 0 && groups[index - 1].rule && (
+            <hr class={`${groups[index - 1].rule} space--large`} />
+          )}
+          <h2>{group.heading}</h2>
+          {group.dates && (
+            <small>
+              <em>{group.dates}</em>
+            </small>
+          )}
+          <ul class="grid-wrapper grid--extra-large gap--large">
+            {group.projects.map((project) => (
+              <li class="project-item">
+                {/* Every entry currently links out; render a plain card if one ever doesn't. */}
+                {project.data.website_url ? (
+                  <a
+                    href={project.data.website_url}
+                    title={project.data.title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card size--square"
+                  >
+                    <h3>{project.data.short ?? project.data.title}</h3>
+                    {project.data.screenshot && (
+                      <SquarePicture
+                        src={project.data.screenshot}
+                        alt={`screenshot of the ${project.data.title} website`}
+                        large={600}
+                        position="top"
+                        quality={100}
+                      />
+                    )}
+                  </a>
+                ) : (
+                  <div class="card size--square">
+                    <h3>{project.data.short ?? project.data.title}</h3>
+                    {project.data.screenshot && (
+                      <SquarePicture
+                        src={project.data.screenshot}
+                        alt={`screenshot of the ${project.data.title} website`}
+                        large={600}
+                        position="top"
+                        quality={100}
+                      />
+                    )}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </Fragment>
+      ))
+    }
+  </section>
+</Default>

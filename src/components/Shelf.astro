@@ -1,0 +1,50 @@
+---
+export interface ShelfItem {
+  image: string;
+  alt: string;
+  title: string;
+  subtitle?: string;
+  year: number;
+}
+
+interface Props {
+  items: ShelfItem[];
+  /** Extra classes for the wrapper, e.g. "shelf--books". */
+  variant: string;
+  gridClass?: string;
+}
+
+const { items, variant, gridClass = '' } = Astro.props;
+
+// The old templates tried to emit a heading whenever the year changed while
+// looping; group up front so the headings are reliable.
+const years = [...new Set(items.map((item) => item.year))];
+const groups = years.map((year) => ({
+  year,
+  items: items.filter((item) => item.year === year),
+}));
+---
+
+<div class={`component component--shelf ${variant} grid-wrapper ${gridClass}`.trim()}>
+  {
+    groups.map((group) => (
+      <Fragment>
+        <h2>{group.year}</h2>
+        {group.items.map((item) => (
+          <div class="shelf__item">
+            <img src={item.image} alt={item.alt} loading="lazy" />
+            <p>
+              <em>{item.title}</em>
+              {item.subtitle && (
+                <Fragment>
+                  <br />
+                  {item.subtitle}
+                </Fragment>
+              )}
+            </p>
+          </div>
+        ))}
+      </Fragment>
+    ))
+  }
+</div>

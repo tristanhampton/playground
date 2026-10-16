@@ -1,0 +1,13 @@
+---
+import Navigation from './Navigation.astro';
+
+interface Props {
+  backLink?: string | false;
+}
+
+const { backLink } = Astro.props;
+---
+
+<header class="site__header">
+  <Navigation backLink={backLink} />
+</header>

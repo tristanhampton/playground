@@ -1,0 +1,12 @@
+---
+title: Buildings
+date: 2023-07-02
+tags:
+- generative 
+libraries:
+- p5.min.js
+- tweakpane.min.js
+- p5-custom-library.js
+published: true
+thumbnail: ./buildings.png
+---

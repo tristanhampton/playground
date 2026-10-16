@@ -1,0 +1,56 @@
+---
+import Default from '~/layouts/Default.astro';
+import SquarePicture from '~/components/SquarePicture.astro';
+
+// The old template hard-coded a 1..40 loop, which had fallen behind the
+// directory; glob instead so dropping a photo in is enough.
+const files = import.meta.glob<{ default: ImageMetadata }>(
+  '~/assets/bookbinding/*.{jpeg,jpg,png}',
+  { eager: true },
+);
+
+const photos = Object.entries(files)
+  .sort(([a], [b]) => {
+    // numbered photos in order, anything unnumbered after them
+    const n = (path: string) =>
+      Number(path.match(/bookbinding-(\d+)\./)?.[1] ?? Number.MAX_SAFE_INTEGER);
+    return n(a) - n(b) || a.localeCompare(b);
+  })
+  .map(([, mod]) => mod.default);
+---
+
+<Default
+  title="Bookbinding"
+  backLink="/creative"
+  description="My latest interest in bookbinding"
+>
+  <section class="component component--standard-wide">
+    <h1>Bookbinding</h1>
+
+    <p>
+      I've been messing around with bookbinding over the last few months, which has been a lot of
+      fun.
+    </p>
+
+    <p>
+      I started with rebinding some trade paperback books like Gardens of the Moon and The Eye of
+      the World. Then I started making some blank notebooks and sewing the pages together.
+    </p>
+
+    <p>
+      Eventually I learned how to use LaTeX to typeset a collection of my dad's short stories, print
+      it, and bind it into a single book
+    </p>
+
+    <p>
+      My wife helped me with a few gifts by either embroidering the covers, or helping me with her
+      cricut to make some covers as well.
+    </p>
+
+    <p>The following images are in no particular order</p>
+
+    <div class="grid-wrapper tile--large">
+      {photos.map((photo) => <SquarePicture src={photo} alt="" />)}
+    </div>
+  </section>
+</Default>

@@ -1,0 +1,55 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+/**
+ * The two-breakpoint AVIF <picture> the old eleventy-plugin-sharp-images
+ * `getUrl | resize | avif` chain produced: a smaller square under 768px,
+ * a larger one above it.
+ */
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  small?: number;
+  large?: number;
+  position?: string;
+  quality?: number;
+  loading?: 'lazy' | 'eager';
+  class?: string;
+}
+
+const {
+  src,
+  alt,
+  small = 300,
+  large = 500,
+  position,
+  quality = 80,
+  loading = 'lazy',
+  class: className,
+} = Astro.props;
+
+const common = {
+  src,
+  format: 'avif' as const,
+  fit: 'cover' as const,
+  quality,
+  ...(position ? { position } : {}),
+};
+
+const smallImage = await getImage({ ...common, width: small, height: small });
+const largeImage = await getImage({ ...common, width: large, height: large });
+---
+
+<picture class={className}>
+  <source srcset={smallImage.src} media="(max-width: 768px)" />
+  <source srcset={largeImage.src} media="(min-width: 769px)" />
+  <img
+    src={largeImage.src}
+    alt={alt}
+    width={large}
+    height={large}
+    loading={loading}
+    decoding="async"
+  />
+</picture>

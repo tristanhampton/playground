@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import Shelf from '~/components/Shelf.astro';
+
+const items = (await getCollection('goodreads'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((book) => ({
+    image: book.data.cover,
+    alt: `${book.data.title} cover`,
+    title: book.data.title,
+    subtitle: book.data.author,
+    year: book.data.date.getFullYear(),
+  }));
+---
+
+<Default
+  title="Bookshelf"
+  backLink="/me"
+  description="A collection of books that I have read. This data is sourced directly from my Goodreads account."
+>
+  <div class="banner banner--default">
+    <h1>Bookshelf</h1>
+    <p>
+      This is a collection of books that I've read. This data is sourced directly from my Goodreads
+      account.
+    </p>
+  </div>
+
+  <Shelf items={items} variant="shelf--books" />
+</Default>

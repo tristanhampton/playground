@@ -1,0 +1,36 @@
+---
+import Base, { type BaseProps } from './Base.astro';
+import Header from '~/components/Header.astro';
+
+export interface Props extends BaseProps {
+  backLink?: string | false;
+  date?: Date;
+}
+
+const { backLink, date, ...base } = Astro.props;
+const slug = (base.title ?? '').toLowerCase().replace(/\s+/g, '-');
+const formatted = date
+  ? date.toLocaleDateString('en-CA', { year: 'numeric', month: 'short', day: 'numeric' })
+  : null;
+---
+
+<Base {...base} layout="note">
+  <Header backLink={backLink} />
+
+  <main class={`page page--${slug}`}>
+    <section class="banner banner__small">
+      <h1>{base.title}</h1>
+      {
+        formatted && (
+          <p class="banner__date">
+            Published: <time datetime={date?.toISOString()}>{formatted}</time>
+          </p>
+        )
+      }
+    </section>
+
+    <div class="component--standard-narrow">
+      <slot />
+    </div>
+  </main>
+</Base>

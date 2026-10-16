@@ -1,0 +1,25 @@
+---
+import Base, { type BaseProps } from './Base.astro';
+import Header from '~/components/Header.astro';
+
+export interface Props extends BaseProps {
+  backLink?: string | false;
+  /** Slugified title, used for the `page--*` hook on <main>. */
+  pageSlug?: string;
+}
+
+const { backLink, pageSlug, ...base } = Astro.props;
+const slug = pageSlug ?? (base.title ?? '').toLowerCase().replace(/\s+/g, '-');
+---
+
+<Base {...base} layout="default">
+  <slot name="head" slot="head" />
+
+  <Header backLink={backLink} />
+
+  <main class={`page page--${slug}`}>
+    <slot />
+  </main>
+
+  <slot name="scripts" slot="scripts" />
+</Base>

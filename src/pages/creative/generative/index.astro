@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import SquarePicture from '~/components/SquarePicture.astro';
+
+const sketches = (await getCollection('generative')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+// Same gate as 11ty: sketches build at their URL but stay unlisted until
+// `published: true`.
+const projects = sketches.filter((sketch) => sketch.data.published);
+
+// The old site showed the "Studies" shelf only on a local hostname.
+const studies = import.meta.env.DEV
+  ? sketches.filter((sketch) => sketch.data.tags.includes('study'))
+  : [];
+---
+
+<Default
+  title="Creative Coding"
+  pageSlug="creative-coding"
+  backLink="/creative"
+  description="I enjoy making art using code. I use p5.js to create images, along with different settings that can be used in real time to customize the image."
+>
+  <section class="banner banner--default">
+    <h1>Creative Coding</h1>
+    <p>
+      All of these projects are made using <a href="https://p5js.org" target="_blank" rel="noopener">p5.js</a>,
+      a Javascript processing library for making art and such using the HTML Canvas
+    </p>
+  </section>
+
+  <section class="component component--standard-wide">
+    <h2>Projects</h2>
+    <ul class="grid-wrapper grid--extra-large gap--large">
+      {
+        projects.map((sketch) => (
+          <li class="generative-item">
+            <a
+              href={`/creative/generative/${sketch.id}/`}
+              title={sketch.data.title}
+              class="card size--square"
+            >
+              <h3>{sketch.data.title}</h3>
+              {sketch.data.thumbnail && (
+                <SquarePicture
+                  src={sketch.data.thumbnail}
+                  alt={`screenshot of the ${sketch.data.title} art piece`}
+                />
+              )}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  {
+    studies.length > 0 && (
+      <section class="component component--standard-wide">
+        <h2>Studies</h2>
+        <ul class="flex-wrapper">
+          {studies.map((sketch) => (
+            <li class="generative-item">
+              <a
+                href={`/creative/generative/${sketch.id}/`}
+                title={sketch.data.title}
+                class="card size--square"
+              >
+                <h3>{sketch.data.title}</h3>
+                {sketch.data.thumbnail && (
+                  <SquarePicture
+                    src={sketch.data.thumbnail}
+                    alt={`screenshot of the ${sketch.data.title} art piece`}
+                  />
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+</Default>

@@ -1,0 +1,10 @@
+---
+import { getKuzcoDistance } from '~/lib/kuzco';
+
+const distance = await getKuzcoDistance();
+---
+
+<p class="kuzco-counter">
+  Kuzco Counter: {distance}
+  <a href="/creative/kuzco-counter/" aria-label="What is this counter?">?</a>
+</p>

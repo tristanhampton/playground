@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import { renderMarkdown } from '~/lib/markdown';
+
+interface Props {
+  limit?: number;
+}
+
+const { limit = 3 } = Astro.props;
+
+const bookmarks = (await getCollection('bookmarks'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, limit);
+---
+
+<section class="component component--latest-bookmarks">
+  <h2 class="h4">Latest Bookmarks</h2>
+  <ul class="text-list">
+    {
+      bookmarks.map((bookmark) => (
+        <li class="bookmark-item">
+          <a class="h5" href={bookmark.data.link}>
+            {bookmark.data.title}
+            <span class="sr-only">(external link)</span>
+          </a>
+          {bookmark.data.description && (
+            <Fragment set:html={renderMarkdown(bookmark.data.description)} />
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</section>

@@ -1,0 +1,51 @@
+---
+import Default from '~/layouts/Default.astro';
+
+const sections = [
+  {
+    href: '/creative/bookbinding/',
+    title: 'Bookbinding',
+    blurb: 'My latest pursuit into the world of bookbinding.',
+  },
+  {
+    href: '/creative/generative/',
+    title: 'Generative Art',
+    blurb:
+      'A collection of "sketches" I\'ve made with p5.js. Not to be confused with AI art. This is all JavaScript!',
+  },
+  {
+    href: '/creative/sketchbook/',
+    title: 'Sketchbook',
+    blurb: 'My sketchbook that I filled between 2018 and 2019.',
+  },
+  {
+    href: '/creative/kuzco-counter/',
+    title: 'Kuzco Counter',
+    blurb: 'Pulls data from Strava to calculate how far my dog and I have walked together.',
+  },
+];
+---
+
+<Default title="Creative" description="Personal creative endeavors relating to Tristan Hampton">
+  <section class="banner banner--default">
+    <h1>Creative</h1>
+    <p>A collection of creative endeavors that I've enjoyed.</p>
+  </section>
+
+  <section class="component component--standard-wide">
+    <ul class="blog-list">
+      {
+        sections.map((section) => (
+          <li>
+            <h2 class="h4">
+              <a href={section.href}>{section.title}</a>
+            </h2>
+            <p>
+              <small>{section.blurb}</small>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Default>

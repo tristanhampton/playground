@@ -1,0 +1,27 @@
+---
+import Base, { type BaseProps } from './Base.astro';
+import Header from '~/components/Header.astro';
+
+export interface Props extends BaseProps {
+  backLink?: string | false;
+  summary?: string;
+}
+
+const { backLink, summary, ...base } = Astro.props;
+const slug = (base.title ?? '').toLowerCase().replace(/\s+/g, '-');
+---
+
+<Base {...base} layout="blog">
+  <Header backLink={backLink} />
+
+  <main class={`page page--${slug}`}>
+    <section class="banner banner--default">
+      <h1>{base.title}</h1>
+      {summary && <p>{summary}</p>}
+    </section>
+
+    <section class="component component--standard-wide">
+      <slot />
+    </section>
+  </main>
+</Base>

@@ -1,0 +1,66 @@
+---
+import BaseHead from '~/components/BaseHead.astro';
+import Footer from '~/components/Footer.astro';
+import site from '~/data/site.json';
+
+export interface BaseProps {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  /** Drives the `layout--*` body class the stylesheet keys off. */
+  layout?: string;
+  bodyClass?: string;
+}
+
+const {
+  title,
+  description,
+  ogTitle,
+  ogImage,
+  ogType,
+  twitterCard,
+  layout = 'default',
+  bodyClass = '',
+} = Astro.props as BaseProps;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      ogTitle={ogTitle}
+      ogImage={ogImage}
+      ogType={ogType}
+      twitterCard={twitterCard}
+    />
+    <slot name="head" />
+  </head>
+  <body class={`site layout layout--${layout} ${bodyClass}`.trim()}>
+    {
+      site.GTM_ID && (
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TWS3W3Q"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          />
+        </noscript>
+      )
+    }
+
+    <slot />
+
+    <Footer />
+
+    <slot name="scripts" />
+    <script>
+      import '../scripts/main.js';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import Shelf from '~/components/Shelf.astro';
+
+const items = (await getCollection('steam'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  // Anything under 2 hours of playtime stays hidden.
+  .filter((game) => game.data.playtime_forever > 120)
+  .map((game) => ({
+    image: `https://cdn.akamai.steamstatic.com/steam/apps/${game.data.id}/library_600x900.jpg`,
+    alt: `icon for ${game.data.title}`,
+    title: game.data.title,
+    subtitle: `${Math.round(game.data.playtime_forever / 60)} hours`,
+    year: game.data.date.getFullYear(),
+  }));
+---
+
+<Default
+  title="Gameshelf"
+  backLink="/me"
+  description="A collection of games that I have played. This data is sourced directly from my Steam account."
+>
+  <div class="banner banner--default">
+    <h1>Gameshelf</h1>
+    <p>
+      This is a collection of games that I've played on Steam. This data is sourced directly from my
+      Steam account. Anything with less than 2 hours of gameplay is hidden.
+    </p>
+  </div>
+
+  <Shelf items={items} variant="shelf--games" />
+</Default>

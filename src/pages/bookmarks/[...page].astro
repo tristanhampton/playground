@@ -1,0 +1,99 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import { renderMarkdown } from '~/lib/markdown';
+
+/**
+ * Paginated by hand rather than with `paginate()` so the URLs stay exactly as
+ * 11ty built them: /bookmarks/ then /bookmarks/page-2/, /bookmarks/page-3/...
+ */
+export const getStaticPaths = (async () => {
+  // declared in here because Astro extracts getStaticPaths into its own module
+  const PAGE_SIZE = 10;
+
+  const bookmarks = (await getCollection('bookmarks')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+  );
+
+  const lastPage = Math.max(1, Math.ceil(bookmarks.length / PAGE_SIZE));
+
+  return Array.from({ length: lastPage }, (_, index) => {
+    const number = index + 1;
+    return {
+      params: { page: number === 1 ? undefined : `page-${number}` },
+      props: {
+        items: bookmarks.slice(index * PAGE_SIZE, number * PAGE_SIZE),
+        currentPage: number,
+        lastPage,
+      },
+    };
+  });
+}) satisfies GetStaticPaths;
+
+const { items, currentPage, lastPage } = Astro.props;
+---
+
+<Default
+  title="Bookmarks"
+  description="Curated list of bookmarks to things that I either found interesting and wanted to save, or that looked interesting and I wanted to read later."
+>
+  <div class="banner banner--default">
+    <h1>Bookmarks</h1>
+    <p>
+      This is my full collection of bookmarks. These are links to resources, articles, inspirations,
+      and other misc. content that I've found online and want to keep track of.
+    </p>
+  </div>
+
+  <div class="component component--standard-wide">
+    <ul class="bookmark-list">
+      {
+        items.map((bookmark) => (
+          <li class="bookmark-item" data-type={bookmark.data.type.join(' ')}>
+            <div class="tags">
+              {bookmark.data.type.map((type) => (
+                <span class="tag">
+                  <span class="sr-only">Tag: </span>
+                  {type}
+                </span>
+              ))}
+            </div>
+            <p class="bookmark-link h4">
+              <a href={bookmark.data.link}>
+                {bookmark.data.title}
+                <span class="sr-only">(external link)</span>
+              </a>
+            </p>
+            {bookmark.data.description && (
+              <Fragment set:html={renderMarkdown(bookmark.data.description)} />
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <nav aria-labelledby="pagination-title" class="pagination component--standard-wide">
+    <h2 id="pagination-title" class="sr-only">Pagination</h2>
+    <ul>
+      {
+        Array.from({ length: lastPage }, (_, index) => {
+          const number = index + 1;
+          const href = number === 1 ? '/bookmarks/' : `/bookmarks/page-${number}/`;
+          return (
+            <li>
+              <a
+                href={href}
+                aria-current={number === currentPage ? 'page' : undefined}
+                aria-label={`go to page ${number}`}
+              >
+                {number}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</Default>

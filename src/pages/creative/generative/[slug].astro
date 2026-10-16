@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Canvas from '~/layouts/Canvas.astro';
+
+export const getStaticPaths = (async () => {
+  const sketches = await getCollection('generative');
+  return sketches.map((sketch) => ({
+    params: { slug: sketch.id },
+    props: { sketch },
+  }));
+}) satisfies GetStaticPaths;
+
+const { sketch } = Astro.props;
+const { Content } = await render(sketch);
+---
+
+<Canvas
+  title={sketch.data.title}
+  ogTitle={sketch.data.title}
+  ogType="website"
+  twitterCard="summary_large_image"
+  description="Artwork built using p5.js"
+  backLink="/creative/generative"
+  intro={sketch.data.intro}
+  libraries={sketch.data.libraries}
+  sketch={sketch.id}
+>
+  <Content />
+</Canvas>

@@ -1,0 +1,13 @@
+---
+title: Perkwerk Attempt
+date: 2023-07-12
+ogDescription: "OG description here"
+tags:
+- generative 
+- study
+libraries:
+- p5.min.js
+- tweakpane.min.js
+- p5-custom-library.js
+thumbnail: ./perkwerk-attempt.png
+---

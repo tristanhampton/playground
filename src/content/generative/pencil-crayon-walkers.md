@@ -1,0 +1,13 @@
+---
+title: Pencil Crayon Walkers
+date: 2022-04-15
+tags:
+- generative 
+libraries:
+- p5.min.js
+- tweakpane.min.js
+- p5-custom-library.js
+published: true
+intro: Click on the canvas! Walkers will move about, with a random colour and pencil weight.
+thumbnail: ./pencil-crayon-walkers.png
+---

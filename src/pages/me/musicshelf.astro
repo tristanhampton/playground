@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import Shelf from '~/components/Shelf.astro';
+
+const items = (await getCollection('music'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((album) => ({
+    image: album.data.cover,
+    alt: `${album.data.title} cover`,
+    title: album.data.title,
+    subtitle: album.data.artist,
+    year: album.data.date.getFullYear(),
+  }));
+---
+
+<Default title="Musicshelf" backLink="/me" description="A collection of music that I enjoy.">
+  <div class="banner banner--default">
+    <h1>Musicshelf</h1>
+    <p>A collection of music that I enjoy.</p>
+  </div>
+
+  <Shelf items={items} variant="shelf--music" gridClass="grid--large" />
+</Default>

@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+
+export const getStaticPaths = (async () => {
+  const tools = await getCollection('tools');
+  return tools.map((tool) => ({
+    params: { slug: tool.id },
+    props: { tool },
+  }));
+}) satisfies GetStaticPaths;
+
+const { tool } = Astro.props;
+const { Content } = await render(tool);
+---
+
+<Default title={tool.data.title} backLink="/tools" description={tool.data.summary}>
+  <Fragment slot="head">
+    {tool.data.styles.map((href) => <link rel="stylesheet" href={href} />)}
+  </Fragment>
+
+  <Content />
+
+  <Fragment slot="scripts">
+    {/* Vendored classic scripts (highlight.js, the tool's own code). */}
+    {tool.data.scripts.map((src) => <script is:inline src={src}></script>)}
+  </Fragment>
+</Default>

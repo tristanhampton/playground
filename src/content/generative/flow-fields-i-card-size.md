@@ -1,0 +1,13 @@
+---
+title: Flow Fields I Card Size
+date: 2023-06-20
+ogDescription: ""
+tags:
+- generative 
+- study
+libraries:
+- p5.min.js
+- tweakpane.min.js
+- p5-custom-library.js
+thumbnail: ./flow-fields-i-card-size.png
+---

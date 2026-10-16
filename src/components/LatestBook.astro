@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+
+const books = (await getCollection('goodreads')).sort(
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+);
+const book = books.at(-1);
+---
+
+{
+  book && (
+    <div class="latest-book">
+      <h2 class="h6">Just <span class="color--red">Read</span></h2>
+      <img src={book.data.cover} alt={`${book.data.title} cover`} loading="lazy" />
+    </div>
+  )
+}

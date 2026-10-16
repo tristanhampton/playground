@@ -1,0 +1,11 @@
+---
+title: Diffusing Lines
+date: 2022-12-31
+tags:
+- generative 
+libraries:
+- p5.min.js
+- tweakpane.min.js
+- p5-custom-library.js
+intro: To generate a new image, click or tap the image. Changing the image settings will also cause the image to update.
+---

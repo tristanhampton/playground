@@ -1,0 +1,14 @@
+---
+date: 2024-07-17
+title: Gravity Forms to Drupal Webforms Converter
+summary: A Node CLI tool to convert Gravity Forms .json files to Drupal .yml syntax for use with the Drupal Webforms module
+---
+
+<section class="banner banner--default">
+  <h1>Gravity Forms to Drupal Webforms Converter</h1>
+</section>
+
+<section class="component component--standard-wide">
+  <p>This is a node cli based tool I made that will convert Wordpress' Gravity Forms .json files to Drupals .yml syntax. It's not perfect or completed by any means, but it converts 90% of standard fields, along with some simple conditional fields.</p>
+  <p>It can be viewed and downloaded from <a href="https://github.com/tristanhampton/gravity-forms-to-drupal-webforms-migration/tree/main">the Github repo</a>.
+</section>

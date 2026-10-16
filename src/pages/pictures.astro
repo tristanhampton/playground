@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import Default from '~/layouts/Default.astro';
+import SquarePicture from '~/components/SquarePicture.astro';
+
+// `photo` is a literal "/uploads/<file>" path in frontmatter; map it onto the
+// imported asset so Astro can resize it.
+const uploads = import.meta.glob<{ default: ImageMetadata }>(
+  '~/assets/pictures/*.{jpeg,jpg,png,gif}',
+  { eager: true },
+);
+const byFilename = new Map(
+  Object.entries(uploads).map(([path, mod]) => [path.split('/').pop()!, mod.default]),
+);
+
+const posts = (await getCollection('fakestagram'))
+  .filter((post) => post.data.published)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((post) => ({
+    ...post,
+    image: byFilename.get(post.data.photo.split('/').pop()!),
+  }));
+
+const missing = posts.filter((post) => !post.image).map((post) => post.data.photo);
+if (missing.length > 0) {
+  console.warn(`[pictures] no image found in src/assets/pictures for: ${missing.join(', ')}`);
+}
+---
+
+<Default title="Pictures" description="A collection of pictures. Think of it like Instagram.">
+  <div class="banner banner--default">
+    <h1>Pictures</h1>
+    <p>
+      The following are posts that you might normally find on social media, but not on social media.
+    </p>
+  </div>
+
+  <section class="component--standard-wide">
+    <ul class="post-grid">
+      {
+        posts.map((post) => (
+          <li class={post.data.caption ? 'has-caption' : 'no-caption'}>
+            {post.image && <SquarePicture src={post.image} alt={post.data.alt} />}
+            {post.data.caption && <p class="caption">{post.data.caption}</p>}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Default>

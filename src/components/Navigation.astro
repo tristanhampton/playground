@@ -1,0 +1,44 @@
+---
+import ArrowLeft from './icons/ArrowLeft.astro';
+import Home from './icons/Home.astro';
+import Palette from './icons/Palette.astro';
+import Camera from './icons/Camera.astro';
+import Person from './icons/Person.astro';
+import ScrewdriverWrench from './icons/ScrewdriverWrench.astro';
+
+interface Props {
+  backLink?: string | false;
+}
+
+const { backLink } = Astro.props;
+---
+
+<nav class="site__navigation">
+  <ul>
+    {
+      backLink && (
+        <li>
+          <a href={backLink} class="back-link" aria-label="Go back">
+            <ArrowLeft />
+          </a>
+        </li>
+      )
+    }
+
+    <li>
+      <a href="/"><Home /><span class="navigation__link-text">Home</span></a>
+    </li>
+    <li>
+      <a href="/creative/"><Palette /><span class="navigation__link-text">Creative</span></a>
+    </li>
+    <li>
+      <a href="/pictures/"><Camera /><span class="navigation__link-text">Pictures</span></a>
+    </li>
+    <li>
+      <a href="/me/"><Person /><span class="navigation__link-text">Me</span></a>
+    </li>
+    <li>
+      <a href="/tools/"><ScrewdriverWrench /><span class="navigation__link-text">Tools</span></a>
+    </li>
+  </ul>
+</nav>
