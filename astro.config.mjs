@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import scssGlobImport from './vite-scss-glob.mjs';
 
 export default defineConfig({
   site: 'https://tristanhampton.ca',
@@ -19,6 +20,7 @@ export default defineConfig({
   },
 
   vite: {
+    plugins: [scssGlobImport()],
     css: {
       preprocessorOptions: {
         scss: {

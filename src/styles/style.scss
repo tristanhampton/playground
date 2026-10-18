@@ -1,51 +1,15 @@
-/* Global Styles
- * ----------------------------------------------- */
-@import "global/reset";
-@import "global/design-system";
-@import "global/typography";
-@import "global/layout";
-@import "global/navigation";
-@import "global/header";
-@import "global/footer";
-@import "global/components";
-@import "global/buttons";
-@import "global/form";
-
-@import "layouts/bento";
-
 /* Vendors
  * ----------------------------------------------- */
-@import "vendors/fancybox.min.css";
+@import "vendors/*";
 
-/* Components
+/* Global
  * ----------------------------------------------- */
-@import "components/standard";
-@import "components/cards";
-@import "components/banner-default";
-@import "components/banner-home";
-@import "components/text-block";
-@import "components/table";
-@import "components/child-pages";
-@import "components/accordions";
-@import "components/media";
-@import "components/media-gallery";
-@import "components/form";
-@import "components/list-text";
-@import "components/list-blog";
-@import "components/list-bookmark";
-@import "components/navigation-tiles";
-@import "components/latest-bookmarks";
-@import "components/palette";
-@import "components/bookshelf";
-@import "components/question-answer";
-@import "components/svg-to-clip-path";
-@import "components/wip";
-
-
+@import "global/*";
 
 /* Layouts
  * ----------------------------------------------- */
-@import "layouts/default";
+@import "layouts/*";
 
-@import "layouts/canvas";
-@import "layouts/home";
+/* Components
+ * ----------------------------------------------- */
+@import "components/*";
