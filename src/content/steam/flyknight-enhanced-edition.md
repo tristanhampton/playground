@@ -1,7 +1,7 @@
 ---
 title: "FlyKnight Enhanced Edition"
 id: 3108510
-date: 2026-10-17T05:00:10.569Z
+date: 2026-10-18T05:00:10.642Z
 link: games/steam/recent/flyknight-enhanced-edition
 image: http://media.steampowered.com/steamcommunity/public/images/apps/3108510/add1e5a6526f7271a89271c6b16d282acb982173.jpg
 playtime_2weeks: 21
