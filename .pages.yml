@@ -1,10 +1,10 @@
 media:
-  input: src/uploads
+  input: src/assets/pictures
   output: /uploads
 content:
   - name: posts
     label: Posts
-    path: src/_content/_collections/posts
+    path: src/content/posts
     type: collection
     fields:
       - name: title
@@ -26,7 +26,7 @@ content:
         default: blog
   - name: wishlist
     label: Wishlist
-    path: src/_content/_collections/wishlist
+    path: src/content/wishlist
     type: collection
     fields:
       - name: title
@@ -41,7 +41,7 @@ content:
         type: string
   - name: fakestagram
     label: Fakestagram
-    path: src/_content/_collections/fakestagram
+    path: src/content/fakestagram
     type: collection
     fields: 
       - name: title
@@ -66,7 +66,7 @@ content:
         default: true
   - name: bookmarks
     label: Bookmarks
-    path: src/_content/_collections/bookmarks
+    path: src/content/bookmarks
     type: collection
     fields: 
       - name: title
@@ -89,7 +89,7 @@ content:
           values: [ Web Development, Website, Social Media, Art, Creative Coding, Book Binding, Article, Misc, Video Games, Home Lab, Accessibility ]
   - name: goodreads
     label: Goodreads
-    path: src/_content/_collections/goodreads
+    path: src/content/goodreads
     type: collection
     fields:
       - name: title
@@ -114,7 +114,7 @@ content:
           values: [ read, dnf ]
   - name: letterboxd
     label: Letterboxd
-    path: src/_content/_collections/letterboxd
+    path: src/content/letterboxd
     type: collection
     fields: 
       - name: title
@@ -142,7 +142,7 @@ content:
         hidden: true
   - name: strava
     label: Strava
-    path: src/_content/_collections/strava
+    path: src/content/strava
     type: collection
     fields:
       - name: title
@@ -194,7 +194,7 @@ content:
           values: [ kuzco-tracker ]
   - name: steam
     label: Steam
-    path: src/_content/_collections/steam
+    path: src/content/steam
     type: collection
     fields:
       - name: title
@@ -239,7 +239,7 @@ content:
         type: string
   - name: music
     label: Music 
-    path: src/_content/_collections/music
+    path: src/content/music
     type: collection 
     fields: 
       - name: title
