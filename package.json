@@ -31,7 +31,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@netlify/plugin-lighthouse": "^6.0.4",
     "@types/markdown-it": "^14.2.0",
+    "netlify-plugin-cache": "^1.0.3",
     "sass": "^1.105.2",
     "typescript": "^6.0.3"
   }
