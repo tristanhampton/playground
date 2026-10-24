@@ -202,7 +202,7 @@ content:
         type: string
       - name: id
         label: Game ID
-        type: string
+        type: number
       - name: date
         label: Date
         type: date
@@ -218,25 +218,25 @@ content:
         hidden: true
       - name: playtime_2weeks
         label: Playtime - Last Two Weeks
-        type: string
+        type: number
       - name: playtime_forever
         label: Playtime - Forever
-        type: string
+        type: number
       - name: playtime_windows_forever
         label: Playtime - Windows
-        type: string
+        type: number
         hidden: true
       - name: playtime_mac_forever
         label: Playtime - Mac
-        type: string
+        type: number
         hidden: true
       - name: playtime_linux_forever
         label: Playtime - Linux
-        type: string
+        type: number
         hidden: true
       - name: playtime_deck_forever
         label: Playtime - Steam Deck
-        type: string
+        type: number
   - name: music
     label: Music 
     path: src/content/music

@@ -1,9 +1,9 @@
 ---
-title: "Antivirus Survivors 2003 Professional"
+title: Antivirus Survivors 2003 Professional
 id: 3832490
-date: 2026-10-18T05:00:07.279Z
+date: 2026-10-18T05:00:00.000Z
+image: https://cdn2.steamgriddb.com/thumb/264a9430421ffd4920e116f7fb22e8e6.jpg
 link: games/steam/recent/antivirus-survivors-2003-professional
-image: http://media.steampowered.com/steamcommunity/public/images/apps/3832490/20871f2559b50fe25d9860579639a5a7e82d0af6.jpg
 playtime_2weeks: 90
 playtime_forever: 401
 playtime_windows_forever: 0
