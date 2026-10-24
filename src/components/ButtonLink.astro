@@ -1,0 +1,15 @@
+---
+const { href, title, img_url, img_alt, text } = Astro.props;
+
+const classes = [
+  'button-link',
+  img_url ? 'has-image' : '',
+  text ? 'text--' + text : '',
+];
+---
+<a class:list={classes} href={href} title={title} aria-label={title}>
+  {img_url &&
+    <img src={img_url} alt={img_alt} />
+  }
+  <p>{title}</p>
+</a>

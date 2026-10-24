@@ -1,0 +1,19 @@
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-000);
+  border-radius: 1rem;
+  aspect-ratio: 1 / 1;
+  transition: box-shadow 0.3s ease-in-out;
+
+  svg {
+    fill: var(--text-invert);
+    max-width: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0rem 0rem 0.75rem 0.3rem rgba(50, 50, 50, 0.60);
+  }
+}

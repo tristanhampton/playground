@@ -14,7 +14,6 @@
   padding: 1rem;
   border: 0.1rem solid #000;
   border-radius: 8px;
-  overflow: hidden;
 
   &--dotted {
     border-style: dotted;
@@ -27,6 +26,7 @@
   &--bare {
     padding: 0;
     border: none;
+    border-radius: 0;
   }
 
   &--shadow {
@@ -46,6 +46,10 @@
       object-fit: contain;
       object-position: center;
     }
+  }
+
+  &--hidden {
+    overflow: hidden;
   }
 }
 

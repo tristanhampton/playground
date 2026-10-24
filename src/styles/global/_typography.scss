@@ -363,9 +363,9 @@ a {
     border-radius: var(--radius-button-300);
   }
 
-  &:visited {
-    color: var(--text-link-visited);
-  }
+  // &:visited {
+  //   color: var(--text-link-visited);
+  // }
 
   &.has-external-icon {
     svg {

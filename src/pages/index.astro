@@ -3,6 +3,8 @@ import Home from '~/layouts/Home.astro';
 import LatestBook from '~/components/LatestBook.astro';
 import LatestBookmarks from '~/components/LatestBookmarks.astro';
 import KuzcoCounter from '~/components/KuzcoCounter.astro';
+import ButtonLink from '~/components/ButtonLink.astro';
+import IconLink from '~/components/IconLink.astro';
 ---
 
 <Home
@@ -13,7 +15,7 @@ import KuzcoCounter from '~/components/KuzcoCounter.astro';
   <div class="tile tile-4x2 tile--dotted">
     <p class="h1">Under Construction</p>
   </div>
-  <div class="tile tile-2x2">
+  <div class="tile tile-2x2 tile--bare">
     <LatestBook />
   </div>
   <div class="tile tile-2x2 tile--bare tile--image">
@@ -22,7 +24,28 @@ import KuzcoCounter from '~/components/KuzcoCounter.astro';
   <div class="tile tile-4x4 tile--shadow">
     <LatestBookmarks limit={3} />
   </div>
-  <div class="tile tile-3x2 tile--dashed">
-    <KuzcoCounter />
+
+  <div class="tile tile-2x2 tile--bare">
+    <ButtonLink title={'Me'} href={'/me'} text={'medium'}/>
+  </div>
+
+  <div class="tile tile-2x2 tile--bare">
+    <ButtonLink title={'Creative'} href={'/creative'} text={'medium'}/>
+  </div>
+
+  <div class="tile tile-2x2 tile--bare">
+    <ButtonLink title={'Photos'} href={'/pictures'} text={'medium'}/>
+  </div>
+
+  <div class="tile tile-1X1 tile--bare">
+    <IconLink href={'/me/bookshelf'} title={'Bookshelf'} icon={'book'} />
+  </div>
+
+  <div class="tile tile-1X1 tile--bare">
+    <IconLink href={'/me/gameshelf'} title={'Gameshelf'} icon={'gamepad'} />
+  </div>
+
+  <div class="tile tile-1X1 tile--bare">
+    <IconLink href={'/me/movieshelf'} title={'Movieshelf'} icon={'ticket'} />
   </div>
 </Home>
